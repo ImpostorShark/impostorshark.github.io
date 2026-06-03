@@ -1,0 +1,1233 @@
+{
+  "classes": [
+    {
+      "id": "pixie",
+      "name": "Pixie",
+      "trees": [
+        {
+          "id": "spiritArcher",
+          "name": "Spirit Archer",
+          "talents": [
+            {
+              "id": "precision",
+              "name": "Precision",
+              "image": "images/precision.png",
+              "column": 3,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "manaSkin1"
+              ],
+              "levels": {
+                "1": {
+                  "hitPercent": 6,
+                  "matk": 24,
+                  "description": "Hit% +6, MATK + 24"
+                },
+                "2": {
+                  "hitPercent": 12,
+                  "matk": 43,
+                  "description": "Hit% +12, MATK + 43"
+                },
+                "3": {
+                  "hitPercent": 18,
+                  "matk": 62,
+                  "description": "Hit% +18, MATK + 62"
+                },
+                "4": {
+                  "hitPercent": 24,
+                  "matk": 82,
+                  "description": "Hit% +24, MATK + 82"
+                },
+                "5": {
+                  "hitPercent": 35,
+                  "matk": 101,
+                  "description": "Hit% +35, MATK + 101"
+                }
+              }
+            },
+            {
+              "id": "bloodmandala",
+              "name": "Blood Mandala I",
+              "image": "images/bloodmandala1.png",
+              "column": 3,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 124,
+                  "MATKBonus": 118,
+                  "description": "MATK Rate: 124%, MATK Bonus: +118, 52HP/3s DOT"
+                },
+                "2": {
+                  "dmgMATKPercent": 128,
+                  "MATKBonus": 150,
+                  "description": "MATK Rate: 128%, MATK Bonus: +150, 66HP/3s DOT"
+                },
+                "3": {
+                  "dmgMATKPercent": 131,
+                  "MATKBonus": 182,
+                  "description": "MATK Rate: 131%, MATK Bonus: +182, 80HP/3s DOT"
+                },
+                "4": {
+                  "dmgMATKPercent": 135,
+                  "MATKBonus": 214,
+                  "description": "MATK Rate: 135%, MATK Bonus: +214, 94HP/3s DOT"
+                },
+                "5": {
+                  "dmgMATKPercent": 139,
+                  "MATKBonus": 246,
+                  "description": "MATK Rate: 139%, MATK Bonus: +246, 108HP/3s DOT"
+                }
+              }
+            },
+            {
+              "id": "withertrap",
+              "name": "Wither Trap I",
+              "image": "images/withertrap1.png",
+              "column": 3,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "Roots for 2 seconds every 3 seconds (Bugged, only happens once). Deals 4% max HP (Max 80). Max 5 targets"
+                },
+                "2": {
+                  "description": "Roots for 2 seconds every 3 seconds (Bugged, only happens once). Deals 6% max HP (Max 420). Max 6 targets"
+                },
+                "3": {
+                  "description": "Roots for 2 seconds every 3 seconds (Bugged, only happens once). Deals 8% max HP (Max 960). Max 7 targets"
+                },
+                "4": {
+                  "description": "Roots for 2 seconds every 3 seconds (Bugged, only happens once). Deals 10% max HP (Max 4750). Max 8 targets"
+                },
+                "5": {
+                  "description": "Roots for 2 seconds every 3 seconds (Bugged, only happens once). Deals 12% max HP (Max 9600). Max 9 targets"
+                }
+              }
+            },
+            {
+              "id": "bloodmandala2",
+              "name": "Blood Mandala II",
+              "image": "images/bloodmandala2.png",
+              "column": 3,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 124,
+                  "MATKBonus": 883,
+                  "description": "MATK Rate: 124%, MATK Bonus: +883, 185HP/3s DOT"
+                },
+                "2": {
+                  "dmgMATKPercent": 128,
+                  "MATKBonus": 944,
+                  "description": "MATK Rate: 128%, MATK Bonus: +944, 198HP/3s DOT"
+                },
+                "3": {
+                  "dmgMATKPercent": 131,
+                  "MATKBonus": 1005,
+                  "description": "MATK Rate: 131%, MATK Bonus: +1005, 211HP/3s DOT"
+                },
+                "4": {
+                  "dmgMATKPercent": 135,
+                  "MATKBonus": 1066,
+                  "description": "MATK Rate: 135%, MATK Bonus: +1066, 223HP/3s DOT"
+                },
+                "5": {
+                  "dmgMATKPercent": 139,
+                  "MATKBonus": 1127,
+                  "description": "MATK Rate: 139%, MATK Bonus: +1127, 236HP/3s DOT"
+                }
+              }
+            },
+            {
+              "id": "dreamtrap",
+              "name": "Dream Trap",
+              "image": "images/dreamtrap.png",
+              "column": 3,
+              "row": 5,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "Sleep 6s. Cooldown 20s.Target wakes when hit."
+                },
+                "2": {
+                  "description": "Sleep 9s. Cooldown 22s.Target wakes when hit."
+                },
+                "3": {
+                  "description": "Sleep 12s. Cooldown 24s.Target wakes when hit."
+                },
+                "4": {
+                  "description": "Sleep 15s. Cooldown 26s.Target wakes when hit."
+                },
+                "5": {
+                  "description": "Sleep 18s. Cooldown 28s.Target wakes when hit."
+                }
+              }
+            },
+            {
+              "id": "snakeward",
+              "name": "Snake Ward",
+              "image": "images/snakeward.png",
+              "column": 3,
+              "row": 6,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 36,
+                  "MATKBonus": 160,
+                  "description": "MATK Rate: 36%, MATK Bonus: +160, AoE"
+                },
+                "2": {
+                  "dmgMATKPercent": 38,
+                  "MATKBonus": 168,
+                  "description": "MATK Rate: 38%, MATK Bonus: +168, AoE"
+                },
+                "3": {
+                  "dmgMATKPercent": 40,
+                  "MATKBonus": 176,
+                  "description": "MATK Rate: 40%, MATK Bonus: +176, AoE"
+                },
+                "4": {
+                  "dmgMATKPercent": 41,
+                  "MATKBonus": 184,
+                  "description": "MATK Rate: 41%, MATK Bonus: +184, AoE"
+                },
+                "5": {
+                  "dmgMATKPercent": 43,
+                  "MATKBonus": 192,
+                  "description": "MATK Rate: 43%, MATK Bonus: +192, AoE"
+                }
+              }
+            },
+            {
+              "id": "magicarrow",
+              "name": "Magic Arrow I",
+              "image": "images/magicarrow1.png",
+              "column": 4,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 100,
+                  "MATKBonus": 12,
+                  "description": "MATK Rate: 100%, MATK Bonus: +12"
+                },
+                "2": {
+                  "dmgMATKPercent": 103,
+                  "MATKBonus": 32,
+                  "description": "MATK Rate: 103%, MATK Bonus: +32"
+                },
+                "3": {
+                  "dmgMATKPercent": 106,
+                  "MATKBonus": 51,
+                  "description": "MATK Rate: 106%, MATK Bonus: +51"
+                },
+                "4": {
+                  "dmgMATKPercent": 109,
+                  "MATKBonus": 71,
+                  "description": "MATK Rate: 109%, MATK Bonus: +71"
+                },
+                "5": {
+                  "dmgMATKPercent": 112,
+                  "MATKBonus": 91,
+                  "description": "MATK Rate: 112%, MATK Bonus: +91"
+                }
+              }
+            },
+            {
+              "id": "vineyarrow",
+              "name": "Viney Arrow",
+              "image": "images/vineyarrow.png",
+              "column": 4,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 120,
+                  "MATKBonus": 242,
+                  "description": "MATK Rate: 120%, MATK Bonus: +242, Slow 50% 4seconds"
+                },
+                "2": {
+                  "dmgMATKPercent": 124,
+                  "MATKBonus": 282,
+                  "description": "MATK Rate: 124%, MATK Bonus: +282, Slow 55% 4seconds"
+                },
+                "3": {
+                  "dmgMATKPercent": 127,
+                  "MATKBonus": 320,
+                  "description": "MATK Rate: 127%, MATK Bonus: +320, Slow 60% 4seconds"
+                },
+                "4": {
+                  "dmgMATKPercent": 131,
+                  "MATKBonus": 359,
+                  "description": "MATK Rate: 131%, MATK Bonus: +359, Slow 65% 4seconds"
+                },
+                "5": {
+                  "dmgMATKPercent": 134,
+                  "MATKBonus": 398,
+                  "description": "MATK Rate: 134%, MATK Bonus: +398, Slow 70% 4seconds"
+                }
+              }
+            },
+            {
+              "id": "magicarrow2",
+              "name": "Magic Arrow II",
+              "image": "images/magicarrow2.png",
+              "column": 4,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 100,
+                  "MATKBonus": 428,
+                  "description": "MATK Rate: 100%, MATK Bonus: +428"
+                },
+                "2": {
+                  "dmgMATKPercent": 103,
+                  "MATKBonus": 466,
+                  "description": "MATK Rate: 103%, MATK Bonus: +466"
+                },
+                "3": {
+                  "dmgMATKPercent": 106,
+                  "MATKBonus": 505,
+                  "description": "MATK Rate: 106%, MATK Bonus: +505"
+                },
+                "4": {
+                  "dmgMATKPercent": 109,
+                  "MATKBonus": 543,
+                  "description": "MATK Rate: 109%, MATK Bonus: +543"
+                },
+                "5": {
+                  "dmgMATKPercent": 112,
+                  "MATKBonus": 581,
+                  "description": "MATK Rate: 112%, MATK Bonus: +581"
+                }
+              }
+            },
+            {
+              "id": "magicarrow3",
+              "name": "Magic Arrow III",
+              "image": "images/magicarrow3.png",
+              "column": 4,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 100,
+                  "MATKBonus": 1163,
+                  "description": "MATK Rate: 100%, MATK Bonus: +1163"
+                },
+                "2": {
+                  "dmgMATKPercent": 103,
+                  "MATKBonus": 1220,
+                  "description": "MATK Rate: 103%, MATK Bonus: +1220"
+                },
+                "3": {
+                  "dmgMATKPercent": 106,
+                  "MATKBonus": 1277,
+                  "description": "MATK Rate: 106%, MATK Bonus: +1277"
+                },
+                "4": {
+                  "dmgMATKPercent": 109,
+                  "MATKBonus": 1334,
+                  "description": "MATK Rate: 109%, MATK Bonus: +1334"
+                },
+                "5": {
+                  "dmgMATKPercent": 112,
+                  "MATKBonus": 1390,
+                  "description": "MATK Rate: 112%, MATK Bonus: +1390"
+                }
+              }
+            },
+            {
+              "id": "swiftness",
+              "name": "Swiftness",
+              "image": "images/swiftness.png",
+              "column": 5,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "attackSpeedPercent": 2,
+                  "moveSpeed": 3,
+                  "description": "Attack Speed% +2, movement speed + 3"
+                },
+                "2": {
+                  "attackSpeedPercent": 4,
+                  "moveSpeed": 6,
+                  "description": "Attack Speed% +4, movement speed + 6"
+                },
+                "3": {
+                  "attackSpeedPercent": 6,
+                  "moveSpeed": 9,
+                  "description": "Attack Speed% +6, movement speed + 9"
+                },
+                "4": {
+                  "attackSpeedPercent": 8,
+                  "moveSpeed": 12,
+                  "description": "Attack Speed% +8, movement speed + 12"
+                },
+                "5": {
+                  "attackSpeedPercent": 10,
+                  "moveSpeed": 15,
+                  "description": "Attack Speed% +10, movement speed + 15"
+                }
+              }
+            },
+            {
+              "id": "moisten",
+              "name": "Moisten I",
+              "image": "images/moisten1.png",
+              "column": 5,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "description": "Regen 2% Max HP per second (Max 55)"
+                },
+                "2": {
+                  "description": "Regen 2% Max HP per second (Max 117)"
+                },
+                "3": {
+                  "description": "Regen 3% Max HP per second (Max 189)"
+                },
+                "4": {
+                  "description": "Regen 3% Max HP per second (Max 270)"
+                },
+                "5": {
+                  "description": "Regen 3% Max HP per second (Max 360)"
+                }
+              }
+            },
+            {
+              "id": "quickheal",
+              "name": "Quick Heal",
+              "image": "images/quickheal.png",
+              "column": 5,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "healDMGPercent": 110,
+                  "bonusHeal": 776,
+                  "description": "Heal% +110, Bonus Heal +776"
+                },
+                "2": {
+                  "healDMGPercent": 113,
+                  "bonusHeal": 830,
+                  "description": "Heal% +113, Bonus Heal +830"
+                },
+                "3": {
+                  "healDMGPercent": 117,
+                  "bonusHeal": 884,
+                  "description": "Heal% +117, Bonus Heal +884"
+                },
+                "4": {
+                  "healDMGPercent": 120,
+                  "bonusHeal": 938,
+                  "description": "Heal% +120, Bonus Heal +938"
+                },
+                "5": {
+                  "healDMGPercent": 123,
+                  "bonusHeal": 992,
+                  "description": "Heal% +123, Bonus Heal +992"
+                }
+              }
+            },
+            {
+              "id": "surgearrow",
+              "name": "Surge Arrow",
+              "image": "images/surgearrow.png",
+              "column": 5,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 36,
+                  "MATKBonus": 699,
+                  "description": "MATK Rate: 36%, MATK Bonus: +699, Knockback radius 180"
+                },
+                "2": {
+                  "dmgMATKPercent": 40,
+                  "MATKBonus": 759,
+                  "description": "MATK Rate: 40%, MATK Bonus: +759, Knockback radius 210"
+                },
+                "3": {
+                  "dmgMATKPercent": 414,
+                  "MATKBonus": 818,
+                  "description": "MATK Rate: 414%, MATK Bonus: +818, Knockback radius 240"
+                },
+                "4": {
+                  "dmgMATKPercent": 48,
+                  "MATKBonus": 877,
+                  "description": "MATK Rate: 48%, MATK Bonus: +877, Knockback radius 270"
+                },
+                "5": {
+                  "dmgMATKPercent": 52,
+                  "MATKBonus": 936,
+                  "description": "MATK Rate: 52%, MATK Bonus: +2362, Knockback radius 300"
+                }
+              }
+            },
+            {
+              "id": "vitalsurge",
+              "name": "Vital Surge",
+              "image": "images/vitalsurge.png",
+              "column": 5,
+              "row": 5,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "description": "Regen 6% Max HP during 5 seconds when taking damage"
+                },
+                "2": {
+                  "description": "Regen 7% Max HP during 5 seconds when taking damage"
+                },
+                "3": {
+                  "description": "Regen 8% Max HP during 6 seconds when taking damage"
+                },
+                "4": {
+                  "description": "Regen 9% Max HP during 6 seconds when taking damage"
+                },
+                "5": {
+                  "description": "Regen 10% Max HP during 7 seconds when taking damage"
+                }
+              }
+            },
+            {
+              "id": "moistenii",
+              "name": "Moisten II",
+              "image": "images/moisten2.png",
+              "column": 5,
+              "row": 6,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "description": "Regen 2% Max HP per second (Max 330)"
+                },
+                "2": {
+                  "description": "Regen 2% Max HP per second (Max 750)"
+                },
+                "3": {
+                  "description": "Regen 3% Max HP per second (Max 1235)"
+                },
+                "4": {
+                  "description": "Regen 3% Max HP per second (Max 1785)"
+                },
+                "5": {
+                  "description": "Regen 3% Max HP per second (Max 2400)"
+                }
+              }
+            },
+            {
+              "id": "agile",
+              "name": "Agile",
+              "image": "images/agile.png",
+              "column": 5,
+              "row": 7,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "description": "Move Speed% +10, Proc Rate: 6%"
+                },
+                "2": {
+                  "description": "Move Speed% +15, Proc Rate: 7%"
+                },
+                "3": {
+                  "description": "Move Speed% +20, Proc Rate: 8%"
+                },
+                "4": {
+                  "description": "Move Speed% +25, Proc Rate: 9%"
+                },
+                "5": {
+                  "description": "Move Speed% +30, Proc Rate: 10%"
+                }
+              }
+            },
+            {
+              "id": "spiritsoul",
+              "name": "Spirit Soul",
+              "image": "images/spiritsoul.png",
+              "column": 5,
+              "row": 7,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "description": "Heal 40%. Costs all MP"
+                },
+                "2": {
+                  "description": "Heal 55%. Costs all MP"
+                },
+                "3": {
+                  "description": "Heal 70%. Costs all MP"
+                },
+                "4": {
+                  "description": "Heal 85%. Costs all MP"
+                },
+                "5": {
+                  "description": "Heal 100%. Costs all MP"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "magicArcher",
+          "name": "Magic Archer",
+          "talents": [
+            {
+              "id": "forestbolt",
+              "name": "Forest Bolt I",
+              "image": "images/forestbolt.png",
+              "column": 1,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 8,
+                  "PATKBonus": 11,
+                  "description": "Attack Rate: 8%, PATK Bonus: +11"
+                },
+                "2": {
+                  "dmgPATKPercent": 11,
+                  "PATKBonus": 46,
+                  "description": "Attack Rate: 11%, PATK Bonus: +46"
+                },
+                "3": {
+                  "dmgPATKPercent": 14,
+                  "PATKBonus": 74,
+                  "description": "Attack Rate: 14%, PATK Bonus: +74"
+                },
+                "4": {
+                  "dmgPATKPercent": 18,
+                  "PATKBonus": 102,
+                  "description": "Attack Rate: 18%, PATK Bonus: +102"
+                },
+                "5": {
+                  "dmgPATKPercent": 21,
+                  "PATKBonus": 130,
+                  "description": "Attack Rate: 21%, PATK Bonus: +130"
+                }
+              }
+            },
+            {
+              "id": "seekerarrow",
+              "name": "Seeker Arrow",
+              "image": "images/seekerarrow1.png",
+              "column": 1,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 36,
+                  "PATKBonus": 292,
+                  "description": "Attack Rate: 36%, PATK Bonus: +292,PDEF REDUCTION:40"
+                },
+                "2": {
+                  "dmgPATKPercent": 40,
+                  "PATKBonus": 339,
+                  "description": "Attack Rate: 40%, PATK Bonus: +339,PDEF REDUCTION:66"
+                },
+                "3": {
+                  "dmgPATKPercent": 44,
+                  "PATKBonus": 385,
+                  "description": "Attack Rate: 44%, PATK Bonus: +385,PDEF REDUCTION:92"
+                },
+                "4": {
+                  "dmgPATKPercent": 48,
+                  "PATKBonus": 431,
+                  "description": "Attack Rate: 48%, PATK Bonus: +431,PDEF REDUCTION:118"
+                },
+                "5": {
+                  "dmgPATKPercent": 52,
+                  "PATKBonus": 477,
+                  "description": "Attack Rate: 52%, PATK Bonus: +477,PDEF REDUCTION:144"
+                }
+              }
+            },
+            {
+              "id": "forestboltii",
+              "name": "Forest Bolt II",
+              "image": "images/forestbolt.png",
+              "column": 1,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 8,
+                  "PATKBonus": 508,
+                  "description": "Attack Rate: 8%, PATK Bonus: +508"
+                },
+                "2": {
+                  "dmgPATKPercent": 11,
+                  "PATKBonus": 629,
+                  "description": "Attack Rate: 11%, PATK Bonus: +629"
+                },
+                "3": {
+                  "dmgPATKPercent": 14,
+                  "PATKBonus": 678,
+                  "description": "Attack Rate: 14%, PATK Bonus: +678"
+                },
+                "4": {
+                  "dmgPATKPercent": 18,
+                  "PATKBonus": 727,
+                  "description": "Attack Rate: 18%, PATK Bonus: +727"
+                },
+                "5": {
+                  "dmgPATKPercent": 21,
+                  "PATKBonus": 776,
+                  "description": "Attack Rate: 21%, PATK Bonus: +776"
+                }
+              }
+            },
+            {
+              "id": "sunchase",
+              "name": "Sun Chase",
+              "image": "images/sunchase.png",
+              "column": 1,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 189,
+                  "PATKBonus": 1838,
+                  "description": "Attack Rate: 189%, PATK Bonus: +1838, Knockback radius 165"
+                },
+                "2": {
+                  "dmgPATKPercent": 195,
+                  "PATKBonus": 1969,
+                  "description": "Attack Rate: 195%, PATK Bonus: +1969, Knockback radius 180"
+                },
+                "3": {
+                  "dmgPATKPercent": 200,
+                  "PATKBonus": 2100,
+                  "description": "Attack Rate: 200%, PATK Bonus: +2100, Knockback radius 195"
+                },
+                "4": {
+                  "dmgPATKPercent": 206,
+                  "PATKBonus": 2231,
+                  "description": "Attack Rate: 206%, PATK Bonus: +2231, Knockback radius 210"
+                },
+                "5": {
+                  "dmgPATKPercent": 212,
+                  "PATKBonus": 2362,
+                  "description": "Attack Rate: 212%, PATK Bonus: +2362, Knockback radius 225"
+                }
+              }
+            },
+            {
+              "id": "seekerarrowii",
+              "name": "Seeker Arrow",
+              "image": "images/seekerarrow2.png",
+              "column": 1,
+              "row": 5,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 36,
+                  "PATKBonus": 1364,
+                  "description": "Attack Rate: 36%, PATK Bonus: +1364,PDEF REDUCTION:5%"
+                },
+                "2": {
+                  "dmgPATKPercent": 40,
+                  "PATKBonus": 1442,
+                  "description": "Attack Rate: 40%, PATK Bonus: +1442,PDEF REDUCTION:11%"
+                },
+                "3": {
+                  "dmgPATKPercent": 44,
+                  "PATKBonus": 1520,
+                  "description": "Attack Rate: 44%, PATK Bonus: +1520,PDEF REDUCTION:18%"
+                },
+                "4": {
+                  "dmgPATKPercent": 48,
+                  "PATKBonus": 1598,
+                  "description": "Attack Rate: 48%, PATK Bonus: +1598,PDEF REDUCTION:26%"
+                },
+                "5": {
+                  "dmgPATKPercent": 52,
+                  "PATKBonus": 1676,
+                  "description": "Attack Rate: 52%, PATK Bonus: +1676,PDEF REDUCTION:35%"
+                }
+              }
+            },
+            {
+              "id": "forestboltiii",
+              "name": "Forest Bolt III",
+              "image": "images/forestbolt.png",
+              "column": 1,
+              "row": 6,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 8,
+                  "PATKBonus": 1675,
+                  "description": "Attack Rate: 8%, PATK Bonus: +1675"
+                },
+                "2": {
+                  "dmgPATKPercent": 11,
+                  "PATKBonus": 1757,
+                  "description": "Attack Rate: 11%, PATK Bonus: +1757"
+                },
+                "3": {
+                  "dmgPATKPercent": 14,
+                  "PATKBonus": 1839,
+                  "description": "Attack Rate: 14%, PATK Bonus: +1839"
+                },
+                "4": {
+                  "dmgPATKPercent": 18,
+                  "PATKBonus": 1921,
+                  "description": "Attack Rate: 18%, PATK Bonus: +1921"
+                },
+                "5": {
+                  "dmgPATKPercent": 21,
+                  "PATKBonus": 2003,
+                  "description": "Attack Rate: 21%, PATK Bonus: +2003"
+                }
+              }
+            },
+            {
+              "id": "doubleshot",
+              "name": "Double Shot I",
+              "image": "images/doubleshot.png",
+              "column": 2,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 58,
+                  "PATKBonus": 54,
+                  "description": "Hits twice,Attack Rate: 58%, PATK Bonus: +54"
+                },
+                "2": {
+                  "dmgPATKPercent": 60,
+                  "PATKBonus": 69,
+                  "description": "Hits twice,Attack Rate: 60%, PATK Bonus: +69"
+                },
+                "3": {
+                  "dmgPATKPercent": 61,
+                  "PATKBonus": 84,
+                  "description": "Hits twice,Attack Rate: 61%, PATK Bonus: +84"
+                },
+                "4": {
+                  "dmgPATKPercent": 63,
+                  "PATKBonus": 98,
+                  "description": "Hits twice,Attack Rate: 63%, PATK Bonus: +98"
+                },
+                "5": {
+                  "dmgPATKPercent": 65,
+                  "PATKBonus": 112,
+                  "description": "Hits twice,Attack Rate: 65%, PATK Bonus: +112"
+                }
+              }
+            },
+            {
+              "id": "snakeshot",
+              "name": "Snake Shot",
+              "image": "images/snakeshot.png",
+              "column": 2,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 4,
+                  "PATKBonus": 298,
+                  "description": "Attack Rate: 4%, PATK Bonus: +298, 5 targets"
+                },
+                "2": {
+                  "dmgPATKPercent": 7,
+                  "PATKBonus": 330,
+                  "description": "Attack Rate: 7%, PATK Bonus: +330, 6 targets"
+                },
+                "3": {
+                  "dmgPATKPercent": 10,
+                  "PATKBonus": 364,
+                  "description": "Attack Rate: 10%, PATK Bonus: +364, 7 targets"
+                },
+                "4": {
+                  "dmgPATKPercent": 13,
+                  "PATKBonus": 398,
+                  "description": "Attack Rate: 13%, PATK Bonus: +398, 8 targets"
+                },
+                "5": {
+                  "dmgPATKPercent": 16,
+                  "PATKBonus": 431,
+                  "description": "Attack Rate: 16%, PATK Bonus: +431, 9 targets"
+                }
+              }
+            },
+            {
+              "id": "doubleshotii",
+              "name": "Double Shot II",
+              "image": "images/doubleshot.png",
+              "column": 2,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 58,
+                  "PATKBonus": 403,
+                  "description": "Hits twice,Attack Rate: 58%, PATK Bonus: +403"
+                },
+                "2": {
+                  "dmgPATKPercent": 60,
+                  "PATKBonus": 431,
+                  "description": "Hits twice,Attack Rate: 60%, PATK Bonus: +431"
+                },
+                "3": {
+                  "dmgPATKPercent": 61,
+                  "PATKBonus": 459,
+                  "description": "Hits twice,Attack Rate: 61%, PATK Bonus: +459"
+                },
+                "4": {
+                  "dmgPATKPercent": 63,
+                  "PATKBonus": 486,
+                  "description": "Hits twice,Attack Rate: 63%, PATK Bonus: +486"
+                },
+                "5": {
+                  "dmgPATKPercent": 65,
+                  "PATKBonus": 514,
+                  "description": "Hits twice,Attack Rate: 65%, PATK Bonus: +514"
+                }
+              }
+            },
+            {
+              "id": "rainofarrows",
+              "name": "Rain of Arrows",
+              "image": "images/rainofarrows.png",
+              "column": 2,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 12,
+                  "PATKBonus": 1410,
+                  "description": "Targets: 5, Root 1s,Hits twice,Attack Rate: 12%, PATK Bonus: +1410"
+                },
+                "2": {
+                  "dmgPATKPercent": 15,
+                  "PATKBonus": 1479,
+                  "description": "Targets: 6, Root 1.5s,Hits twice,Attack Rate: 15%, PATK Bonus: +1479"
+                },
+                "3": {
+                  "dmgPATKPercent": 18,
+                  "PATKBonus": 1548,
+                  "description": "Targets: 7, Root 2s,Hits twice,Attack Rate: 18%, PATK Bonus: +1548"
+                },
+                "4": {
+                  "dmgPATKPercent": 21,
+                  "PATKBonus": 1617,
+                  "description": "Targets: 8, Root 2.5s,Hits twice,Attack Rate: 21%, PATK Bonus: +1617"
+                },
+                "5": {
+                  "dmgPATKPercent": 24,
+                  "PATKBonus": 1686,
+                  "description": "Targets: 9, Root 3s,Hits twice,Attack Rate: 24%, PATK Bonus: +1686"
+                }
+              }
+            },
+            {
+              "id": "manaSkin1",
+              "name": "Mana Skin I",
+              "image": "images/manaskin1.png",
+              "column": 3,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "precision"
+              ],
+              "levels": {
+                "1": {
+                  "patkPercent": 2,
+                  "pdef": 30,
+                  "description": "PATK % +2, PDEF + 30"
+                },
+                "2": {
+                  "patkPercent": 4,
+                  "pdef": 54,
+                  "description": "PATK% +4, PDEF + 54"
+                },
+                "3": {
+                  "patkPercent": 6,
+                  "pdef": 78,
+                  "description": "PATK% +6, PDEF + 78"
+                },
+                "4": {
+                  "patkPercent": 8,
+                  "pdef": 102,
+                  "description": "PATK% +8, PDEF + 102"
+                },
+                "5": {
+                  "patkPercent": 10,
+                  "pdef": 126,
+                  "description": "PATK% +10, PDEF + 126"
+                }
+              }
+            },
+            {
+              "id": "angelKiss",
+              "name": "Angel Kiss",
+              "image": "images/angelkiss.png",
+              "column": 3,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "precision"
+              ],
+              "levels": {
+                "1": {
+                  "luck": 3,
+                  "hitPercent": 5,
+                  "critPercent": 2,
+                  "description": "Luck +3, Hit% + 5, Crit %"
+                },
+                "2": {
+                  "luck": 6,
+                  "hitPercent": 10,
+                  "critPercent": 4,
+                  "description": "Luck +6, Hit% + 10, Crit % +4"
+                },
+                "3": {
+                  "luck": 9,
+                  "hitPercent": 15,
+                  "critPercent": 6,
+                  "description": "Luck +9, Hit% + 15, Crit % +6"
+                },
+                "4": {
+                  "luck": 12,
+                  "hitPercent": 20,
+                  "critPercent": 8,
+                  "description": "Luck +12, Hit% + 20, Crit % +8"
+                },
+                "5": {
+                  "luck": 15,
+                  "hitPercent": 25,
+                  "critPercent": 10,
+                  "description": "Luck +15, Hit% + 25, Crit % +10"
+                }
+              }
+            },
+            {
+              "id": "voidblade",
+              "name": "Void Blade",
+              "image": "images/voidblade.png",
+              "column": 3,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "precision"
+              ],
+              "levels": {
+                "1": {
+                  "attackSpeedPercent": 5,
+                  "description": "Interrupts casting. +5 Attack Speed% for 5 seconds. 32 seconds cooldown"
+                },
+                "2": {
+                  "attackSpeedPercent": 10,
+                  "description": "Interrupts casting. +10 Attack Speed% for 5 seconds. 26 seconds cooldown"
+                },
+                "3": {
+                  "attackSpeedPercent": 15,
+                  "description": "Interrupts casting. +15 Attack Speed% for 5 seconds. 20 seconds cooldown"
+                },
+                "4": {
+                  "attackSpeedPercent": 20,
+                  "description": "Interrupts casting. +20 Attack Speed% for 5 seconds. 14 seconds cooldown"
+                },
+                "5": {
+                  "attackSpeedPercent": 25,
+                  "description": "Interrupts casting. +25 Attack Speed% for 5 seconds. 8 seconds cooldown"
+                }
+              }
+            },
+            {
+              "id": "manaSkin2",
+              "name": "Mana Skin II",
+              "image": "images/manaskin1.png",
+              "column": 3,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "precision"
+              ],
+              "levels": {
+                "1": {
+                  "MDMGPercent": 3,
+                  "description": "Magic Damage Received Reduction% +3"
+                },
+                "2": {
+                  "MDMGPercent": 6,
+                  "description": "Magic Damage Received Reduction% +6"
+                },
+                "3": {
+                  "MDMGPercent": 9,
+                  "description": "Magic Damage Received Reduction% +9"
+                },
+                "4": {
+                  "MDMGPercent": 12,
+                  "description": "Magic Damage Received Reduction% +12"
+                },
+                "5": {
+                  "MDMGPercent": 15,
+                  "description": "Magic Damage Received Reduction% +15"
+                }
+              }
+            },
+            {
+              "id": "snareTrap",
+              "name": "Snare Trap",
+              "image": "images/snaretrap.png",
+              "column": 3,
+              "row": 5,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "precision"
+              ],
+              "levels": {
+                "1": {
+                  "cooldown": 20,
+                  "description": "Root 3s"
+                },
+                "2": {
+                  "cooldown": 20,
+                  "description": "Root 3.5s"
+                },
+                "3": {
+                  "cooldown": 20,
+                  "description": "Root 4s"
+                },
+                "4": {
+                  "cooldown": 20,
+                  "description": "Root 4.5s"
+                },
+                "5": {
+                  "cooldown": 20,
+                  "description": "Root 5s"
+                }
+              }
+            },
+            {
+              "id": "nimble",
+              "name": "Nimble",
+              "image": "images/nimble.png",
+              "column": 3,
+              "row": 6,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "precision"
+              ],
+              "levels": {
+                "1": {
+                  "mpRegen": 3,
+                  "moveSpeed": 5,
+                  "description": "MP Regen +3, Move Speed + 5"
+                },
+                "2": {
+                  "mpRegen": 6,
+                  "moveSpeed": 10,
+                  "description": "MP Regen +6, Move Speed + 10"
+                },
+                "3": {
+                  "mpRegen": 9,
+                  "moveSpeed": 15,
+                  "description": "MP Regen +9, Move Speed + 15"
+                },
+                "4": {
+                  "mpRegen": 12,
+                  "moveSpeed": 20,
+                  "description": "MP Regen +12, Move Speed + 20"
+                },
+                "5": {
+                  "mpRegen": 15,
+                  "moveSpeed": 25,
+                  "description": "MP Regen +15, Move Speed + 25"
+                }
+              }
+            },
+            {
+              "id": "waves",
+              "name": "Waves",
+              "image": "images/waves.png",
+              "column": 3,
+              "row": 7,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "precision"
+              ],
+              "levels": {
+                "1": {
+                  "patkPercent": 4,
+                  "critPercent": 3,
+                  "description": "PATK% +4, Crit% +3 for 10 seconds every 20."
+                },
+                "2": {
+                  "patkPercent": 8,
+                  "critPercent": 6,
+                  "description": "PATK% +8, Crit% +6 for 10 seconds every 20."
+                },
+                "3": {
+                  "patkPercent": 12,
+                  "critPercent": 9,
+                  "description": "PATK% +12, Crit% +9 for 10 seconds every 20."
+                },
+                "4": {
+                  "patkPercent": 16,
+                  "critPercent": 12,
+                  "description": "PATK% +16, Crit% +12 for 10 seconds every 20."
+                },
+                "5": {
+                  "patkPercent": 20,
+                  "critPercent": 15,
+                  "description": "PATK% +20, Crit% +15 for 10 seconds every 20."
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
