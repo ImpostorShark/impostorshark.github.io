@@ -79,6 +79,30 @@ function computeStats(){
   return stats;
 }
 
+function getAvailableSkillPoints(){
+  const lvl = Number(document.getElementById('characterLevel').value)/2;
+  return Math.max(0, lvl);
+}
+
+function getUsedSkillPoints(){
+  let used = 0;
+  currentClass.trees.forEach(tree=>{
+    tree.talents.forEach(t=>{
+      used += t.level || 0;
+    });
+  });
+  return used;
+}
+
+function updateSkillPointsInfo(){
+  const available = getAvailableSkillPoints();
+  const used = getUsedSkillPoints();
+  const info = document.getElementById('skillPointsInfo');
+  if(info){
+    info.textContent = `Skill Points: ${used}/${available}`;
+  }
+}
+
 function findTalent(id){
  for(const tree of currentClass.trees){
    const found=tree.talents.find(t=>t.id===id);
@@ -115,6 +139,10 @@ function changeLevel(id, amount){
  }
  if(amount>0 && !canUpgradeTalent(talent,tree)) return;
 
+ const available = getAvailableSkillPoints();
+ const used = getUsedSkillPoints();
+ if(amount>0 && used + amount > available) return;
+
  const next=talent.level+amount;
  if(next<0 || next>talent.maxLevel) return;
 
@@ -131,6 +159,7 @@ function render(){
 
  currentClass.trees.forEach(tree=>{
    const wrapper=document.createElement('div');
+   wrapper.className='tree-wrapper';
 
    const title=document.createElement('h2');
    title.className='tree-title';
@@ -138,7 +167,12 @@ function render(){
 
    const grid=document.createElement('div');
    grid.className='tree';
+   const maxColumn = Math.max(...tree.talents.map(t=>t.column||1));
+   grid.style.gridTemplateColumns = `repeat(${Math.max(maxColumn,1)}, 160px)`;
 
+   const available = getAvailableSkillPoints();
+   const used = getUsedSkillPoints();
+   const outOfPoints = used >= available;
    tree.talents.forEach(t=>{
       const card=document.createElement('div');
       card.className='skill-card';
@@ -175,15 +209,19 @@ function render(){
         }
       }
 
+      const plusDisabled = outOfPoints && t.level < t.maxLevel ? 'disabled' : '';
+      const minusDisabled = t.level <= 0 ? 'disabled' : '';
       card.innerHTML=`
         <img src="${t.image}" onerror="this.style.display='none'">
-        <div><strong>${t.name}</strong></div>
+        <div"><strong>${t.name}</strong></div>
+        <div class="button-row">
+          <button class="skill-btn skill-btn-decr" onclick="changeLevel('${t.id}',-1)" ${minusDisabled}>-</button>
+          <button class="skill-btn skill-btn-incr" onclick="changeLevel('${t.id}',1)" ${plusDisabled}>+</button>
+        </div>
         <div>Lv ${t.minLevel}</div>
         ${descHtml}
         ${dmgHtml}
         <div class="skill-level">${t.level}/${t.maxLevel}</div>
-        <button onclick="changeLevel('${t.id}',-1)">-</button>
-        <button onclick="changeLevel('${t.id}',1)">+</button>
       `;
 
       grid.appendChild(card);
@@ -200,11 +238,12 @@ function updateSummary(){
  const s=document.getElementById('summary');
  s.innerHTML='';
  Object.entries(stats).forEach(([k,v])=>{
-   if(k === 'dmgPATKPercent' || k === 'PATKBonus' || k === 'dmgPatkPercent' || k === 'patkBonus' || k === 'dmgMATKPercent' || k === 'MATKBonus' || k === 'dmgMatkPercent' || k === 'matkBonus') return;
+   if(k.includes('Bonus') ||  k.includes('bonus') || k.includes('DMG') || k.includes('dmg')) return;
    const d=document.createElement('div');
    d.innerHTML=`<b>${k}</b>: ${v}`;
    s.appendChild(d);
  });
+ updateSkillPointsInfo();
 }
 
 document.addEventListener('input',()=>{render();updateSummary();});
