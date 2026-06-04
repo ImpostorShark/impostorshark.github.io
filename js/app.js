@@ -36,8 +36,10 @@ function computeStats(){
   const stats = {
     PATK:+document.getElementById('patk').value,
     MATK:+document.getElementById('matk').value,
-    hp:+document.getElementById('hp').value,
-    Heal: document.getElementById('heal') ? +document.getElementById('heal').value : 0
+    PDEF:+document.getElementById('pdef').value,
+    MDEF:+document.getElementById('mdef').value,
+    HP:+document.getElementById('hp').value,
+    HEAL: document.getElementById('heal') ? +document.getElementById('heal').value : 0
   };
 
   currentClass.trees.forEach(tree=>{
@@ -47,48 +49,57 @@ function computeStats(){
       if(!lvl) return;
       Object.entries(lvl).forEach(([k,v])=>{
         if(k === 'description' || k === 'bonusHeal') return;
-        if(k.endsWith('Percent')) return;
+        // skip skill-level damage fields (they start with "dmg"), allow percent buffs like patkPercent
+        if(/^dmg/.test(k)) return;
         if(stats[k]===undefined) stats[k]=0;
         stats[k]+=v;
       });
     });
   });
 
-  // merge raw patk into the final PATK stat if present
-  if(stats.patk){
-    stats.PATK = (stats.PATK || 0) + stats.patk;
-    delete stats.patk;
-  }
+  // merge raw patk/matk/hp/heal/pdef/mdef into normalized uppercase stats if present
+  if(stats.patk){ stats.PATK = (stats.PATK || 0) + stats.patk; delete stats.patk; }
+  if(stats.matk){ stats.MATK = (stats.MATK || 0) + stats.matk; delete stats.matk; }
+  if(stats.hp){ stats.HP = (stats.HP || 0) + stats.hp; delete stats.hp; }
+  if(stats.heal){ stats.HEAL = (stats.HEAL || 0) + stats.heal; delete stats.heal; }
+  if(stats.pdef){ stats.PDEF = (stats.PDEF || 0) + stats.pdef; delete stats.pdef; }
+  if(stats.mdef){ stats.MDEF = (stats.MDEF || 0) + stats.mdef; delete stats.mdef; }
 
-  // merge raw matk into the final MATK stat if present
-  if(stats.matk){
-    stats.MATK = (stats.MATK || 0) + stats.matk;
-    delete stats.matk;
-  }
-
-  // merge raw heal into the final Heal stat if present
-  if(stats.heal){
-    stats.Heal = (stats.Heal || 0) + stats.heal;
-    delete stats.heal;
-  }
-
-  // derive final PATK: base PATK + PATKPercent
+  // derive final PATK: base PATK * (1 + PATKPercent)
   let patk = stats.PATK || 0;
-  if(stats.patkPercent) patk += stats.patkPercent;
-  if(stats.PATKPercent) patk += stats.PATKPercent;
-  stats.PATK = Math.round(patk);
+  const rawPatkPercent = (stats.patkPercent || 0) + (stats.PATKPercent || 0);
+  if(rawPatkPercent) patk = Math.round(patk * (1 + rawPatkPercent / 100));
+  stats.PATK = patk;
 
-  // derive final MATK: base MATK + MATKPercent
+  // derive final MATK: base MATK * (1 + MATKPercent)
   let matk = stats.MATK || 0;
-  if(stats.matkPercent) matk += stats.matkPercent;
-  if(stats.MATKPercent) matk += stats.MATKPercent;
-  stats.MATK = Math.round(matk);
+  const rawMatkPercent = (stats.matkPercent || 0) + (stats.MATKPercent || 0);
+  if(rawMatkPercent) matk = Math.round(matk * (1 + rawMatkPercent / 100));
+  stats.MATK = matk;
 
-  // derive final Heal: base Heal + HealPercent
-  let heal = stats.Heal || 0;
+  // derive final HP: base HP * (1 + hpPercent)
+  let hp = stats.HP || 0;
+  const rawHpPercent = (stats.hpPercent || 0) + (stats.HPPercent || 0);
+  if(rawHpPercent) hp = hp * (1 + rawHpPercent / 100);
+  stats.HP = Math.round(hp); // keep one decimal to show small percent changes
+
+  // derive final PDEF: base PDEF * (1 + PDEFPercent)
+  let pdef = stats.PDEF || 0;
+  const rawPdefPercent = (stats.pdefPercent || 0) + (stats.PDEFPercent || 0);
+  if(rawPdefPercent) pdef = Math.round(pdef * (1 + rawPdefPercent / 100));
+  stats.PDEF = pdef;
+
+  // derive final MDEF: base MDEF * (1 + MDEFPercent)
+  let mdef = stats.MDEF || 0;
+  const rawMdefPercent = (stats.mdefPercent || 0) + (stats.MDEFPercent || 0);
+  if(rawMdefPercent) mdef = Math.round(mdef * (1 + rawMdefPercent / 100));
+  stats.MDEF = mdef;
+
+  // derive final Heal: base HEAL + HealPercent
+  let heal = stats.HEAL || 0;
   if(stats.healPercent) heal += stats.healPercent;
   if(stats.HealPercent) heal += stats.HealPercent;
-  stats.Heal = Math.round(heal);
+  stats.HEAL = Math.round(heal);
 
   return stats;
 }
@@ -228,14 +239,14 @@ function render(){
           dmgTotal += (matk) * (percentMATK / 100);
         }
         if(percentHP !== null){
-          const hpv = Number(stats.hp || 0) + hpBonus;
+          const hpv = Number(stats.HP || 0) + hpBonus;
           dmgTotal += (hpv) * (percentHP / 100);
         }
 
         // dmgHealPercent is damage calculated from the Heal stat
         const percentHealDmg = lvlObj.dmgHealPercent !== undefined ? Number(lvlObj.dmgHealPercent) : null;
         if(percentHealDmg !== null){
-          const healStat = (stats.Heal || 0);
+          const healStat = (stats.HEAL || 0);
           dmgTotal += healStat * (percentHealDmg / 100);
         }
 
@@ -244,7 +255,7 @@ function render(){
         const bonusHeal = Number(lvlObj.bonusHeal || lvlObj.BonusHeal || 0);
 
         if(percentHealDirect !== null){
-          const baseHeal = (stats.Heal || 0) + bonusHeal;
+          const baseHeal = (stats.HEAL || 0) + bonusHeal;
           healTotal += baseHeal * (percentHealDirect / 100);
         }
 
@@ -287,8 +298,9 @@ function updateSummary(){
  const stats = computeStats();
  const s=document.getElementById('summary');
  s.innerHTML='';
- Object.entries(stats).forEach(([k,v])=>{
-   if(k.includes('Bonus') ||  k.includes('bonus') || k.includes('DMG') || k.includes('dmg') || k === "healPercent") return;
+  Object.entries(stats).forEach(([k,v])=>{
+   // hide bonus and dmg-specific entries; show MDMGPercent and PDMGPercent as calculated
+   if(k.includes('Bonus') || k.includes('bonus') || k.startsWith('dmg') || (k.endsWith('Percent') && k !== 'MDMGPercent' && k !== 'PDMGPercent') || k === 'healPercent') return;
    const d=document.createElement('div');
    d.innerHTML=`<b>${k}</b>: ${v}`;
    s.appendChild(d);
