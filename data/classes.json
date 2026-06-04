@@ -426,27 +426,27 @@
               "exclusiveWith": [],
               "levels": {
                 "1": {
-                  "healDMGPercent": 110,
+                  "healPercent": 110,
                   "bonusHeal": 776,
                   "description": "Heal% +110, Bonus Heal +776"
                 },
                 "2": {
-                  "healDMGPercent": 113,
+                  "healPercent": 113,
                   "bonusHeal": 830,
                   "description": "Heal% +113, Bonus Heal +830"
                 },
                 "3": {
-                  "healDMGPercent": 117,
+                  "healPercent": 117,
                   "bonusHeal": 884,
                   "description": "Heal% +117, Bonus Heal +884"
                 },
                 "4": {
-                  "healDMGPercent": 120,
+                  "healPercent": 120,
                   "bonusHeal": 938,
                   "description": "Heal% +120, Bonus Heal +938"
                 },
                 "5": {
-                  "healDMGPercent": 123,
+                  "healPercent": 123,
                   "bonusHeal": 992,
                   "description": "Heal% +123, Bonus Heal +992"
                 }
@@ -1251,6 +1251,1156 @@
                   "patkPercent": 20,
                   "critPercent": 15,
                   "description": "PATK% +20, Crit% +15 for 10 seconds every 20."
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "priest",
+      "name": "Priest",
+      "trees": [
+        {
+          "id": "lightpriest",
+          "name": "Light Priest",
+          "talents": [
+            {
+              "id": "radiantbolt1",
+              "name": "Radiant Bolt I",
+              "image": "images/radiantbolt1.png",
+              "column": 1,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 44,
+                  "dmgHealPercent": 53,
+                  "MATKBonus": 20,
+                  "description": "MATK Rate: 44%, Heal Rate: 53% MATK Bonus: +20"
+                },
+                "2": {
+                  "dmgMATKPercent": 48,
+                  "dmgHealPercent": 55,
+                  "MATKBonus": 53,
+                  "description": "MATK Rate: 48%, Heal Rate: 55% MATK Bonus: +53"
+                },
+                "3": {
+                  "dmgMATKPercent": 53,
+                  "dmgHealPercent": 56,
+                  "MATKBonus": 86,
+                  "description": "MATK Rate: 53%, Heal Rate: 56% MATK Bonus: +86"
+                },
+                "4": {
+                  "dmgMATKPercent": 57,
+                  "dmgHealPercent": 58,
+                  "MATKBonus": 119,
+                  "description": "MATK Rate: 57%, Heal Rate: 58% MATK Bonus: +119"
+                },
+                "5": {
+                  "dmgMATKPercent": 61,
+                  "dmgHealPercent": 59,
+                  "MATKBonus": 152,
+                  "description": "MATK Rate: 61%, Heal Rate: 59% MATK Bonus: +152"
+                }
+              }
+            },
+            {
+              "id": "soulinfusion",
+              "name": "Soul Infusion",
+              "image": "images/soulinfusion1.png",
+              "column": 1,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 14,
+                  "dmgHealPercent": 34,
+                  "MATKBonus": 211,
+                  "description": "MATK Rate: 14%, Heal Rate: 24%, MATK Bonus: +211"
+                },
+                "2": {
+                  "dmgMATKPercent": 17,
+                  "dmgHealPercent": 35,
+                  "MATKBonus": 245,
+                  "description": "MATK Rate: 17%, Heal Rate: 35%, MATK Bonus: +245"
+                },
+                "3": {
+                  "dmgMATKPercent": 21,
+                  "dmgHealPercent": 36,
+                  "MATKBonus": 279,
+                  "description": "MATK Rate: 21%, Heal Rate: 36%, MATK Bonus: +279"
+                },
+                "4": {
+                  "dmgMATKPercent": 24,
+                  "dmgHealPercent": 37,
+                  "MATKBonus": 313,
+                  "description": "MATK Rate: 24%, Heal Rate: 37%, MATK Bonus: +313"
+                },
+                "5": {
+                  "dmgMATKPercent": 28,
+                  "dmgHealPercent": 38,
+                  "MATKBonus": 347,
+                  "description": "MATK Rate: 28%, Heal Rate: 38%, MATK Bonus: +347"
+                }
+              }
+            },
+            {
+              "id": "forestboltii",
+              "name": "TBD",
+              "image": "images/forestbolt.png",
+              "column": 1,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 8,
+                  "MATKBonus": 508,
+                  "description": "Attack Rate: 8%, MATK Bonus: +508"
+                },
+                "2": {
+                  "dmgMATKPercent": 11,
+                  "MATKBonus": 629,
+                  "description": "Attack Rate: 11%, MATK Bonus: +629"
+                },
+                "3": {
+                  "dmgMATKPercent": 14,
+                  "MATKBonus": 678,
+                  "description": "Attack Rate: 14%, MATK Bonus: +678"
+                },
+                "4": {
+                  "dmgMATKPercent": 18,
+                  "MATKBonus": 727,
+                  "description": "Attack Rate: 18%, MATK Bonus: +727"
+                },
+                "5": {
+                  "dmgMATKPercent": 21,
+                  "MATKBonus": 776,
+                  "description": "Attack Rate: 21%, MATK Bonus: +776"
+                }
+              }
+            },
+            {
+              "id": "sunchase",
+              "name": "TBD",
+              "image": "images/sunchase.png",
+              "column": 1,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 189,
+                  "MATKBonus": 1838,
+                  "description": "Attack Rate: 189%, MATK Bonus: +1838, Knockback radius 165"
+                },
+                "2": {
+                  "dmgMATKPercent": 195,
+                  "MATKBonus": 1969,
+                  "description": "Attack Rate: 195%, MATK Bonus: +1969, Knockback radius 180"
+                },
+                "3": {
+                  "dmgMATKPercent": 200,
+                  "MATKBonus": 2100,
+                  "description": "Attack Rate: 200%, MATK Bonus: +2100, Knockback radius 195"
+                },
+                "4": {
+                  "dmgMATKPercent": 206,
+                  "MATKBonus": 2231,
+                  "description": "Attack Rate: 206%, MATK Bonus: +2231, Knockback radius 210"
+                },
+                "5": {
+                  "dmgMATKPercent": 212,
+                  "MATKBonus": 2362,
+                  "description": "Attack Rate: 212%, MATK Bonus: +2362, Knockback radius 225"
+                }
+              }
+            },
+            {
+              "id": "seekerarrowii",
+              "name": "TBD",
+              "image": "images/seekerarrow2.png",
+              "column": 1,
+              "row": 5,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 36,
+                  "MATKBonus": 1364,
+                  "description": "Attack Rate: 36%, MATK Bonus: +1364,PDEF REDUCTION:5%"
+                },
+                "2": {
+                  "dmgMATKPercent": 40,
+                  "MATKBonus": 1442,
+                  "description": "Attack Rate: 40%, MATK Bonus: +1442,PDEF REDUCTION:11%"
+                },
+                "3": {
+                  "dmgMATKPercent": 44,
+                  "MATKBonus": 1520,
+                  "description": "Attack Rate: 44%, MATK Bonus: +1520,PDEF REDUCTION:18%"
+                },
+                "4": {
+                  "dmgMATKPercent": 48,
+                  "MATKBonus": 1598,
+                  "description": "Attack Rate: 48%, MATK Bonus: +1598,PDEF REDUCTION:26%"
+                },
+                "5": {
+                  "dmgMATKPercent": 52,
+                  "MATKBonus": 1676,
+                  "description": "Attack Rate: 52%, MATK Bonus: +1676,PDEF REDUCTION:35%"
+                }
+              }
+            },
+            {
+              "id": "mend",
+              "name": "Mend",
+              "image": "images/mend.png",
+              "column": 2,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "healPercent": 167,
+                  "bonusHeal": 38,
+                  "description": "Heals for 167%, Bonus heal: 38"
+                },
+                "2": {
+                  "healPercent": 172,
+                  "bonusHeal": 100,
+                  "description": "Heals for 172%, Bonus heal: 100"
+                },
+                "3": {
+                  "healPercent": 177,
+                  "bonusHeal": 162,
+                  "description": "Heals for 177%, Bonus heal: 162"
+                },
+                "4": {
+                  "healPercent": 182,
+                  "bonusHeal": 224,
+                  "description": "Heals for 182%, Bonus heal: 224"
+                },
+                "5": {
+                  "healPercent": 187,
+                  "bonusHeal": 286,
+                  "description": "Heals for 187%, Bonus heal: 286"
+                }
+              }
+            },
+            {
+              "id": "holydew1",
+              "name": "Holy Dew",
+              "image": "images/holydew1.png",
+              "column": 2,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "Regen 4% Max HP per second for 12 seconds (Max 100). Damage reduction 3%"
+                },
+                "2": {
+                  "description": "Regen 4% Max HP per second for 12 seconds (Max 196). Damage reduction 6%"
+                },
+                "3": {
+                  "description": "Regen 5% Max HP per second for 12 seconds (Max 363). Damage reduction 9%"
+                },
+                "4": {
+                  "description": "Regen 5% Max HP per second for 12 seconds (Max 481). Damage reduction 12%"
+                },
+                "5": {
+                  "description": "Regen 6% Max HP per second for 12 seconds (Max 720). Damage reduction 15%"
+                }
+              }
+            },
+            {
+              "id": "doubleshotii",
+              "name": "TBD",
+              "image": "images/doubleshot.png",
+              "column": 2,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 58,
+                  "PATKBonus": 403,
+                  "description": "Hits twice,Attack Rate: 58%, PATK Bonus: +403"
+                },
+                "2": {
+                  "dmgPATKPercent": 60,
+                  "PATKBonus": 431,
+                  "description": "Hits twice,Attack Rate: 60%, PATK Bonus: +431"
+                },
+                "3": {
+                  "dmgPATKPercent": 61,
+                  "PATKBonus": 459,
+                  "description": "Hits twice,Attack Rate: 61%, PATK Bonus: +459"
+                },
+                "4": {
+                  "dmgPATKPercent": 63,
+                  "PATKBonus": 486,
+                  "description": "Hits twice,Attack Rate: 63%, PATK Bonus: +486"
+                },
+                "5": {
+                  "dmgPATKPercent": 65,
+                  "PATKBonus": 514,
+                  "description": "Hits twice,Attack Rate: 65%, PATK Bonus: +514"
+                }
+              }
+            },
+            {
+              "id": "rainofarrows",
+              "name": "TBD",
+              "image": "images/rainofarrows.png",
+              "column": 2,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 12,
+                  "PATKBonus": 1410,
+                  "description": "Targets: 5, Root 1s,Hits twice,Attack Rate: 12%, PATK Bonus: +1410"
+                },
+                "2": {
+                  "dmgPATKPercent": 15,
+                  "PATKBonus": 1479,
+                  "description": "Targets: 6, Root 1.5s,Hits twice,Attack Rate: 15%, PATK Bonus: +1479"
+                },
+                "3": {
+                  "dmgPATKPercent": 18,
+                  "PATKBonus": 1548,
+                  "description": "Targets: 7, Root 2s,Hits twice,Attack Rate: 18%, PATK Bonus: +1548"
+                },
+                "4": {
+                  "dmgPATKPercent": 21,
+                  "PATKBonus": 1617,
+                  "description": "Targets: 8, Root 2.5s,Hits twice,Attack Rate: 21%, PATK Bonus: +1617"
+                },
+                "5": {
+                  "dmgPATKPercent": 24,
+                  "PATKBonus": 1686,
+                  "description": "Targets: 9, Root 3s,Hits twice,Attack Rate: 24%, PATK Bonus: +1686"
+                }
+              }
+            },
+            {
+              "id": "azurefeather",
+              "name": "Azure Feather",
+              "image": "images/azurefeather.png",
+              "column": 3,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "bloodresilience"
+              ],
+              "levels": {
+                "1": {
+                  "description": "PDEF% & MDEF%: + 5%, Bonus PDEF & MDEF: +10"
+                },
+                "2": {
+                  "description": "PDEF% & MDEF%: + 10%, Bonus PDEF & MDEF: +20"
+                },
+                "3": {
+                  "description": "PDEF% & MDEF%: + 15%, Bonus PDEF & MDEF: +30"
+                },
+                "4": {
+                  "description": "PDEF% & MDEF%: + 20%, Bonus PDEF & MDEF: +40"
+                },
+                "5": {
+                  "description": "PDEF% & MDEF%: + 25%, Bonus PDEF & MDEF: +50"
+                }
+              }
+            },
+            {
+              "id": "mindcleanse",
+              "name": "Mind Cleanse",
+              "image": "images/mindcleanse.png",
+              "column": 3,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "bloodresilience"
+              ],
+              "levels": {
+                "1": {
+                  "description": "Cleanses all debuffs from 3 nearby targets. 16s cooldown."
+                },
+                "2": {
+                  "description": "Cleanses all debuffs from 5 nearby targets. 14s cooldown."
+                },
+                "3": {
+                  "description": "Cleanses all debuffs from 8 nearby targets. 12s cooldown."
+                },
+                "4": {
+                  "description": "Cleanses all debuffs from 12 nearby targets. 10s cooldown."
+                },
+                "5": {
+                  "description": "Cleanses all debuffs from 15 nearby targets. 8s cooldown."
+                }
+              }
+            },
+            {
+              "id": "resurrection",
+              "name": "Resurrection",
+              "image": "images/resurrection.png",
+              "column": 3,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "bloodresilience"
+              ],
+              "levels": {
+                "1": {
+                  "description": "Revives target ally with 20% HP & MP. 10s cast time."
+                },
+                "2": {
+                  "description": "Revives target ally with 25% HP & MP. 8s cast time."
+                },
+                "3": {
+                  "description": "Revives target ally with 30% HP & MP. 6s cast time."
+                },
+                "4": {
+                  "description": "Revives target ally with 35% HP & MP. 4s cast time."
+                },
+                "5": {
+                  "description": "Revives target ally with 40% HP & MP. 2s cast time."
+                }
+              }
+            },
+            {
+              "id": "angeltear",
+              "name": "Angel Tear",
+              "image": "images/angeltear.png",
+              "column": 3,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "bloodresilience"
+              ],
+              "levels": {
+                "1": {
+                  "description": "Passively restores 2% HP & MP every 10 seconds."
+                },
+                "2": {
+                  "description": "Passively restores 4% HP & MP every 10 seconds."
+                },
+                "3": {
+                  "description": "Passively restores 6% HP & MP every 10 seconds."
+                },
+                "4": {
+                  "description": "Passively restores 8% HP & MP every 10 seconds."
+                },
+                "5": {
+                  "description": "Passively restores 10% HP & MP every 10 seconds."
+                }
+              }
+            },
+            {
+              "id": "powercircle",
+              "name": "Power Circle",
+              "image": "images/powercircle.png",
+              "column": 3,
+              "row": 5,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "bloodresilience"
+              ],
+              "levels": {
+                "1": {
+                  "description": "Increases PATK & MATK: +5%. Bonus PATK & MATK: 10"
+                },
+                "2": {
+                  "description": "Increases PATK & MATK: +10%. Bonus PATK & MATK: 20"
+                },
+                "3": {
+                  "description": "Increases PATK & MATK: +15%. Bonus PATK & MATK: 30"
+                },
+                "4": {
+                  "description": "Increases PATK & MATK: +20%. Bonus PATK & MATK: 40"
+                },
+                "5": {
+                  "description": "Increases PATK & MATK: +25%. Bonus PATK & MATK: 50"
+                }
+              }
+            },
+            {
+              "id": "snareTrap",
+              "name": "TBD",
+              "image": "images/snaretrap.png",
+              "column": 3,
+              "row": 6,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "bloodresilience"
+              ],
+              "levels": {
+                "1": {
+                  "cooldown": 20,
+                  "description": "Root 3s"
+                },
+                "2": {
+                  "cooldown": 20,
+                  "description": "Root 3.5s"
+                },
+                "3": {
+                  "cooldown": 20,
+                  "description": "Root 4s"
+                },
+                "4": {
+                  "cooldown": 20,
+                  "description": "Root 4.5s"
+                },
+                "5": {
+                  "cooldown": 20,
+                  "description": "Root 5s"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "bloodpriest",
+          "name": "Blood Priest",
+          "talents": [
+            {
+              "id": "bloodbolt1",
+              "name": "Blood Bolt I",
+              "image": "images/bloodbolt1.png",
+              "column": 1,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 18,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4%, MATK Bonus: +18"
+                },
+                "2": {
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 18,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4.1%, MATK Bonus: +47"
+                },
+                "3": {
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 18,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4.2%, MATK Bonus: +76"
+                },
+                "4": {
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 18,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4.4%, MATK Bonus: +105"
+                },
+                "5": {
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 18,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4.5%, MATK Bonus: +134"
+                }
+              }
+            },
+            {
+              "id": "bloodcurse",
+              "name": "Blood Curse I",
+              "image": "images/bloodcurse1.png",
+              "column": 1,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "After 4s, reduce Max HP by 8% (Max 600), +2% damage taken. You heal by 8% (Max 600) and take 2% less damage"
+                },
+                "2": {
+                  "description": "After 4s, reduce Max HP by 8% (Max 1170), +4% damage taken. You heal by 8% (Max 1170) and take 4% less damage"
+                },
+                "3": {
+                  "description": "After 4s, reduce Max HP by 8% (Max 1740), +6% damage taken. You heal by 8% (Max 1740) and take 6% less damage"
+                },
+                "4": {
+                  "description": "After 4s, reduce Max HP by 8% (Max 2310), +8% damage taken. You heal by 8% (Max 2310) and take 8% less damage"
+                },
+                "5": {
+                  "description": "After 4s, reduce Max HP by 8% (Max 2880), +10% damage taken. You heal by 8% (Max 2880) and take 10% less damage"
+                }
+              }
+            },
+            {
+              "id": "bloodscythe1",
+              "name": "Blood Scythe I",
+              "image": "images/bloodscythe1.png",
+              "column": 1,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 80,
+                  "MATKBonus": 500,
+                  "dmgHPPercent": 6,
+                  "description": "MATK Rate: 80%, MATK BONUS: +500, Current HP Rate: 6%, DOT of 1% max HP/s(max 216)"
+                },
+                "2": {
+                  "description": "MATK Rate: 80%, MATK BONUS: +556, Current HP Rate: 6.2%, DOT of 1% max HP/s(max 504)"
+                },
+                "3": {
+                  "description": "MATK Rate: 80%, MATK BONUS: +612, Current HP Rate: 6.4%, DOT of 1% max HP/s(max 756)"
+                },
+                "4": {
+                  "description": "MATK Rate: 80%, MATK BONUS: +668, Current HP Rate: 6.5%, DOT of 2% max HP/s(max 1296)"
+                },
+                "5": {
+                  "description": "MATK Rate: 80%, MATK BONUS: +724, Current HP Rate: 6.7%, DOT of 2% max HP/s(max 1800)"
+                }
+              }
+            },{
+              "id": "bloodbolt2",
+              "name": "Blood Bolt II",
+              "image": "images/bloodbolt2.png",
+              "column": 1,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 449,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4%, MATK Bonus: +449"
+                },
+                "2": {
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 487,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4.1%, MATK Bonus: +487"
+                },
+                "3": {
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 525,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4.2%, MATK Bonus: +525"
+                },
+                "4": {
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 563,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4.4%, MATK Bonus: +563"
+                },
+                "5": {
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 602,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4.5%, MATK Bonus: +602"
+                }
+              }
+            },
+            {
+              "id": "bloodcurse2",
+              "name": "TBD",
+              "image": "images/bloodcurse2.png",
+              "column": 1,
+              "row": 5,
+              "minLevel": 1,
+              "maxLevel": 0,
+              "levels": {
+                "1": {
+                  "description": "Sleep 6s. Cooldown 20s.Target wakes when hit."
+                },
+                "2": {
+                  "description": "Sleep 9s. Cooldown 22s.Target wakes when hit."
+                },
+                "3": {
+                  "description": "Sleep 12s. Cooldown 24s.Target wakes when hit."
+                },
+                "4": {
+                  "description": "Sleep 15s. Cooldown 26s.Target wakes when hit."
+                },
+                "5": {
+                  "description": "Sleep 18s. Cooldown 28s.Target wakes when hit."
+                }
+              }
+            },
+            {
+              "id": "bloodscythe2",
+              "name": "TBD",
+              "image": "images/bloodscythe2.png",
+              "column": 1,
+              "row": 6,
+              "minLevel": 1,
+              "maxLevel": 0,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 36,
+                  "MATKBonus": 160,
+                  "description": "MATK Rate: 36%, MATK Bonus: +160, AoE"
+                },
+                "2": {
+                  "dmgMATKPercent": 38,
+                  "MATKBonus": 168,
+                  "description": "MATK Rate: 38%, MATK Bonus: +168, AoE"
+                },
+                "3": {
+                  "dmgMATKPercent": 40,
+                  "MATKBonus": 176,
+                  "description": "MATK Rate: 40%, MATK Bonus: +176, AoE"
+                },
+                "4": {
+                  "dmgMATKPercent": 41,
+                  "MATKBonus": 184,
+                  "description": "MATK Rate: 41%, MATK Bonus: +184, AoE"
+                },
+                "5": {
+                  "dmgMATKPercent": 43,
+                  "MATKBonus": 192,
+                  "description": "MATK Rate: 43%, MATK Bonus: +192, AoE"
+                }
+              }
+            },
+            {
+              "id": "bloodbolt3",
+              "name": "TBD",
+              "image": "images/bloodbolt3.png",
+              "column": 1,
+              "row": 7,
+              "minLevel": 1,
+              "maxLevel": 0,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 36,
+                  "MATKBonus": 160,
+                  "description": "MATK Rate: 36%, MATK Bonus: +160, AoE"
+                },
+                "2": {
+                  "dmgMATKPercent": 38,
+                  "MATKBonus": 168,
+                  "description": "MATK Rate: 38%, MATK Bonus: +168, AoE"
+                },
+                "3": {
+                  "dmgMATKPercent": 40,
+                  "MATKBonus": 176,
+                  "description": "MATK Rate: 40%, MATK Bonus: +176, AoE"
+                },
+                "4": {
+                  "dmgMATKPercent": 41,
+                  "MATKBonus": 184,
+                  "description": "MATK Rate: 41%, MATK Bonus: +184, AoE"
+                },
+                "5": {
+                  "dmgMATKPercent": 43,
+                  "MATKBonus": 192,
+                  "description": "MATK Rate: 43%, MATK Bonus: +192, AoE"
+                }
+              }
+            },
+            {
+              "id": "bloodresilience",
+              "name": "TBD",
+              "image": "images/bloodresilience.png",
+              "column": 2,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 1,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 100,
+                  "MATKBonus": 12,
+                  "description": "MATK Rate: 100%, MATK Bonus: +12"
+                },
+                "2": {
+                  "dmgMATKPercent": 103,
+                  "MATKBonus": 32,
+                  "description": "MATK Rate: 103%, MATK Bonus: +32"
+                },
+                "3": {
+                  "dmgMATKPercent": 106,
+                  "MATKBonus": 51,
+                  "description": "MATK Rate: 106%, MATK Bonus: +51"
+                },
+                "4": {
+                  "dmgMATKPercent": 109,
+                  "MATKBonus": 71,
+                  "description": "MATK Rate: 109%, MATK Bonus: +71"
+                },
+                "5": {
+                  "dmgMATKPercent": 112,
+                  "MATKBonus": 91,
+                  "description": "MATK Rate: 112%, MATK Bonus: +91"
+                }
+              }
+            },
+            {
+              "id": "bloodtide",
+              "name": "TBD",
+              "image": "images/bloodtide.png",
+              "column": 2,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 0,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 120,
+                  "MATKBonus": 242,
+                  "description": "MATK Rate: 120%, MATK Bonus: +242, Slow 50% 4seconds"
+                },
+                "2": {
+                  "dmgMATKPercent": 124,
+                  "MATKBonus": 282,
+                  "description": "MATK Rate: 124%, MATK Bonus: +282, Slow 55% 4seconds"
+                },
+                "3": {
+                  "dmgMATKPercent": 127,
+                  "MATKBonus": 320,
+                  "description": "MATK Rate: 127%, MATK Bonus: +320, Slow 60% 4seconds"
+                },
+                "4": {
+                  "dmgMATKPercent": 131,
+                  "MATKBonus": 359,
+                  "description": "MATK Rate: 131%, MATK Bonus: +359, Slow 65% 4seconds"
+                },
+                "5": {
+                  "dmgMATKPercent": 134,
+                  "MATKBonus": 398,
+                  "description": "MATK Rate: 134%, MATK Bonus: +398, Slow 70% 4seconds"
+                }
+              }
+            },
+            {
+              "id": "bloodsurge",
+              "name": "TBD",
+              "image": "images/bloodsurge.png",
+              "column": 2,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 1,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 100,
+                  "MATKBonus": 428,
+                  "description": "MATK Rate: 100%, MATK Bonus: +428"
+                },
+                "2": {
+                  "dmgMATKPercent": 103,
+                  "MATKBonus": 466,
+                  "description": "MATK Rate: 103%, MATK Bonus: +466"
+                },
+                "3": {
+                  "dmgMATKPercent": 106,
+                  "MATKBonus": 505,
+                  "description": "MATK Rate: 106%, MATK Bonus: +505"
+                },
+                "4": {
+                  "dmgMATKPercent": 109,
+                  "MATKBonus": 543,
+                  "description": "MATK Rate: 109%, MATK Bonus: +543"
+                },
+                "5": {
+                  "dmgMATKPercent": 112,
+                  "MATKBonus": 581,
+                  "description": "MATK Rate: 112%, MATK Bonus: +581"
+                }
+              }
+            },
+            {
+              "id": "bloodmistarmor",
+              "name": "TBD",
+              "image": "images/bloodmistarmor.png",
+              "column": 2,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 0,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 100,
+                  "MATKBonus": 1163,
+                  "description": "MATK Rate: 100%, MATK Bonus: +1163"
+                },
+                "2": {
+                  "dmgMATKPercent": 103,
+                  "MATKBonus": 1220,
+                  "description": "MATK Rate: 103%, MATK Bonus: +1220"
+                },
+                "3": {
+                  "dmgMATKPercent": 106,
+                  "MATKBonus": 1277,
+                  "description": "MATK Rate: 106%, MATK Bonus: +1277"
+                },
+                "4": {
+                  "dmgMATKPercent": 109,
+                  "MATKBonus": 1334,
+                  "description": "MATK Rate: 109%, MATK Bonus: +1334"
+                },
+                "5": {
+                  "dmgMATKPercent": 112,
+                  "MATKBonus": 1390,
+                  "description": "MATK Rate: 112%, MATK Bonus: +1390"
+                }
+              }
+            },
+            {
+              "id": "bloodfogtotem",
+              "name": "TBD",
+              "image": "images/bloodfogtotem.png",
+              "column": 2,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 0,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 100,
+                  "MATKBonus": 1163,
+                  "description": "MATK Rate: 100%, MATK Bonus: +1163"
+                },
+                "2": {
+                  "dmgMATKPercent": 103,
+                  "MATKBonus": 1220,
+                  "description": "MATK Rate: 103%, MATK Bonus: +1220"
+                },
+                "3": {
+                  "dmgMATKPercent": 106,
+                  "MATKBonus": 1277,
+                  "description": "MATK Rate: 106%, MATK Bonus: +1277"
+                },
+                "4": {
+                  "dmgMATKPercent": 109,
+                  "MATKBonus": 1334,
+                  "description": "MATK Rate: 109%, MATK Bonus: +1334"
+                },
+                "5": {
+                  "dmgMATKPercent": 112,
+                  "MATKBonus": 1390,
+                  "description": "MATK Rate: 112%, MATK Bonus: +1390"
+                }
+              }
+            },
+            {
+              "id": "demonclaw",
+              "name": "TBD",
+              "image": "images/demonclaw.png",
+              "column": 2,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 0,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 100,
+                  "MATKBonus": 1163,
+                  "description": "MATK Rate: 100%, MATK Bonus: +1163"
+                },
+                "2": {
+                  "dmgMATKPercent": 103,
+                  "MATKBonus": 1220,
+                  "description": "MATK Rate: 103%, MATK Bonus: +1220"
+                },
+                "3": {
+                  "dmgMATKPercent": 106,
+                  "MATKBonus": 1277,
+                  "description": "MATK Rate: 106%, MATK Bonus: +1277"
+                },
+                "4": {
+                  "dmgMATKPercent": 109,
+                  "MATKBonus": 1334,
+                  "description": "MATK Rate: 109%, MATK Bonus: +1334"
+                },
+                "5": {
+                  "dmgMATKPercent": 112,
+                  "MATKBonus": 1390,
+                  "description": "MATK Rate: 112%, MATK Bonus: +1390"
+                }
+              }
+            },
+            {
+              "id": "bloodrite",
+              "name": "TBD",
+              "image": "images/bloodrite.png",
+              "column": 2,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 0,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 100,
+                  "MATKBonus": 1163,
+                  "description": "MATK Rate: 100%, MATK Bonus: +1163"
+                },
+                "2": {
+                  "dmgMATKPercent": 103,
+                  "MATKBonus": 1220,
+                  "description": "MATK Rate: 103%, MATK Bonus: +1220"
+                },
+                "3": {
+                  "dmgMATKPercent": 106,
+                  "MATKBonus": 1277,
+                  "description": "MATK Rate: 106%, MATK Bonus: +1277"
+                },
+                "4": {
+                  "dmgMATKPercent": 109,
+                  "MATKBonus": 1334,
+                  "description": "MATK Rate: 109%, MATK Bonus: +1334"
+                },
+                "5": {
+                  "dmgMATKPercent": 112,
+                  "MATKBonus": 1390,
+                  "description": "MATK Rate: 112%, MATK Bonus: +1390"
+                }
+              }
+            },
+            {
+              "id": "cursemastery",
+              "name": "Curse Mastery",
+              "image": "images/cursemastery.png",
+              "column": 3,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "HP Percent": 2,
+                  "description": "Max HP% +2. Allows curses level 1."
+                },
+                "2": {
+                  "HP Percent": 2,
+                  "description": "Max HP% +4. Allows curses level 2."
+                },
+                "3": {
+                  "HP Percent": 2,
+                  "description": "Max HP% +6. Allows curses level 3."
+                },
+                "4": {
+                  "HP Percent": 2,
+                  "description": "Max HP% +8. Allows curses level 4."
+                },
+                "5": {
+                  "HP Percent": 2,
+                  "description": "Max HP% +10. Allows curses level 5."
+                }
+              }
+            },
+            {
+              "id": "weaknesscurse",
+              "name": "Weakness Curse",
+              "image": "images/weaknesscurse.png",
+              "column": 3,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 30,
+                  "MATKBonus": 36,
+                  "description": "Puts an AoE on the ground for 15 seconds. Enemies inside deal 5% less damage and take 30% MATK + 36 HP every 3 seconds."
+                },
+                "2": {
+                  "dmgMATKPercent": 31,
+                  "MATKBonus": 42,
+                  "description": "Puts an AoE on the ground for 15 seconds. Enemies inside deal 10% less damage and take 31% MATK + 42 HP every 3 seconds."
+                },
+                "3": {
+                  "dmgMATKPercent": 33,
+                  "MATKBonus": 47,
+                  "description": "Puts an AoE on the ground for 15 seconds. Enemies inside deal 15% less damage and take 33% MATK + 47 HP every 3 seconds."
+                },
+                "4": {
+                  "dmgMATKPercent": 34,
+                  "MATKBonus": 53,
+                  "description": "Puts an AoE on the ground for 15 seconds. Enemies inside deal 20% less damage and take 34% MATK + 53 HP every 3 seconds."
+                },
+                "5": {
+                  "dmgMATKPercent": 35,
+                  "MATKBonus": 59,
+                  "description": "Puts an AoE on the ground for 15 seconds. Enemies inside deal 25% less damage and take 35% MATK + 59 HP every 3 seconds."
+                }
+              }
+            },
+            {
+              "id": "ringofdecay",
+              "name": "Ring of Decay",
+              "image": "images/ringofdecay.png",
+              "column": 3,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 30,
+                  "MATKBonus": 91,
+                  "description": "Puts an AoE on the ground for 15 seconds. Enemies inside have 5% less defense and take 30% MATK + 91 HP every 3 seconds."
+                },
+                "2": {
+                  "dmgMATKPercent": 31,
+                  "MATKBonus": 98,
+                  "description": "Puts an AoE on the ground for 15 seconds. Enemies inside have 11% less defense and take 31% MATK + 98 HP every 3 seconds."
+                },
+                "3": {
+                  "dmgMATKPercent": 33,
+                  "MATKBonus": 106,
+                  "description": "Puts an AoE on the ground for 15 seconds. Enemies inside have 18% less defense and take 33% MATK + 106 HP every 3 seconds."
+                },
+                "4": {
+                  "dmgMATKPercent": 34,
+                  "MATKBonus": 114,
+                  "description": "Puts an AoE on the ground for 15 seconds. Enemies inside have 26% less defense and take 34% MATK + 114 HP every 3 seconds."
+                },
+                "5": {
+                  "dmgMATKPercent": 35,
+                  "MATKBonus": 122,
+                  "description": "Puts an AoE on the ground for 15 seconds. Enemies inside have 35% less defense and take 35% MATK + 122 HP every 3 seconds."
+                }
+              }
+            },
+            {
+              "id": "slowcurse",
+              "name": "TBD",
+              "image": "images/slowcurse.png",
+              "column": 3,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 0,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "healPercent": 110,
+                  "bonusHeal": 776,
+                  "description": "Heal% +110, Bonus Heal +776"
+                },
+                "2": {
+                  "healPercent": 113,
+                  "bonusHeal": 830,
+                  "description": "Heal% +113, Bonus Heal +830"
+                },
+                "3": {
+                  "healPercent": 117,
+                  "bonusHeal": 884,
+                  "description": "Heal% +117, Bonus Heal +884"
+                },
+                "4": {
+                  "healPercent": 120,
+                  "bonusHeal": 938,
+                  "description": "Heal% +120, Bonus Heal +938"
+                },
+                "5": {
+                  "healPercent": 123,
+                  "bonusHeal": 992,
+                  "description": "Heal% +123, Bonus Heal +992"
                 }
               }
             }

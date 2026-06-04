@@ -1,10 +1,13 @@
 
 body{margin:0;background:#181818;color:#fff;font-family:Arial;display:flex;min-height:100vh;}
-.sidebar{flex:0 0 260px;padding:20px;background:#202020;}
+.sidebar{flex:0 0 260px;padding:20px;background:#202020;display:flex;flex-direction:column;}
 .main{flex:1;display:flex;gap:20px;align-items:flex-start;min-width:0;padding:20px;}
 .summary{flex:0 0 260px;padding:20px;background:#202020;}
 .sidebar input,.sidebar select{width:100%;padding:8px;margin-bottom:10px;}
 .sidebar select, .sidebar select option{ text-align: center; text-align-last: center; }
+.sidebar-footer{padding-bottom:20px;border-bottom:1px solid #333;text-align:center;margin-bottom:20px;}
+.sidebar-footer a{color:#8be9fd;text-decoration:none;font-size:0.9rem;}
+.sidebar-footer a:hover{text-decoration:underline;}
 #treeContainer{flex:1;overflow:auto;display:flex;gap:40px;justify-content:flex-start;}
 .tree-wrapper{display:flex;flex-direction:column;align-items:center;width:max-content;position:relative;}
 .tree-wrapper:not(:last-child){padding-right:5px;margin-right:5px;}

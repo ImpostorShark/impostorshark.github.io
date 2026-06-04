@@ -36,7 +36,8 @@ function computeStats(){
   const stats = {
     PATK:+document.getElementById('patk').value,
     MATK:+document.getElementById('matk').value,
-    hp:+document.getElementById('hp').value
+    hp:+document.getElementById('hp').value,
+    Heal: document.getElementById('heal') ? +document.getElementById('heal').value : 0
   };
 
   currentClass.trees.forEach(tree=>{
@@ -45,7 +46,8 @@ function computeStats(){
       const lvl = t.levels && t.levels[String(t.level)];
       if(!lvl) return;
       Object.entries(lvl).forEach(([k,v])=>{
-        if(k === 'description') return;
+        if(k === 'description' || k === 'bonusHeal') return;
+        if(k.endsWith('Percent')) return;
         if(stats[k]===undefined) stats[k]=0;
         stats[k]+=v;
       });
@@ -64,6 +66,12 @@ function computeStats(){
     delete stats.matk;
   }
 
+  // merge raw heal into the final Heal stat if present
+  if(stats.heal){
+    stats.Heal = (stats.Heal || 0) + stats.heal;
+    delete stats.heal;
+  }
+
   // derive final PATK: base PATK + PATKPercent
   let patk = stats.PATK || 0;
   if(stats.patkPercent) patk += stats.patkPercent;
@@ -75,6 +83,12 @@ function computeStats(){
   if(stats.matkPercent) matk += stats.matkPercent;
   if(stats.MATKPercent) matk += stats.MATKPercent;
   stats.MATK = Math.round(matk);
+
+  // derive final Heal: base Heal + HealPercent
+  let heal = stats.Heal || 0;
+  if(stats.healPercent) heal += stats.healPercent;
+  if(stats.HealPercent) heal += stats.HealPercent;
+  stats.Heal = Math.round(heal);
 
   return stats;
 }
@@ -192,20 +206,55 @@ function render(){
 
       // if this level defines a damage percent, compute estimated damage
       let dmgHtml = '';
+      let healHtml = '';
       if(lvlObj){
         const stats = computeStats();
         const percentPATK = lvlObj.dmgPATKPercent !== undefined ? Number(lvlObj.dmgPATKPercent) : null;
         const percentMATK = lvlObj.dmgMATKPercent !== undefined ? Number(lvlObj.dmgMATKPercent) : null;
-        const bonus = Number(lvlObj.PATKBonus || lvlObj.PatkBonus || lvlObj.MATKBonus || lvlObj.matkBonus || 0);
+        const percentHP = lvlObj.dmgHPPercent !== undefined ? Number(lvlObj.dmgHPPercent) : null;
 
+        const patkBonus = Number(lvlObj.PATKBonus || lvlObj.PatkBonus || 0);
+        const matkBonus = Number(lvlObj.MATKBonus || lvlObj.matkBonus || 0);
+        const hpBonus = Number(lvlObj.HPBonus || lvlObj.hpBonus || 0);
+
+        let dmgTotal = 0;
+        let healTotal = 0;
         if(percentPATK !== null){
-          const patk = stats.PATK || 0;
-          const dmg = Math.round((patk + bonus) * (percentPATK / 100) * 10) / 10;
+          const patk = (stats.PATK || 0) + patkBonus;
+          dmgTotal += (patk) * (percentPATK / 100);
+        }
+        if(percentMATK !== null){
+          const matk = (stats.MATK || 0) + matkBonus;
+          dmgTotal += (matk) * (percentMATK / 100);
+        }
+        if(percentHP !== null){
+          const hpv = Number(stats.hp || 0) + hpBonus;
+          dmgTotal += (hpv) * (percentHP / 100);
+        }
+
+        // dmgHealPercent is damage calculated from the Heal stat
+        const percentHealDmg = lvlObj.dmgHealPercent !== undefined ? Number(lvlObj.dmgHealPercent) : null;
+        if(percentHealDmg !== null){
+          const healStat = (stats.Heal || 0);
+          dmgTotal += healStat * (percentHealDmg / 100);
+        }
+
+        // Healing output calculations: support `healPercent` and `bonusHeal`
+        const percentHealDirect = lvlObj.healPercent !== undefined ? Number(lvlObj.healPercent) : null;
+        const bonusHeal = Number(lvlObj.bonusHeal || lvlObj.BonusHeal || 0);
+
+        if(percentHealDirect !== null){
+          const baseHeal = (stats.Heal || 0) + bonusHeal;
+          healTotal += baseHeal * (percentHealDirect / 100);
+        }
+
+        if(dmgTotal > 0){
+          const dmg = Math.round(dmgTotal * 10) / 10;
           dmgHtml = `<div class="skill-dmg">Est. Damage: ${dmg}</div>`;
-        } else if(percentMATK !== null){
-          const matk = stats.MATK || 0;
-          const dmg = Math.round((matk + bonus) * (percentMATK / 100) * 10) / 10;
-          dmgHtml = `<div class="skill-dmg">Est. Damage: ${dmg}</div>`;
+        }
+        if(healTotal > 0){
+          const hv = Math.round(healTotal * 10) / 10;
+          healHtml = `<div class="skill-dmg">Est. Heal: ${hv}</div>`;
         }
       }
 
@@ -221,6 +270,7 @@ function render(){
         <div>Lv ${t.minLevel}</div>
         ${descHtml}
         ${dmgHtml}
+        ${healHtml}
         <div class="skill-level">${t.level}/${t.maxLevel}</div>
       `;
 
@@ -238,7 +288,7 @@ function updateSummary(){
  const s=document.getElementById('summary');
  s.innerHTML='';
  Object.entries(stats).forEach(([k,v])=>{
-   if(k.includes('Bonus') ||  k.includes('bonus') || k.includes('DMG') || k.includes('dmg')) return;
+   if(k.includes('Bonus') ||  k.includes('bonus') || k.includes('DMG') || k.includes('dmg') || k === "healPercent") return;
    const d=document.createElement('div');
    d.innerHTML=`<b>${k}</b>: ${v}`;
    s.appendChild(d);
