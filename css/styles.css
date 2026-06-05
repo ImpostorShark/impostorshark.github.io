@@ -27,3 +27,15 @@ body{margin:0;background:#181818;color:#fff;font-family:Arial;display:flex;min-h
 .skill-level{color:#ffd966;}
 .skill-desc{font-size:0.85rem;line-height:1.2;margin-top:4px;}
 .skill-dmg{font-size:0.9rem;color:#8be9fd;margin-top:4px;}
+
+@media (max-width: 768px) {
+  body { flex-direction: column; }
+  .sidebar { flex: 0 0 auto; width: 100%; padding: 15px; }
+  .main { flex-direction: column; gap: 15px; padding: 15px; }
+  .summary { flex: 0 0 auto; width: 100%; }
+  #treeContainer { flex-direction: column; gap: 30px; }
+  .tree-wrapper { width: 100%; }
+  .tree { grid-template-columns: repeat(3, 1fr); gap: 15px; }
+  .skill-card { width: 100%; min-height: 200px; }
+  .tree-wrapper:not(:last-child)::after { display: none; }
+}
