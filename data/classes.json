@@ -1,6 +1,568 @@
 {
   "classes": [
     {
+      "id": "mage",
+      "name": "Mage",
+      "trees": [
+        {
+          "id": "frostMage",
+          "name": "Frost Mage",
+          "talents": [
+            {
+              "id": "blizzard1",
+              "name": "TBD",
+              "image": "images/blizzard1.png",
+              "column": 1,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 0,
+              "levels": {
+                "1": { "description": "TBD" },
+                "2": { "description": "TBD" },
+                "3": { "description": "TBD" },
+                "4": { "description": "TBD" },
+                "5": { "description": "TBD" }
+              }
+            },
+            {
+              "id": "iceHalo",
+              "name": "TBD",
+              "image": "images/icehalo.png",
+              "column": 1,
+              "row": 2,
+              "minLevel": 20,
+              "maxLevel": 0,
+              "levels": {
+                "1": { "description": "TBD" },
+                "2": { "description": "TBD" },
+                "3": { "description": "TBD" },
+                "4": { "description": "TBD" },
+                "5": { "description": "TBD" }
+              }
+            },
+            {
+              "id": "blizzard2",
+              "name": "TBD",
+              "image": "images/blizzard2.png",
+              "column": 1,
+              "row": 3,
+              "minLevel": 40,
+              "maxLevel": 0,
+              "levels": {
+                "1": { "description": "TBD" },
+                "2": { "description": "TBD" },
+                "3": { "description": "TBD" },
+                "4": { "description": "TBD" },
+                "5": { "description": "TBD" }
+              }
+            },
+            {
+              "id": "heavenWind",
+              "name": "TBD",
+              "image": "images/heavenwind.png",
+              "column": 1,
+              "row": 4,
+              "minLevel": 60,
+              "maxLevel": 0,
+              "levels": {
+                "1": { "description": "TBD" },
+                "2": { "description": "TBD" },
+                "3": { "description": "TBD" },
+                "4": { "description": "TBD" },
+                "5": { "description": "TBD" }
+              }
+            },
+            {
+              "id": "blackHole",
+              "name": "TBD",
+              "image": "images/blackhole.png",
+              "column": 1,
+              "row": 5,
+              "minLevel": 80,
+              "maxLevel": 0,
+              "levels": {
+                "1": { "description": "TBD" },
+                "2": { "description": "TBD" },
+                "3": { "description": "TBD" },
+                "4": { "description": "TBD" },
+                "5": { "description": "TBD" }
+              }
+            },
+
+            {
+              "id": "iceSpike1",
+              "name": "Ice Spike I",
+              "image": "images/icespike1.png",
+              "column": 2,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 36,
+                  "MATKBonus": 23,
+                  "description": "MATK Rate: 36% + 23.Slow -50% for 4 seconds."
+                },
+                "2": {
+                  "dmgMATKPercent": 40,
+                  "MATKBonus": 60,
+                  "description": "MATK Rate: 40% + 60.Slow -55% for 4 seconds."
+                },
+                "3": {
+                  "dmgMATKPercent": 44,
+                  "MATKBonus": 98,
+                  "description": "MATK Rate: 44% + 98.Slow -60% for 4 seconds."
+                },
+                "4": {
+                  "dmgMATKPercent": 48,
+                  "MATKBonus": 136,
+                  "description": "MATK Rate: 48% + 136.Slow -65% for 4 seconds."
+                },
+                "5": {
+                  "dmgMATKPercent": 52,
+                  "MATKBonus": 174,
+                  "description": "MATK Rate: 52% + 174.Slow -70% for 4 seconds."
+                }
+              }
+            },
+            {
+              "id": "windCurse1",
+              "name": "Wind Curse I",
+              "image": "images/windcurse1.png",
+              "column": 2,
+              "row": 2,
+              "minLevel": 20,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 42,
+                  "MATKBonus": 322,
+                  "description": "MATK Rate: 42% + 322"
+                },
+                "2": {
+                  "dmgMATKPercent": 46,
+                  "MATKBonus": 374,
+                  "description": "MATK Rate: 46% + 374"
+                },
+                "3": {
+                  "dmgMATKPercent": 51,
+                  "MATKBonus": 426,
+                  "description": "MATK Rate: 51% + 426"
+                },
+                "4": {
+                  "dmgMATKPercent": 55,
+                  "MATKBonus": 478,
+                  "description": "MATK Rate: 55% + 478"
+                },
+                "5": {
+                  "dmgMATKPercent": 59,
+                  "MATKBonus": 530,
+                  "description": "MATK Rate: 59% + 530"
+                }
+              }
+            },
+            {
+              "id": "iceSpike2",
+              "name": "Ice Spike II",
+              "image": "images/icespike2.png",
+              "column": 2,
+              "row": 3,
+              "minLevel": 40,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 36,
+                  "MATKBonus": 787,
+                  "description": "MATK Rate: 36% + 787.Slow -50% for 4 seconds."
+                },
+                "2": {
+                  "dmgMATKPercent": 40,
+                  "MATKBonus": 856,
+                  "description": "MATK Rate: 40% + 856.Slow -55% for 4 seconds."
+                },
+                "3": {
+                  "dmgMATKPercent": 44,
+                  "MATKBonus": 923,
+                  "description": "MATK Rate: 44% + 923.Slow -60% for 4 seconds."
+                },
+                "4": {
+                  "dmgMATKPercent": 48,
+                  "MATKBonus": 990,
+                  "description": "MATK Rate: 48% + 990.Slow -65% for 4 seconds."
+                },
+                "5": {
+                  "dmgMATKPercent": 52,
+                  "MATKBonus": 1057,
+                  "description": "MATK Rate: 52% + 1057.Slow -70% for 4 seconds."
+                }
+              }
+            },
+            {
+              "id": "frost",
+              "name": "Frost",
+              "image": "images/frost.png",
+              "column": 2,
+              "row": 4,
+              "minLevel": 60,
+              "maxLevel": 5,
+              "levels": {
+                "1": {                   
+                  "dmgMATKPercent": 40,
+                  "MATKBonus": 982,
+                  "description": "MATK Rate: 140% + 982.Freezes for 3 seconds, ends on taking damage." 
+                },
+                "2": {                   
+                  "dmgMATKPercent": 44,
+                  "MATKBonus": 1050,
+                  "description": "MATK Rate: 144% + 1050.Freezes for 3.5 seconds, ends on taking damage."  
+                },
+                "3": {                   
+                  "dmgMATKPercent": 48,
+                  "MATKBonus": 1118,
+                  "description": "MATK Rate: 148% + 1118.Freezes for 4 seconds, ends on taking damage."  
+                },
+                "4": {                   
+                  "dmgMATKPercent": 52,
+                  "MATKBonus": 1186,
+                  "description": "MATK Rate: 152% + 1186.Freezes for 4.5 seconds, ends on taking damage."  
+                },
+                "5": {                   
+                  "dmgMATKPercent": 57,
+                  "MATKBonus": 1254,
+                  "description": "MATK Rate: 157% + 1254.Freezes for 5 seconds, ends on taking damage."  
+                }
+              }
+            },
+            {
+              "id": "windCurse2",
+              "name": "Wind Curse II",
+              "image": "images/windcurse2.png",
+              "column": 2,
+              "row": 5,
+              "minLevel": 70,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgAmp": 42,
+                  "MATKBonus": 1523,
+                  "description": "MATK Rate: 142% + 1523."
+                },
+                "2": {
+                  "dmgAmp": 46,
+                  "MATKBonus": 1612,
+                  "description": "MATK Rate: 146% + 1612."
+                },
+                "3": {
+                  "dmgAmp": 51,
+                  "MATKBonus": 1701,
+                  "description": "MATK Rate: 151% + 1701."
+                },
+                "4": {
+                  "dmgAmp": 55,
+                  "MATKBonus": 1790,
+                  "description": "MATK Rate: 155% + 1790."
+                },
+                "5": {
+                  "dmgAmp": 59,
+                  "MATKBonus": 1879,
+                  "description": "MATK Rate: 159% + 1879."
+                }
+              }
+            },
+            {
+              "id": "iceSpikeb",
+              "name": "Ice Spike",
+              "image": "images/icespikeb.png",
+              "column": 2,
+              "row": 6,
+              "minLevel": 80,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgAmp": 58,
+                  "MATKBonus": 1940,
+                  "description": "MATK Rate: 158% + 1940.DOT: 482 every 2s for 6s."
+                },
+                "2": {
+                  "dmgAmp": 63,
+                  "MATKBonus": 2038,
+                  "description": "MATK Rate: 163% + 2038.DOT: 508 every 2s for 6s."
+                },
+                "3": {
+                  "dmgAmp": 67,
+                  "MATKBonus": 2137,
+                  "description": "MATK Rate: 167% + 2137.DOT: 534 every 2s for 6s."
+                },
+                "4": {
+                  "dmgAmp": 72,
+                  "MATKBonus": 2235,
+                  "description": "MATK Rate: 172% + 2235.DOT: 560  every 2s for 6s."
+                },
+                "5": {
+                  "dmgAmp": 77,
+                  "MATKBonus": 2334,
+                  "description": "MATK Rate: 177% + 2334.DOT: 586 every 2s for 6s."
+                }
+              }
+            },
+            {
+              "id": "frost",
+              "name": "Frost",
+              "image": "images/frost.png",
+              "column": 2,
+              "row": 4,
+              "minLevel": 60,
+              "maxLevel": 5,
+              "levels": {
+                "1": {                   
+                  "dmgMATKPercent": 40,
+                  "MATKBonus": 982,
+                  "description": "MATK Rate: 140% + 982.Freezes for 3 seconds, ends on taking damage." 
+                },
+                "2": {                   
+                  "dmgMATKPercent": 44,
+                  "MATKBonus": 1050,
+                  "description": "MATK Rate: 144% + 1050.Freezes for 3.5 seconds, ends on taking damage."  
+                },
+                "3": {                   
+                  "dmgMATKPercent": 48,
+                  "MATKBonus": 1118,
+                  "description": "MATK Rate: 148% + 1118.Freezes for 4 seconds, ends on taking damage."  
+                },
+                "4": {                   
+                  "dmgMATKPercent": 52,
+                  "MATKBonus": 1186,
+                  "description": "MATK Rate: 152% + 1186.Freezes for 4.5 seconds, ends on taking damage."  
+                },
+                "5": {                   
+                  "dmgMATKPercent": 57,
+                  "MATKBonus": 1254,
+                  "description": "MATK Rate: 157% + 1254.Freezes for 5 seconds, ends on taking damage."  
+                }
+              }
+            },
+            {
+              "id": "frostbolt3",
+              "name": "TBD",
+              "image": "images/frostbolt3.png",
+              "column": 2,
+              "row": 7,
+              "minLevel": 40,
+              "maxLevel": 0,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 36,
+                  "MATKBonus": 787,
+                  "description": "MATK Rate: 36% + 787.Slow -50% for 4 seconds."
+                },
+                "2": {
+                  "dmgMATKPercent": 40,
+                  "MATKBonus": 856,
+                  "description": "MATK Rate: 40% + 856.Slow -55% for 4 seconds."
+                },
+                "3": {
+                  "dmgMATKPercent": 44,
+                  "MATKBonus": 923,
+                  "description": "MATK Rate: 44% + 923.Slow -60% for 4 seconds."
+                },
+                "4": {
+                  "dmgMATKPercent": 48,
+                  "MATKBonus": 990,
+                  "description": "MATK Rate: 48% + 990.Slow -65% for 4 seconds."
+                },
+                "5": {
+                  "dmgMATKPercent": 52,
+                  "MATKBonus": 1057,
+                  "description": "MATK Rate: 52% + 1057.Slow -70% for 4 seconds."
+                }
+              }
+            },
+            {
+              "id": "iceShield",
+              "name": "Ice Shield",
+              "image": "images/iceshield.png",
+              "column": 3,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": { 
+                  "hitPercent": 3,
+                  "MDMGPercent": 3,
+                  "PDMGPercent": 3,
+                  "description": "Hit Rate: +3%. DMG Reduction: +3%. Slows Attack speed when hit by 25% for 6 seconds." 
+                },
+                "2": { 
+                  "hitPercent": 6,
+                  "MDMGPercent": 6,
+                  "PDMGPercent": 6,
+                  "description": "Hit Rate: +6%. DMG Reduction: +6%. Slows Attack speed when hit by 30% for 6 seconds." 
+                },
+                "3": { 
+                  "hitPercent": 9,
+                  "MDMGPercent": 9,
+                  "PDMGPercent": 9,
+                  "description": "Hit Rate: +9%. DMG Reduction: +9%. Slows Attack speed when hit by 35% for 6 seconds." 
+                },
+                "4": { 
+                  "hitPercent": 12,
+                  "MDMGPercent": 12,
+                  "PDMGPercent": 12,
+                  "description": "Hit Rate: +12%. DMG Reduction: +12%. Slows Attack speed when hit by 40% for 6 seconds." 
+                },
+                "5": { 
+                  "hitPercent": 15,
+                  "MDMGPercent": 15,
+                  "PDMGPercent": 15,
+                  "description": "Hit Rate: +15%. DMG Reduction: +15%. Slows Attack speed when hit by 45% for 6 seconds." 
+                }
+              }
+            },
+            {
+              "id": "spiritFocus",
+              "name": "Spirit Focus",
+              "image": "images/spiritfocus.png",
+              "column": 3,
+              "row": 2,
+              "minLevel": 20,
+              "maxLevel": 5,
+              "levels": {
+                "1": { 
+                  "castSpeedPercent": 3,
+                  "description": "Cast Speed + 3%" 
+                },
+                "2": { 
+                  "castSpeedPercent": 6,
+                  "description": "Cast Speed + 6%" 
+                },
+                "3": { 
+                  "castSpeedPercent": 9,
+                  "description": "Cast Speed + 9%" 
+                },
+                "4": {
+                  "castSpeedPercent": 12,
+                  "description": "Cast Speed + 12%"
+                },
+                "5": {
+                  "castSpeedPercent": 15,
+                  "description": "Cast Speed + 15%"
+                }
+              }
+            },
+            {
+              "id": "frenzyArt",
+              "name": "Frenzy Art",
+              "image": "images/frenzyart.png",
+              "column": 3,
+              "row": 3,
+              "minLevel": 30,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "Ignore target's defense. Proc Rate: 3%"
+                },
+                "2": {
+                  "description": "Ignore target's defense. Proc Rate: 6%"
+                },
+                "3": {
+                  "description": "Ignore target's defense. Proc Rate: 9%"
+                },
+                "4": {
+                  "description": "Ignore target's defense. Proc Rate: 1%"
+                },
+                "5": {
+                  "description": "Ignore target's defense. Proc Rate: 1%"
+                }
+              }
+            },
+            {
+              "id": "deepfrost",
+              "name": "Deepfrost",
+              "image": "images/deepfrost.png",
+              "column": 3,
+              "row": 4,
+              "minLevel": 40,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "Increases MATK by 2% per stack. Maximum Stacks: 2"
+                },
+                "2": {
+                  "description": "Increases MATK by 2% per stack. Maximum Stacks: 4"
+                },
+                "3": {
+                  "description": "Increases MATK by 2% per stack. Maximum Stacks: 6"
+                },
+                "4": {
+                  "description": "Increases MATK by 2% per stack. Maximum Stacks: 8"
+                },
+                "5": {
+                  "description": "Increases MATK by 2% per stack. Maximum Stacks: 10"
+                }
+              }
+            },
+            {
+              "id": "demonCall",
+              "name": "Demon Call",
+              "image": "images/demoncall.png",
+              "column": 3,
+              "row": 5,
+              "minLevel": 60,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "Restore 12% of maximum MP over 5s.Cooldown 130 seconds"
+                },
+                "2": {
+                  "description": "Restore 14% of maximum MP over 5s.Cooldown 120 seconds"
+                },
+                "3": {
+                  "description": "Restore 16% of maximum MP over 5s.Cooldown 110 seconds"
+                },
+                "4": {
+                  "description": "Restore 18% of maximum MP over 5s.Cooldown 100 seconds"
+                },
+                "5": {
+                  "description": "Restore 20% of maximum MP over 5s.Cooldown 90 seconds"
+                }
+              }
+            },
+            {
+              "id": "iceArmor",
+              "name": "Ice Armor",
+              "image": "images/icearmor.png",
+              "column": 3,
+              "row": 6,
+              "minLevel": 80,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "pdef": 48,
+                  "description": "Permanently increases PDEF +48. Chance to freeze attackers when hit : 1%. Duration of Freeze 3 seconds"
+                },
+                "2": {
+                  "pdef": 88,
+                  "description": "Permanently increases PDEF +88. Chance to freeze attackers when hit : 2%. Duration 3.5 of Freeze seconds"
+                },
+                "3": {
+                  "pdef": 128,
+                  "description": "Permanently increases PDEF +128. Chance to freeze attackers when hit : 3%. Duration of Freeze 4 seconds"
+                },
+                "4": {
+                  "pdef": 168,
+                  "description": "Permanently increases PDEF +168. Chance to freeze attackers when hit : 4%. Duration 4.5 of Freeze seconds"
+                },
+                "5": {
+                  "pdef": 208,
+                  "description": "Permanently increases PDEF +208. Chance to freeze attackers when hit : 5%. Duration of Freeze 5 seconds"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "pixie",
       "name": "Pixie",
       "trees": [

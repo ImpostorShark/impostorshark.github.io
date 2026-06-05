@@ -22,6 +22,11 @@ async function init(){
    render();
    updateSummary();
  });
+
+  // If a build is present in the URL, load it (robust to future talents/classes)
+  loadBuildFromURL();
+  const shareBtn = document.getElementById('shareBtn');
+  if(shareBtn) shareBtn.addEventListener('click', createShareLink);
 }
 
 function initializeLevels(){
@@ -39,7 +44,10 @@ function computeStats(){
     PDEF:+document.getElementById('pdef').value,
     MDEF:+document.getElementById('mdef').value,
     HP:+document.getElementById('hp').value,
-    HEAL: document.getElementById('heal') ? +document.getElementById('heal').value : 0
+    HEAL: document.getElementById('heal') ? +document.getElementById('heal').value : 0,
+    ATTACKSPEED: document.getElementById('attackSpeed') ? +document.getElementById('attackSpeed').value : 100,
+    CASTSPEED: document.getElementById('castSpeed') ? +document.getElementById('castSpeed').value : 100,
+    HITPERCENT: document.getElementById('hitPercent') ? +document.getElementById('hitPercent').value : 100
   };
 
   currentClass.trees.forEach(tree=>{
@@ -100,6 +108,18 @@ function computeStats(){
   if(stats.healPercent) heal += stats.healPercent;
   if(stats.HealPercent) heal += stats.HealPercent;
   stats.HEAL = Math.round(heal);
+
+  // derive final ATTACKSPEED: base ATTACKSPEED * (1 + attackSpeedPercent)
+  let attackSpeed = stats.ATTACKSPEED || 100;
+  const rawAttackSpeedPercent = (stats.attackSpeedPercent || 0) + (stats.AttackSpeedPercent || 0);
+  if(rawAttackSpeedPercent) attackSpeed = Math.round(attackSpeed * (1 + rawAttackSpeedPercent / 100));
+  stats.ATTACKSPEED = attackSpeed;
+
+  // derive final CASTSPEED: base CASTSPEED * (1 + castSpeedPercent)
+  let castSpeed = stats.CASTSPEED || 100;
+  const rawCastSpeedPercent = (stats.castSpeedPercent || 0) + (stats.CastSpeedPercent || 0);
+  if(rawCastSpeedPercent) castSpeed = Math.round(castSpeed * (1 + rawCastSpeedPercent / 100));
+  stats.CASTSPEED = castSpeed;
 
   return stats;
 }
@@ -292,6 +312,124 @@ function render(){
    wrapper.appendChild(grid);
    container.appendChild(wrapper);
  });
+}
+
+// Build serialization: collect currentClass id, inputs, and talent levels (only non-zero)
+function getCurrentBuildObject(){
+  const obj = { classId: currentClass.id, characterLevel: Number(document.getElementById('characterLevel').value), inputs: {}, talents: {} };
+  ['patk','matk','pdef','mdef','hp','heal','attackSpeed','castSpeed','hitPercent'].forEach(k=>{
+    const el = document.getElementById(k);
+    if(el) obj.inputs[k] = Number(el.value) || 0;
+  });
+  currentClass.trees.forEach(tree=>{
+    tree.talents.forEach(t=>{
+      if(t.level && t.level > 0) obj.talents[t.id] = t.level;
+    });
+  });
+  return obj;
+}
+
+function encodeBuild(obj){
+  try{
+    const json = JSON.stringify(obj);
+    // URL-safe Base64 (UTF-8 safe)
+    const b64 = base64UrlEncode(json);
+    return b64;
+  }catch(e){
+    return '';
+  }
+}
+
+function decodeBuild(str){
+  if(!str) return null;
+  // Backwards-compatible: first try URL-decoded JSON (old format), then base64-url
+  try{
+    const maybeJson = decodeURIComponent(str);
+    return JSON.parse(maybeJson);
+  }catch(e){
+    try{
+      const decoded = base64UrlDecode(str);
+      return JSON.parse(decoded);
+    }catch(e2){
+      return null;
+    }
+  }
+}
+
+function base64UrlEncode(str){
+  const encoder = new TextEncoder();
+  const data = encoder.encode(str);
+  let binary = '';
+  const chunk = 0x8000;
+  for (let i=0; i<data.length; i+=chunk) {
+    binary += String.fromCharCode.apply(null, data.subarray(i, i+chunk));
+  }
+  let b64 = btoa(binary);
+  return b64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+function base64UrlDecode(b64u){
+  b64u = b64u.replace(/-/g, '+').replace(/_/g, '/');
+  while (b64u.length % 4) b64u += '=';
+  const bin = atob(b64u);
+  const len = bin.length;
+  const bytes = new Uint8Array(len);
+  for (let i=0;i<len;i++) bytes[i] = bin.charCodeAt(i);
+  const decoder = new TextDecoder();
+  return decoder.decode(bytes);
+}
+
+function createShareLink(){
+  const obj = getCurrentBuildObject();
+  const encoded = encodeBuild(obj);
+  if(!encoded) return alert('Could not encode build');
+  const link = location.origin + location.pathname + '?build=' + encoded;
+  const input = document.getElementById('shareLink');
+  if(input) input.value = link;
+  // copy to clipboard when possible
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(link).then(()=>{
+      alert('Link copied to clipboard');
+    }).catch(()=>{
+      try{ input.select(); document.execCommand('copy'); alert('Link copied'); }catch(e){ alert(link); }
+    });
+  }else{
+    try{ input.select(); document.execCommand('copy'); alert('Link copied'); }catch(e){ alert(link); }
+  }
+}
+
+function applyBuildObject(obj){
+  if(!obj || !obj.classId) return;
+  const cls = data.classes.find(c=>c.id===obj.classId);
+  if(!cls) return;
+  currentClass = cls;
+  const sel = document.getElementById('classSelect');
+  if(sel) sel.value = currentClass.id;
+  // set inputs
+  if(obj.characterLevel !== undefined) document.getElementById('characterLevel').value = obj.characterLevel;
+  if(obj.inputs){
+    Object.entries(obj.inputs).forEach(([k,v])=>{ const el = document.getElementById(k); if(el) el.value = v; });
+  }
+  // initialize then set talent levels (clamped to maxLevel)
+  initializeLevels();
+  if(obj.talents){
+    Object.entries(obj.talents).forEach(([tid, lvl])=>{
+      for(const tree of currentClass.trees){
+        const t = tree.talents.find(x=>x.id===tid);
+        if(t){ t.level = Math.max(0, Math.min(t.maxLevel, Number(lvl)||0)); break; }
+      }
+    });
+  }
+  render(); updateSummary();
+}
+
+function loadBuildFromURL(){
+  const params = new URLSearchParams(location.search);
+  const b = params.get('build');
+  if(!b) return;
+  const obj = decodeBuild(b);
+  if(!obj) return;
+  applyBuildObject(obj);
 }
 
 function updateSummary(){
