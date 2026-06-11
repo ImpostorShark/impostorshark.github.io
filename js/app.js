@@ -298,7 +298,7 @@ function render(){
           <button class="skill-btn skill-btn-decr" onclick="changeLevel('${t.id}',-1)" ${minusDisabled}>-</button>
           <button class="skill-btn skill-btn-incr" onclick="changeLevel('${t.id}',1)" ${plusDisabled}>+</button>
         </div>
-        <div>Lv ${t.minLevel}</div>
+        <div>Lv ${t.level}</div>
         ${descHtml}
         ${dmgHtml}
         ${healHtml}
