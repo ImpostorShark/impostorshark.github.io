@@ -332,9 +332,14 @@ function getCurrentBuildObject(){
 function encodeBuild(obj){
   try{
     const json = JSON.stringify(obj);
-    // URL-safe Base64 (UTF-8 safe)
-    const b64 = base64UrlEncode(json);
-    return b64;
+    // Compress then base64 encode for much shorter URLs
+    if(window.LZString){
+      const compressed = LZString.compressToBase64(json);
+      return 'z' + compressed; // prefix 'z' to indicate compressed format
+    }else{
+      const b64 = base64UrlEncode(json);
+      return b64;
+    }
   }catch(e){
     return '';
   }
@@ -342,12 +347,22 @@ function encodeBuild(obj){
 
 function decodeBuild(str){
   if(!str) return null;
-  // Backwards-compatible: first try URL-decoded JSON (old format), then base64-url
+  // Backwards-compatible: handle compressed (z...), base64-url, and old URL-encoded formats
   try{
+    // If starts with 'z', it's LZ-compressed
+    if(str[0] === 'z'){
+      const compressed = str.substring(1);
+      if(window.LZString){
+        const json = LZString.decompressFromBase64(compressed);
+        return JSON.parse(json);
+      }
+    }
+    // Try URL-decoded JSON (old format)
     const maybeJson = decodeURIComponent(str);
     return JSON.parse(maybeJson);
   }catch(e){
     try{
+      // Try base64-url decode (old base64 format, no compression)
       const decoded = base64UrlDecode(str);
       return JSON.parse(decoded);
     }catch(e2){

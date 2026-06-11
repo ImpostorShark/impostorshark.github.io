@@ -243,27 +243,27 @@
               "maxLevel": 5,
               "levels": {
                 "1": {
-                  "dmgAmp": 42,
+                  "dmgMATKPercent": 42,
                   "MATKBonus": 1523,
                   "description": "MATK Rate: 142% + 1523."
                 },
                 "2": {
-                  "dmgAmp": 46,
+                  "dmgMATKPercent": 46,
                   "MATKBonus": 1612,
                   "description": "MATK Rate: 146% + 1612."
                 },
                 "3": {
-                  "dmgAmp": 51,
+                  "dmgMATKPercent": 51,
                   "MATKBonus": 1701,
                   "description": "MATK Rate: 151% + 1701."
                 },
                 "4": {
-                  "dmgAmp": 55,
+                  "dmgMATKPercent": 55,
                   "MATKBonus": 1790,
                   "description": "MATK Rate: 155% + 1790."
                 },
                 "5": {
-                  "dmgAmp": 59,
+                  "dmgMATKPercent": 59,
                   "MATKBonus": 1879,
                   "description": "MATK Rate: 159% + 1879."
                 }
@@ -279,27 +279,27 @@
               "maxLevel": 5,
               "levels": {
                 "1": {
-                  "dmgAmp": 58,
+                  "dmgMATKPercent": 58,
                   "MATKBonus": 1940,
                   "description": "MATK Rate: 158% + 1940.DOT: 482 every 2s for 6s."
                 },
                 "2": {
-                  "dmgAmp": 63,
+                  "dmgMATKPercent": 63,
                   "MATKBonus": 2038,
                   "description": "MATK Rate: 163% + 2038.DOT: 508 every 2s for 6s."
                 },
                 "3": {
-                  "dmgAmp": 67,
+                  "dmgMATKPercent": 67,
                   "MATKBonus": 2137,
                   "description": "MATK Rate: 167% + 2137.DOT: 534 every 2s for 6s."
                 },
                 "4": {
-                  "dmgAmp": 72,
+                  "dmgMATKPercent": 72,
                   "MATKBonus": 2235,
                   "description": "MATK Rate: 172% + 2235.DOT: 560  every 2s for 6s."
                 },
                 "5": {
-                  "dmgAmp": 77,
+                  "dmgMATKPercent": 77,
                   "MATKBonus": 2334,
                   "description": "MATK Rate: 177% + 2334.DOT: 586 every 2s for 6s."
                 }
@@ -378,13 +378,16 @@
               }
             },
             {
-              "id": "iceShield",
+              "id": "iceshield",
               "name": "Ice Shield",
               "image": "images/iceshield.png",
               "column": 3,
               "row": 1,
               "minLevel": 1,
               "maxLevel": 5,
+              "exclusiveWith": [
+                "flameshield"
+              ],
               "levels": {
                 "1": { 
                   "hitPercent": 3,
@@ -555,6 +558,613 @@
                 "5": {
                   "pdef": 208,
                   "description": "Permanently increases PDEF +208. Chance to freeze attackers when hit : 5%. Duration of Freeze 5 seconds"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "fireMage",
+          "name": "Fire Mage",
+          "talents": [
+            {
+              "id": "blaze1",
+              "name": "Blaze I",
+              "image": "images/blaze1.png",
+              "column": 1,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 53,
+                  "MATKBonus": 30,
+                  "description": "MATK Rate: 53% MATK Bonus: 30"
+                },
+                "2": {
+                  "dmgMATKPercent": 58,
+                  "MATKBonus": 81,
+                  "description": "MATK Rate: 58% MATK Bonus: 81"
+                },
+                "3": {
+                  "dmgMATKPercent": 62,
+                  "MATKBonus": 131,
+                  "description": "MATK Rate: 62% MATK Bonus: 131"
+                },
+                "4": {
+                  "dmgMATKPercent": 67,
+                  "MATKBonus": 181,
+                  "description": "MATK Rate: 67% MATK Bonus: 181"
+                },
+                "5": {
+                  "dmgMATKPercent": 71,
+                  "MATKBonus": 231,
+                  "description": "MATK Rate: 71% MATK Bonus: 231"
+                }
+              }
+            },
+            {
+              "id": "flare1",
+              "name": "Flare I",
+              "image": "images/flare1.png",
+              "column": 1,
+              "row": 2,
+              "minLevel": 20,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 116,
+                  "MATKBonus": 144,
+                  "description": "MATK Rate: 116% MATK Bonus: 144"
+                },
+                "2": {
+                  "dmgMATKPercent": 119,
+                  "MATKBonus": 184,
+                  "description": "MATK Rate: 119% MATK Bonus: 184"
+                },
+                "3": {
+                  "dmgMATKPercent": 23,
+                  "MATKBonus": 223,
+                  "description": "MATK Rate: 123% MATK Bonus: 223"
+                },
+                "4": {
+                  "dmgMATKPercent": 26,
+                  "MATKBonus": 262,
+                  "description": "MATK Rate: 126% MATK Bonus: 262"
+                },
+                "5": {
+                  "dmgMATKPercent": 30,
+                  "MATKBonus": 301,
+                  "description": "MATK Rate: 130% MATK Bonus: 301"
+                }
+              }
+            },
+            {
+              "id": "blaze2",
+              "name": "Blaze II",
+              "image": "images/blaze2.png",
+              "column": 1,
+              "row": 3,
+              "minLevel": 40,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 53,
+                  "MATKBonus": 1057,
+                  "description": "MATK Rate: 53%. MATK Bonus: 1057"
+                },
+                "2": {
+                  "dmgMATKPercent": 58,
+                  "MATKBonus": 1149,
+                  "description": "MATK Rate: 58%. MATK Bonus: 1149"
+                },
+                "3": {
+                  "dmgMATKPercent": 62,
+                  "MATKBonus": 1241,
+                  "description": "MATK Rate: 62%. MATK Bonus: 1241"
+                },
+                "4": {
+                  "dmgMATKPercent": 67,
+                  "MATKBonus": 1333,
+                  "description": "MATK Rate: 67%. MATK Bonus: 1333"
+                },
+                "5": {
+                  "dmgMATKPercent": 71,
+                  "MATKBonus": 1425,
+                  "description": "MATK Rate: 71%. MATK Bonus: 1425"
+                }
+              }
+            },
+            {
+              "id": "flare2",
+              "name": "Flare II",
+              "image": "images/flare2.png",
+              "column": 1,
+              "row": 4,
+              "minLevel": 60,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 116,
+                  "MATKBonus": 1082,
+                  "description": "MATK Rate: 116%. MATK Bonus: 1082"
+                },
+                "2": {
+                  "dmgMATKPercent": 119,
+                  "MATKBonus": 1157,
+                  "description": "MATK Rate: 119%. MATK Bonus: 1157"
+                },
+                "3": {
+                  "dmgMATKPercent": 123,
+                  "MATKBonus": 1231,
+                  "description": "MATK Rate: 123%. MATK Bonus: 1231"
+                },
+                "4": {
+                  "dmgMATKPercent": 126,
+                  "MATKBonus": 1305,
+                  "description": "MATK Rate: 126%. MATK Bonus: 1305"
+                },
+                "5": {
+                  "dmgMATKPercent": 130,
+                  "MATKBonus": 1379,
+                  "description": "MATK Rate: 130%. MATK Bonus: 1379"
+                }
+              }
+            },
+            {
+              "id": "flameexplosion",
+              "name": "Flame Explosion",
+              "image": "images/flameexplosion.png",
+              "column": 1,
+              "row": 5,
+              "minLevel": 70,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 75,
+                  "MATKBonus": 2206,
+                  "description": "MATK Rate: 75%. MATK Bonus: 2206. 7 Targets."
+                },
+                "2": {
+                  "dmgMATKPercent": 80,
+                  "MATKBonus": 2318,
+                  "description": "MATK Rate: 80%. MATK Bonus: 2318. 9 Targets."
+                },
+                "3": {
+                  "dmgMATKPercent": 86,
+                  "MATKBonus": 2431,
+                  "description": "MATK Rate: 86%. MATK Bonus: 2431. 11 Targets."
+                },
+                "4": {
+                  "dmgMATKPercent": 91,
+                  "MATKBonus": 2544,
+                  "description": "MATK Rate: 91%. MATK Bonus: 2544. 13 Targets."
+                },
+                "5": {
+                  "dmgMATKPercent": 96,
+                  "MATKBonus": 2657,
+                  "description": "MATK Rate: 96%. MATK Bonus: 2657. 15 Targets."
+                }
+              }
+            },
+            {
+              "id": "flare3",
+              "name": "TBD",
+              "image": "images/flare3.png",
+              "column": 1,
+              "row": 6,
+              "minLevel": 80,
+              "maxLevel": 0,
+              "levels": {
+                "1": {
+                  "description": "TBD"
+                },
+                "2": {
+                  "description": "TBD"
+                },
+                "3": {
+                  "description": "TBD"
+                },
+                "4": {
+                  "description": "TBD"
+                },
+                "5": {
+                  "description": "TBD"
+                }
+              }
+            },
+            {
+              "id": "balrogHell",
+              "name": "Balrog Hell",
+              "image": "images/balroghell.png",
+              "column": 2,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 55,
+                  "MATKBonus": 28,
+                  "description": "MATK Rate: 55%. MATK Bonus: 28. 7 Targets."
+                },
+                "2": {
+                  "dmgMATKPercent": 57,
+                  "MATKBonus": 32,
+                  "description": "MATK Rate: 57%. MATK Bonus: 32. 9 Targets."
+                },
+                "3": {
+                  "dmgMATKPercent": 58,
+                  "MATKBonus": 36,
+                  "description": "MATK Rate: 58%. MATK Bonus: 36. 11 Targets."
+                },
+                "4": {
+                  "dmgMATKPercent": 60,
+                  "MATKBonus": 40,
+                  "description": "MATK Rate: 60%. MATK Bonus: 40. 13 Targets."
+                },
+                "5": {
+                  "dmgMATKPercent": 62,
+                  "MATKBonus": 44,
+                  "description": "MATK Rate: 62%. MATK Bonus: 44. 15 Targets."
+                }
+              }
+            },
+            {
+              "id": "wildfire1",
+              "name": "Wildfire I",
+              "image": "images/wildfire1.png",
+              "column": 2,
+              "row": 2,
+              "minLevel": 20,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 104,
+                  "MATKBonus": 219,
+                  "description": "MATK Rate: 104%. MATK Bonus: 219. MAX HP -3%. 7 Targets."
+                },
+                "2": {
+                  "dmgMATKPercent": 107,
+                  "MATKBonus": 254,
+                  "description": "MATK Rate: 107%. MATK Bonus: 254. MAX HP -6%. 9 Targets."
+                },
+                "3": {
+                  "dmgMATKPercent": 110,
+                  "MATKBonus": 289,
+                  "description": "MATK Rate: 110%. MATK Bonus: 289. MAX HP -9%. 11 Targets."
+                },
+                "4": {
+                  "dmgMATKPercent": 113,
+                  "MATKBonus": 324,
+                  "description": "MATK Rate: 113%. MATK Bonus: 324. MAX HP -12%. 13 Targets."
+                },
+                "5": {
+                  "dmgMATKPercent": 116,
+                  "MATKBonus": 359,
+                  "description": "MATK Rate: 116%. MATK Bonus: 359. MAX HP -15%. 15 Targets."
+                }
+              }
+            },
+            {
+              "id": "thunderBolt",
+              "name": "Thunder Bolt",
+              "image": "images/thunderbolt.png",
+              "column": 2,
+              "row": 3,
+              "minLevel": 40,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 36,
+                  "MATKBonus": 612,
+                  "description": "MATK Rate: 136%. MATK Bonus: 612. Numb 10 seconds."
+                },
+                "2": {
+                  "dmgMATKPercent": 40,
+                  "MATKBonus": 681,
+                  "description": "MATK Rate: 140%. MATK Bonus: 681. Numb 10 seconds."
+                },
+                "3": {
+                  "dmgMATKPercent": 44,
+                  "MATKBonus": 749,
+                  "description": "MATK Rate: 144%. MATK Bonus: 749. Numb 10 seconds."
+                },
+                "4": {
+                  "dmgMATKPercent": 48,
+                  "MATKBonus": 817,
+                  "description": "MATK Rate: 148%. MATK Bonus: 817. Numb 10 seconds."
+                },
+                "5": {
+                  "dmgMATKPercent": 52,
+                  "MATKBonus": 885,
+                  "description": "MATK Rate: 152%. MATK Bonus: 885. Numb 10 seconds."
+                }
+              }
+            },
+            {
+              "id": "wildfire2",
+              "name": "Wildfire II",
+              "image": "images/wildfire2.png",
+              "column": 2,
+              "row": 4,
+              "minLevel": 60,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 104,
+                  "MATKBonus": 1018,
+                  "description": "MATK Rate: 104%. MATK Bonus: 1018. MAX HP -3%. 7 Targets."
+                },
+                "2": {
+                  "dmgMATKPercent": 107,
+                  "MATKBonus": 1077,
+                  "description": "MATK Rate: 107%. MATK Bonus: 1077. MAX HP -6%. 9 Targets."
+                },
+                "3": {
+                  "dmgMATKPercent": 110,
+                  "MATKBonus": 1135,
+                  "description": "MATK Rate: 110%. MATK Bonus: 1135. MAX HP -9%. 11 Targets."
+                },
+                "4": {
+                  "dmgMATKPercent": 113,
+                  "MATKBonus": 1194,
+                  "description": "MATK Rate: 113%. MATK Bonus: 1194. MAX HP -12%. 13 Targets."
+                },
+                "5": {
+                  "dmgMATKPercent": 116,
+                  "MATKBonus": 1252,
+                  "description": "MATK Rate: 116%. MATK Bonus: 1252. MAX HP -15%. 15 Targets."
+                }
+              }
+            },
+            {
+              "id": "meteorStrike",
+              "name": "Meteor Strike",
+              "image": "images/meteorstrike.png",
+              "column": 2,
+              "row": 5,
+              "minLevel": 80,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgMATKPercent": 148 ,
+                  "MATKBonus": 2925,
+                  "description": "MATK Rate: 148  %. MATK Bonus: 2925. Stun 1.5s"
+                },
+                "2": {
+                  "dmgMATKPercent": 152,
+                  "MATKBonus": 3067,
+                  "description": "MATK Rate: 152%. MATK Bonus: 3067. Stun 2s"
+                },
+                "3": {
+                  "dmgMATKPercent": 157,
+                  "MATKBonus": 3209,
+                  "description": "MATK Rate: 157%. MATK Bonus: 3209. Stun 2.5s"
+                },
+                "4": {
+                  "dmgMATKPercent": 161,
+                  "MATKBonus": 3251,
+                  "description": "MATK Rate: 161%. MATK Bonus: 3251. Stun 3s"
+                },
+                "5": {
+                  "dmgMATKPercent": 166,
+                  "MATKBonus": 3493,
+                  "description": "MATK Rate: 166%. MATK Bonus: 3493. Stun 3.5s"
+                }
+              }
+            },
+            {
+              "id": "flameshield",
+              "name": "Flame Shield",
+              "image": "images/flameshield.png",
+              "column": 3,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [
+                "iceshield"
+              ],
+              "levels": {
+                "1": { 
+                  "matkPercent": 2,
+                  "crit chance": 2,
+                  "description": "MATK + 2%. Crit + 2%" 
+                },
+                "2": { 
+                  "matkPercent": 4,
+                  "crit chance": 4,
+                  "description": "MATK + 4%. Crit + 4%" 
+                },
+                "3": { 
+                  "matkPercent": 6,
+                  "crit chance": 6,
+                  "description": "MATK + 6%. Crit + 6%" 
+                },
+                "4": { 
+                  "matkPercent": 8,
+                  "crit chance": 8,
+                  "description": "MATK + 8%. Crit + 8%" 
+                },
+                "5": { 
+                  "matkPercent": 10,
+                  "crit chance": 10,
+                  "description": "MATK + 10%. Crit + 10%" 
+                }
+              }
+            },
+            {
+              "id": "teleport",
+              "name": "Teleport",
+              "image": "images/teleport.png",
+              "column": 3,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": { 
+                  "description": "Teleports to location. 300 Range. 24s cooldown. Clears movement restrictions." 
+                },
+                "2": { 
+                  "description": "Teleports to location. 350 Range. 20s cooldown. Clears movement restrictions." 
+                },
+                "3": { 
+                  "description": "Teleports to location. 400 Range. 16s cooldown. Clears movement restrictions." 
+                },
+                "4": { 
+                  "description": "Teleports to location. 450 Range. 12s cooldown. Clears movement restrictions." 
+                },
+                "5": { 
+                  "description": "Teleports to location. 500 Range. 8s cooldown. Clears movement restrictions." 
+                }
+              }
+            },
+            {
+              "id": "cohesion",
+              "name": "Cohesion",
+              "image": "images/cohesion.png",
+              "column": 3,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": { 
+                  "description": "Max MP + 4%" 
+                },
+                "2": { 
+                  "description": "Max MP + 8%" 
+                },
+                "3": { 
+                  "description": "Max MP + 12%" 
+                },
+                "4": { 
+                  "description": "Max MP + 16%" 
+                },
+                "5": { 
+                  "description": "Max MP + 20%" 
+                }
+              }
+            },
+            {
+              "id": "manaslay",
+              "name": "Mana Slay",
+              "image": "images/manaslay.png",
+              "column": 3,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": { 
+                  "matkPercent": 3, 
+                  "description": "MATK + 3%. Spells cost 5 more MP." 
+                },
+                "2": { 
+                  "matkPercent": 6, 
+                  "description": "MATK + 6%. Spells cost 12 more MP." 
+                },
+                "3": { 
+                  "matkPercent": 9, 
+                  "description": "MATK + 9%. Spells cost 20 more MP." 
+                },
+                "4": { 
+                  "matkPercent": 12, 
+                  "description": "MATK + 12%. Spells cost 27 more MP." 
+                },
+                "5": { 
+                  "matkPercent": 15,  
+                  "description": "MATK + 15%. Spells cost 34 more MP." 
+                }
+              }
+            },
+            {
+              "id": "decision",
+              "name": "Decision",
+              "image": "images/decision.png",
+              "column": 3,
+              "row": 5,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": { 
+                  "HPPercent":-15,
+                  "matkPercent": 2,
+                  "crit chance": 1,
+                  "description": "MATK + 2%. Crit + 1%. -15% Max HP." 
+                },
+                "2": { 
+                  "HPPercent":-15,
+                  "matkPercent": 4,
+                  "crit chance": 2,
+                  "description": "MATK + 4%. Crit + 2%. -15% Max HP." 
+                },
+                "3": { 
+                  "HPPercent":-15,
+                  "matkPercent": 6,
+                  "crit chance": 3,
+                  "description": "MATK + 6%. Crit + 3%. -15% Max HP." 
+                },
+                "4": { 
+                  "HPPercent":-15,
+                  "matkPercent": 8,
+                  "crit chance": 4,
+                  "description": "MATK + 8%. Crit + 4%. -15% Max HP." 
+                },
+                "5": { 
+                  "HPPercent":-15,
+                  "matkPercent": 10,
+                  "crit chance": 5,
+                  "description": "MATK + 10%. Crit + 5%. -15% Max HP." 
+                }
+              }
+            },
+            {
+              "id": "spiritlore",
+              "name": "Spirit Lore",
+              "image": "images/spiritlore.png",
+              "column": 3,
+              "row": 6,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": { 
+                  "description": "5% chance on cast to recover 3% max MP." 
+                },
+                "2": { 
+                  "description": "5% chance on cast to recover 6% max MP." 
+                },
+                "3": { 
+                  "description": "5% chance on cast to recover 9% max MP." 
+                },
+                "4": { 
+                  "description": "5% chance on cast to recover 12% max MP." 
+                },
+                "5": { 
+                  "description": "5% chance on cast to recover 15% max MP." 
+                }
+              }
+            },
+            {
+              "id": "tranquility",
+              "name": "Tranquility",
+              "image": "images/tranquility.png",
+              "column": 3,
+              "row": 7,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": { 
+                  "description": "Reduces cast time for next ability within 10 seconds by 0.3s" 
+                },
+                "2": { 
+                  "description": "Reduces cast time for next ability within 10 seconds by 0.6s" 
+                },
+                "3": { 
+                  "description": "Reduces cast time for next ability within 10 seconds by 0.9s" 
+                },
+                "4": { 
+                  "description": "Reduces cast time for next ability within 10 seconds by 1.2s" 
+                },
+                "5": { 
+                  "description": "Reduces cast time for next ability within 10 seconds by 1.5s" 
                 }
               }
             }
@@ -1578,31 +2188,31 @@
                 "1": {
                   "luck": 3,
                   "hitPercent": 5,
-                  "critPercent": 2,
+                  "crit chance": 2,
                   "description": "Luck +3, Hit% + 5, Crit %"
                 },
                 "2": {
                   "luck": 6,
                   "hitPercent": 10,
-                  "critPercent": 4,
+                  "crit chance": 4,
                   "description": "Luck +6, Hit% + 10, Crit % +4"
                 },
                 "3": {
                   "luck": 9,
                   "hitPercent": 15,
-                  "critPercent": 6,
+                  "crit chance": 6,
                   "description": "Luck +9, Hit% + 15, Crit % +6"
                 },
                 "4": {
                   "luck": 12,
                   "hitPercent": 20,
-                  "critPercent": 8,
+                  "crit chance": 8,
                   "description": "Luck +12, Hit% + 20, Crit % +8"
                 },
                 "5": {
                   "luck": 15,
                   "hitPercent": 25,
-                  "critPercent": 10,
+                  "crit chance": 10,
                   "description": "Luck +15, Hit% + 25, Crit % +10"
                 }
               }
@@ -1791,27 +2401,27 @@
               "levels": {
                 "1": {
                   "patkPercent": 4,
-                  "critPercent": 3,
+                  "crit chance": 3,
                   "description": "PATK% +4, Crit% +3 for 10 seconds every 20."
                 },
                 "2": {
                   "patkPercent": 8,
-                  "critPercent": 6,
+                  "crit chance": 6,
                   "description": "PATK% +8, Crit% +6 for 10 seconds every 20."
                 },
                 "3": {
                   "patkPercent": 12,
-                  "critPercent": 9,
+                  "crit chance": 9,
                   "description": "PATK% +12, Crit% +9 for 10 seconds every 20."
                 },
                 "4": {
                   "patkPercent": 16,
-                  "critPercent": 12,
+                  "crit chance": 12,
                   "description": "PATK% +16, Crit% +12 for 10 seconds every 20."
                 },
                 "5": {
                   "patkPercent": 20,
-                  "critPercent": 15,
+                  "crit chance": 15,
                   "description": "PATK% +20, Crit% +15 for 10 seconds every 20."
                 }
               }
