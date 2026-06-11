@@ -12,6 +12,9 @@
               "id": "blizzard1",
               "name": "TBD",
               "image": "images/blizzard1.png",
+              "exclusiveWith": [
+                "balroghell"
+              ],
               "column": 1,
               "row": 1,
               "minLevel": 1,
@@ -385,9 +388,6 @@
               "row": 1,
               "minLevel": 1,
               "maxLevel": 5,
-              "exclusiveWith": [
-                "flameshield"
-              ],
               "levels": {
                 "1": { 
                   "hitPercent": 3,
@@ -781,6 +781,9 @@
               "row": 1,
               "minLevel": 1,
               "maxLevel": 5,
+              "exclusiveWith": [
+                "blizzard1"
+              ],
               "levels": {
                 "1": {
                   "dmgMATKPercent": 55,
