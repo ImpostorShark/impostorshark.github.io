@@ -126,7 +126,8 @@ function computeStats(){
 
 function getAvailableSkillPoints(){
   const lvl = Number(document.getElementById('characterLevel').value)/2;
-  return Math.max(0, lvl);
+  const rebirth = Number(document.getElementById('characterRebirth').value)*15;
+  return Math.max(0, lvl+rebirth);
 }
 
 function getUsedSkillPoints(){
@@ -316,7 +317,7 @@ function render(){
 
 // Build serialization: collect currentClass id, inputs, and talent levels (only non-zero)
 function getCurrentBuildObject(){
-  const obj = { classId: currentClass.id, characterLevel: Number(document.getElementById('characterLevel').value), inputs: {}, talents: {} };
+  const obj = { classId: currentClass.id, characterLevel: Number(document.getElementById('characterLevel').value),characterRebirth: Number(document.getElementById('characterRebirth').value), inputs: {}, talents: {} };
   ['patk','matk','pdef','mdef','hp','heal','attackSpeed','castSpeed','hitPercent'].forEach(k=>{
     const el = document.getElementById(k);
     if(el) obj.inputs[k] = Number(el.value) || 0;
@@ -333,13 +334,8 @@ function encodeBuild(obj){
   try{
     const json = JSON.stringify(obj);
     // Compress then base64 encode for much shorter URLs
-    if(window.LZString){
-      const compressed = LZString.compressToBase64(json);
-      return 'z' + compressed; // prefix 'z' to indicate compressed format
-    }else{
       const b64 = base64UrlEncode(json);
       return b64;
-    }
   }catch(e){
     return '';
   }
@@ -347,17 +343,7 @@ function encodeBuild(obj){
 
 function decodeBuild(str){
   if(!str) return null;
-  // Backwards-compatible: handle compressed (z...), base64-url, and old URL-encoded formats
   try{
-    // If starts with 'z', it's LZ-compressed
-    if(str[0] === 'z'){
-      const compressed = str.substring(1);
-      if(window.LZString){
-        const json = LZString.decompressFromBase64(compressed);
-        return JSON.parse(json);
-      }
-    }
-    // Try URL-decoded JSON (old format)
     const maybeJson = decodeURIComponent(str);
     return JSON.parse(maybeJson);
   }catch(e){
@@ -422,6 +408,7 @@ function applyBuildObject(obj){
   if(sel) sel.value = currentClass.id;
   // set inputs
   if(obj.characterLevel !== undefined) document.getElementById('characterLevel').value = obj.characterLevel;
+  if(obj.characterRebirth !== undefined) document.getElementById('characterRebirth').value = obj.characterRebirth;
   if(obj.inputs){
     Object.entries(obj.inputs).forEach(([k,v])=>{ const el = document.getElementById(k); if(el) el.value = v; });
   }

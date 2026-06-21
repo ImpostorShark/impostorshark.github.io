@@ -3824,42 +3824,42 @@
             },
             {
               "id": "radiantboltiii",
-              "name": "TBD",
+              "name": "Radiant Bolt III",
               "image": "images/radiantbolt3.png",
               "column": 1,
               "row": 5,
               "minLevel": 1,
-              "maxLevel": 0,
+              "maxLevel": 5,
               "levels": {
                 "1": {
                   "dmgMATKPercent": 44,
                   "dmgHealPercent": 53,
-                  "MATKBonus": 694,
-                  "description": "MATK Rate: 44%, Heal Rate: 53% MATK Bonus: +694"
+                  "MATKBonus": 2049,
+                  "description": "MATK Rate: 44%, Heal Rate: 53% MATK Bonus: +2049"
                 },
                 "2": {
                   "dmgMATKPercent": 48,
                   "dmgHealPercent": 55,
-                  "MATKBonus": 755,
-                  "description": "MATK Rate: 48%, Heal Rate: 55% MATK Bonus: +755"
+                  "MATKBonus": 2151,
+                  "description": "MATK Rate: 48%, Heal Rate: 55% MATK Bonus: +2151"
                 },
                 "3": {
                   "dmgMATKPercent": 53,
                   "dmgHealPercent": 56,
-                  "MATKBonus": 816,
-                  "description": "MATK Rate: 53%, Heal Rate: 56% MATK Bonus: +816"
+                  "MATKBonus": 2253,
+                  "description": "MATK Rate: 53%, Heal Rate: 56% MATK Bonus: +2253"
                 },
                 "4": {
                   "dmgMATKPercent": 57,
                   "dmgHealPercent": 58,
-                  "MATKBonus": 877,
-                  "description": "MATK Rate: 57%, Heal Rate: 58% MATK Bonus: +877"
+                  "MATKBonus": 2355,
+                  "description": "MATK Rate: 57%, Heal Rate: 58% MATK Bonus: +2355"
                 },
                 "5": {
                   "dmgMATKPercent": 61,
                   "dmgHealPercent": 59,
-                  "MATKBonus": 938,
-                  "description": "MATK Rate: 61%, Heal Rate: 59% MATK Bonus: +938"
+                  "MATKBonus": 2457,
+                  "description": "MATK Rate: 61%, Heal Rate: 59% MATK Bonus: +2457"
                 }
               }
             },
@@ -3988,8 +3988,8 @@
               }
             },
             {
-              "id": "holydew1",
-              "name": "Holy Dew I",
+              "id": "holydew2",
+              "name": "Holy Dew II",
               "image": "images/holydew1.png",
               "column": 2,
               "row": 5,
@@ -3997,19 +3997,19 @@
               "maxLevel": 5,
               "levels": {
                 "1": {
-                  "description": "Regen 4% Max HP per second for 12 seconds (Max 100). Damage reduction 3%"
+                  "description": "Regen 4% Max HP per second for 12 seconds (Max 600). Damage reduction 3%"
                 },
                 "2": {
-                  "description": "Regen 4% Max HP per second for 12 seconds (Max 196). Damage reduction 6%"
+                  "description": "Regen 4% Max HP per second for 12 seconds (Max 1250). Damage reduction 6%"
                 },
                 "3": {
-                  "description": "Regen 5% Max HP per second for 12 seconds (Max 363). Damage reduction 9%"
+                  "description": "Regen 5% Max HP per second for 12 seconds (Max 2375). Damage reduction 9%"
                 },
                 "4": {
-                  "description": "Regen 5% Max HP per second for 12 seconds (Max 481). Damage reduction 12%"
+                  "description": "Regen 5% Max HP per second for 12 seconds (Max 3188). Damage reduction 12%"
                 },
                 "5": {
-                  "description": "Regen 6% Max HP per second for 12 seconds (Max 720). Damage reduction 15%"
+                  "description": "Regen 6% Max HP per second for 12 seconds (Max 4800). Damage reduction 15%"
                 }
               }
             },
@@ -4069,39 +4069,29 @@
               "maxLevel": 0,
               "levels": {
                 "1": {
-                  "dmgMATKPercent": 51,
-                  "healPercent": 51,
-                  "bonusHeal": 2257,
-                  "bonusMATK": 2257,
-                  "description": "Damages enemies by MATK 51% + 2257 Bonus and heals self by Heal 51%  + 2257 Bonus"
+                  "healPercent": 115,
+                  "bonusHeal": 1431,
+                  "description": "Heals nearby allies. Heal Rate 115%. Bonus Heal 1431."
                 },
                 "2": {
-                  "dmgMATKPercent": 56,
-                  "healPercent": 56,
-                  "bonusHeal": 2373,
-                  "bonusMATK": 2373,
-                  "description": "Damages enemies by MATK 56% + 2373 Bonus and heals self by Heal 56%  + 2373 Bonus"
+                  "healPercent": 118,
+                  "bonusHeal": 1504,
+                  "description": "Heals nearby allies. Heal Rate 118%. Bonus Heal 1504."
                 },
                 "3": {
-                  "dmgMATKPercent": 60,
-                  "healPercent": 60,
-                  "bonusHeal": 2489,
-                  "bonusMATK": 2489,
-                  "description": "Damages enemies by MATK 60% + 2489 Bonus and heals self by Heal 60%  + 2489 Bonus"
+                  "healPercent": 122,
+                  "bonusHeal": 1577,
+                  "description": "Heals nearby allies. Heal Rate 122%. Bonus Heal 1577."
                 },
                 "4": {
-                  "dmgMATKPercent": 65,
-                  "healPercent": 65,
-                  "bonusHeal": 2605,
-                  "bonusMATK": 2605,
-                  "description": "Damages enemies by MATK 65% + 2605 Bonus and heals self by Heal 65%  + 2605 Bonus"
+                  "healPercent": 125,
+                  "bonusHeal": 1650,
+                  "description": "Heals nearby allies. Heal Rate 125%. Bonus Heal 1650."
                 },
                 "5": {
-                  "dmgMATKPercent": 69,
-                  "healPercent": 69,
-                  "bonusHeal": 2721,
-                  "bonusMATK": 2721,
-                  "description": "Damages enemies by MATK 69% + 2721 Bonus and heals self by Heal 69%  + 2721 Bonus"
+                  "healPercent": 129,
+                  "bonusHeal": 1723,
+                  "description": "Heals nearby allies. Heal Rate 129%. Bonus Heal 1723."
                 }
               }
             },
@@ -4502,7 +4492,7 @@
             },
             {
               "id": "bloodbolt3",
-              "name": "TBD",
+              "name": "Blood Bolt III",
               "image": "images/bloodbolt3.png",
               "column": 1,
               "row": 7,
@@ -4510,209 +4500,194 @@
               "maxLevel": 0,
               "levels": {
                 "1": {
-                  "dmgMATKPercent": 36,
-                  "MATKBonus": 160,
-                  "description": "MATK Rate: 36%, MATK Bonus: +160, AoE"
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 1296,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4%, MATK Bonus: +1296"
                 },
                 "2": {
-                  "dmgMATKPercent": 38,
-                  "MATKBonus": 168,
-                  "description": "MATK Rate: 38%, MATK Bonus: +168, AoE"
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 1359,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4.1%, MATK Bonus: +1359"
                 },
                 "3": {
-                  "dmgMATKPercent": 40,
-                  "MATKBonus": 176,
-                  "description": "MATK Rate: 40%, MATK Bonus: +176, AoE"
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 1422,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4.2%, MATK Bonus: +1422"
                 },
                 "4": {
-                  "dmgMATKPercent": 41,
-                  "MATKBonus": 184,
-                  "description": "MATK Rate: 41%, MATK Bonus: +184, AoE"
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 1485,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4.4%, MATK Bonus: +1485"
                 },
                 "5": {
-                  "dmgMATKPercent": 43,
-                  "MATKBonus": 192,
-                  "description": "MATK Rate: 43%, MATK Bonus: +192, AoE"
+                  "dmgMATKPercent": 80,
+                  "dmgHPPercent": 4,
+                  "MATKBonus": 1548,
+                  "description": "MATK Rate: 80%, Current HP Rate: 4.5%, MATK Bonus: +1548"
                 }
               }
             },
             {
               "id": "bloodresilience",
-              "name": "TBD",
+              "name": "Blood Resillience",
               "image": "images/bloodresilience.png",
               "column": 2,
               "row": 1,
               "minLevel": 1,
-              "maxLevel": 1,
+              "maxLevel": 5,
               "levels": {
                 "1": {
-                  "dmgMATKPercent": 100,
-                  "MATKBonus": 12,
-                  "description": "MATK Rate: 100%, MATK Bonus: +12"
+                  "Crit DEF": 15,
+                  "description": "Crit DEF + 15."
                 },
                 "2": {
-                  "dmgMATKPercent": 103,
-                  "MATKBonus": 32,
-                  "description": "MATK Rate: 103%, MATK Bonus: +32"
+                  "Crit DEF": 30,
+                  "description": "Crit DEF + 30."
                 },
                 "3": {
-                  "dmgMATKPercent": 106,
-                  "MATKBonus": 51,
-                  "description": "MATK Rate: 106%, MATK Bonus: +51"
+                  "Crit DEF": 45,
+                  "description": "Crit DEF + 45."
                 },
                 "4": {
-                  "dmgMATKPercent": 109,
-                  "MATKBonus": 71,
-                  "description": "MATK Rate: 109%, MATK Bonus: +71"
+                  "Crit DEF": 60,
+                  "description": "Crit DEF + 60."
                 },
                 "5": {
-                  "dmgMATKPercent": 112,
-                  "MATKBonus": 91,
-                  "description": "MATK Rate: 112%, MATK Bonus: +91"
+                  "Crit DEF": 75,
+                  "description": "Crit DEF + 75."
                 }
               }
             },
             {
               "id": "bloodtide",
-              "name": "TBD",
+              "name": "Bloodtide",
               "image": "images/bloodtide.png",
               "column": 2,
               "row": 2,
               "minLevel": 1,
-              "maxLevel": 0,
+              "maxLevel": 5,
               "levels": {
                 "1": {
-                  "dmgMATKPercent": 120,
-                  "MATKBonus": 242,
-                  "description": "MATK Rate: 120%, MATK Bonus: +242, Slow 50% 4seconds"
+                  "matkPercent": 4,
+                  "description": "+ 4% MATK while HP over 70%"
                 },
                 "2": {
-                  "dmgMATKPercent": 124,
-                  "MATKBonus": 282,
-                  "description": "MATK Rate: 124%, MATK Bonus: +282, Slow 55% 4seconds"
+                  "matkPercent": 8,
+                  "description": "+ 8% MATK while HP over 70%"
                 },
                 "3": {
-                  "dmgMATKPercent": 127,
-                  "MATKBonus": 320,
-                  "description": "MATK Rate: 127%, MATK Bonus: +320, Slow 60% 4seconds"
+                  "matkPercent": 12,
+                  "description": "+ 12% MATK while HP over 70%"
                 },
                 "4": {
-                  "dmgMATKPercent": 131,
-                  "MATKBonus": 359,
-                  "description": "MATK Rate: 131%, MATK Bonus: +359, Slow 65% 4seconds"
+                  "matkPercent": 16,
+                  "description": "+ 16% MATK while HP over 70%"
                 },
                 "5": {
-                  "dmgMATKPercent": 134,
-                  "MATKBonus": 398,
-                  "description": "MATK Rate: 134%, MATK Bonus: +398, Slow 70% 4seconds"
+                  "matkPercent": 20,
+                  "description": "+ 20% MATK while HP over 70%"
                 }
               }
             },
             {
               "id": "bloodsurge",
-              "name": "TBD",
+              "name": "Bloodsurge",
               "image": "images/bloodsurge.png",
               "column": 2,
               "row": 3,
               "minLevel": 1,
-              "maxLevel": 1,
+              "maxLevel": 5,
               "levels": {
                 "1": {
-                  "dmgMATKPercent": 100,
-                  "MATKBonus": 428,
-                  "description": "MATK Rate: 100%, MATK Bonus: +428"
+                  "PDMGPercent":1,
+                  "MDMGPercent":3,
+                  "description": "HP Regen + 8. PDMG Ref 1%. MDMG Red. 3%"
                 },
                 "2": {
-                  "dmgMATKPercent": 103,
-                  "MATKBonus": 466,
-                  "description": "MATK Rate: 103%, MATK Bonus: +466"
+                  "PDMGPercent":2,
+                  "MDMGPercent":6,
+                  "description": "HP Regen + 8. PDMG Ref 2%. MDMG Red. 6%"
                 },
                 "3": {
-                  "dmgMATKPercent": 106,
-                  "MATKBonus": 505,
-                  "description": "MATK Rate: 106%, MATK Bonus: +505"
+                  "PDMGPercent":3,
+                  "MDMGPercent":9,
+                  "description": "HP Regen + 8. PDMG Ref 3%. MDMG Red. 9%"
                 },
                 "4": {
-                  "dmgMATKPercent": 109,
-                  "MATKBonus": 543,
-                  "description": "MATK Rate: 109%, MATK Bonus: +543"
+                  "PDMGPercent":4,
+                  "MDMGPercent":12,
+                  "description": "HP Regen + 8. PDMG Ref 4%. MDMG Red. 12%"
                 },
                 "5": {
-                  "dmgMATKPercent": 112,
-                  "MATKBonus": 581,
-                  "description": "MATK Rate: 112%, MATK Bonus: +581"
+                  "PDMGPercent":5,
+                  "MDMGPercent":15,
+                  "description": "HP Regen + 8. PDMG Ref 5%. MDMG Red. 15%"
                 }
               }
             },
             {
               "id": "bloodmistarmor",
-              "name": "TBD",
+              "name": "Bloodmist Armor",
               "image": "images/bloodmistarmor.png",
               "column": 2,
               "row": 4,
               "minLevel": 1,
-              "maxLevel": 0,
+              "maxLevel": 5,
               "levels": {
                 "1": {
-                  "dmgMATKPercent": 100,
-                  "MATKBonus": 1163,
-                  "description": "MATK Rate: 100%, MATK Bonus: +1163"
+                  "HPPercent":1,
+                  "HPBonus":937,
+                  "description": "Max HP% 1%.Bonus HP: 937."
                 },
                 "2": {
-                  "dmgMATKPercent": 103,
-                  "MATKBonus": 1220,
-                  "description": "MATK Rate: 103%, MATK Bonus: +1220"
+                  "HPPercent":2,
+                  "HPBonus":1435,
+                  "description": "Max HP% 2%.Bonus HP: 1435."
                 },
                 "3": {
-                  "dmgMATKPercent": 106,
-                  "MATKBonus": 1277,
-                  "description": "MATK Rate: 106%, MATK Bonus: +1277"
+                  "HPPercent":3,
+                  "HPBonus":1932,
+                  "description": "Max HP% 3%.Bonus HP: 1932."
                 },
                 "4": {
-                  "dmgMATKPercent": 109,
-                  "MATKBonus": 1334,
-                  "description": "MATK Rate: 109%, MATK Bonus: +1334"
+                  "HPPercent":4,
+                  "HPBonus":2430,
+                  "description": "Max HP% 4%.Bonus HP: 2430."
                 },
                 "5": {
-                  "dmgMATKPercent": 112,
-                  "MATKBonus": 1390,
-                  "description": "MATK Rate: 112%, MATK Bonus: +1390"
+                  "HPPercent":5,
+                  "HPBonus":2928,
+                  "description": "Max HP% 5%.Bonus HP: 2928."
                 }
               }
             },
             {
               "id": "bloodfogtotem",
-              "name": "TBD",
+              "name": "Bloodfog Totem",
               "image": "images/bloodfogtotem.png",
               "column": 2,
-              "row": 4,
+              "row": 5,
               "minLevel": 1,
-              "maxLevel": 0,
+              "maxLevel": 5,
               "levels": {
                 "1": {
-                  "dmgMATKPercent": 100,
-                  "MATKBonus": 1163,
-                  "description": "MATK Rate: 100%, MATK Bonus: +1163"
+                  "description": "Summons a totem that gives stealth for 2 seconds. Gives stealth every 5 seconds. 20 second duration."
                 },
                 "2": {
-                  "dmgMATKPercent": 103,
-                  "MATKBonus": 1220,
-                  "description": "MATK Rate: 103%, MATK Bonus: +1220"
+                  "description": "Summons a totem that gives stealth for 2 seconds. Gives stealth every 4.5 seconds. 20 second duration."
                 },
                 "3": {
-                  "dmgMATKPercent": 106,
-                  "MATKBonus": 1277,
-                  "description": "MATK Rate: 106%, MATK Bonus: +1277"
+                  "description": "Summons a totem that gives stealth for 2 seconds. Gives stealth every 4 seconds. 20 second duration."
                 },
                 "4": {
-                  "dmgMATKPercent": 109,
-                  "MATKBonus": 1334,
-                  "description": "MATK Rate: 109%, MATK Bonus: +1334"
+                  "description": "Summons a totem that gives stealth for 2 seconds. Gives stealth every 3.5 seconds. 20 second duration."
                 },
                 "5": {
-                  "dmgMATKPercent": 112,
-                  "MATKBonus": 1390,
-                  "description": "MATK Rate: 112%, MATK Bonus: +1390"
+                  "description": "Summons a totem that gives stealth for 2 seconds. Gives stealth every 3 seconds. 20 second duration."
                 }
               }
             },
@@ -4721,7 +4696,7 @@
               "name": "Demon Claw",
               "image": "images/demonclaw.png",
               "column": 2,
-              "row": 5,
+              "row": 6,
               "minLevel": 1,
               "maxLevel": 5,
               "levels": {
@@ -4749,37 +4724,37 @@
             },
             {
               "id": "bloodrite",
-              "name": "TBD",
+              "name": "Blood Rite",
               "image": "images/bloodrite.png",
               "column": 2,
-              "row": 4,
+              "row": 7,
               "minLevel": 1,
-              "maxLevel": 0,
+              "maxLevel": 5,
               "levels": {
                 "1": {
                   "dmgMATKPercent": 100,
-                  "MATKBonus": 1163,
-                  "description": "MATK Rate: 100%, MATK Bonus: +1163"
+                  "MATKBonus": 2858,
+                  "description": "MATK Rate: 100% (This is a guess, doesn't say anything), MATK Bonus: +2858"
                 },
                 "2": {
-                  "dmgMATKPercent": 103,
-                  "MATKBonus": 1220,
-                  "description": "MATK Rate: 103%, MATK Bonus: +1220"
+                  "dmgMATKPercent": 100,
+                  "MATKBonus": 2997,
+                  "description": "MATK Rate: 100% (This is a guess, doesn't say anything), MATK Bonus: +2997"
                 },
                 "3": {
-                  "dmgMATKPercent": 106,
-                  "MATKBonus": 1277,
-                  "description": "MATK Rate: 106%, MATK Bonus: +1277"
+                  "dmgMATKPercent": 100,
+                  "MATKBonus": 3136,
+                  "description": "MATK Rate: 100% (This is a guess, doesn't say anything), MATK Bonus: +3136"
                 },
                 "4": {
-                  "dmgMATKPercent": 109,
-                  "MATKBonus": 1334,
-                  "description": "MATK Rate: 109%, MATK Bonus: +1334"
+                  "dmgMATKPercent": 100,
+                  "MATKBonus": 3275,
+                  "description": "MATK Rate: 100% (This is a guess, doesn't say anything), MATK Bonus: +3275"
                 },
                 "5": {
-                  "dmgMATKPercent": 112,
-                  "MATKBonus": 1390,
-                  "description": "MATK Rate: 112%, MATK Bonus: +1390"
+                  "dmgMATKPercent": 100,
+                  "MATKBonus": 3414,
+                  "description": "MATK Rate: 100% (This is a guess, doesn't say anything), MATK Bonus: +3414"
                 }
               }
             },
