@@ -964,9 +964,6 @@
               "row": 1,
               "minLevel": 1,
               "maxLevel": 5,
-              "exclusiveWith": [
-                "iceshield"
-              ],
               "levels": {
                 "1": { 
                   "matkPercent": 2,
@@ -2449,6 +2446,9 @@
               "row": 1,
               "minLevel": 1,
               "maxLevel": 5,
+              "exclusiveWith": [
+                "lightstream1"
+              ],
               "levels": {
                 "1": {
                   "description": "Sealths for 20s. Slows you by 40% for duration."
@@ -3040,6 +3040,9 @@
               "row": 1,
               "minLevel": 1,
               "maxLevel": 5,
+              "exclusiveWith": [
+                "shadowcloak"
+              ],
               "levels": {
                 "1": {
                   "dmgPATKPercent": 124,
@@ -4016,7 +4019,9 @@
               "row": 1,
               "minLevel": 1,
               "maxLevel": 5,
-              "exclusiveWith": [],
+              "exclusiveWith": [
+                "earthguard1"
+              ],
               "levels": {
                 "1": {
                   "patk": 15,
@@ -4675,7 +4680,7 @@
               "minLevel": 1,
               "maxLevel": 5,
               "exclusiveWith": [
-                "ironfrenzy"
+                "ironfrenzy1"
               ],
               "levels": {
                 "1": {

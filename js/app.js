@@ -386,20 +386,56 @@ function base64UrlDecode(b64u){
 }
 
 function createShareLink(){
-  const obj = getCurrentBuildObject();
-  const encoded = encodeBuild(obj);
-  if(!encoded) return alert('Could not encode build');
-  const link = location.origin + location.pathname + '?build=' + encoded;
+  // Compact numeric URL scheme: ?class=1&tree=1&skills=215 (col2,row1,level5)
   const input = document.getElementById('shareLink');
-  if(input) input.value = link;
-  // copy to clipboard when possible
-  if(navigator.clipboard && navigator.clipboard.writeText){
-    navigator.clipboard.writeText(link).then(()=>{
-      alert('Link copied to clipboard');
-    }).catch(()=>{
-      try{ input.select(); document.execCommand('copy'); alert('Link copied'); }catch(e){ alert(link); }
+  try{
+    const classIndex = data.classes.findIndex(c=>c.id===currentClass.id) + 1; // 1-based
+    // collect non-zero skills per tree
+    const treeSkills = [];
+    currentClass.trees.forEach((tree, ti)=>{
+      let s = '';
+      tree.talents.forEach(t=>{
+        const lvl = t.level || 0;
+        if(lvl>0){
+          const col = Number(t.column)||0;
+          const row = Number(t.row)||0;
+          s += `${col}${row}${lvl}`;
+        }
+      });
+      if(s.length>0) treeSkills.push({idx: ti+1, skills: s});
     });
-  }else{
+
+    let link = null;
+    const charLevel = Number(document.getElementById('characterLevel').value) || 1;
+    const rebirth = Number(document.getElementById('characterRebirth').value) || 0;
+    if(treeSkills.length===1){
+      // simple scheme matching your example, include level and rebirth
+      link = `${location.origin}${location.pathname}?class=${classIndex}&tree=${treeSkills[0].idx}&skills=${treeSkills[0].skills}&level=${charLevel}&rebirth=${rebirth}`;
+    }else if(treeSkills.length>1){
+      // compact multi-tree: trees=1:215,2:316
+      const parts = treeSkills.map(ts=>`${ts.idx}:${ts.skills}`);
+      link = `${location.origin}${location.pathname}?class=${classIndex}&trees=${parts.join(',')}&level=${charLevel}&rebirth=${rebirth}`;
+    }else{
+      // no talents selected - fall back to full build
+      const obj = getCurrentBuildObject();
+      const encoded = encodeBuild(obj);
+      if(!encoded) return alert('Could not encode build');
+      link = location.origin + location.pathname + '?build=' + encoded;
+    }
+
+    if(input) input.value = link;
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(link).then(()=>{ alert('Link copied to clipboard'); }).catch(()=>{ try{ input.select(); document.execCommand('copy'); alert('Link copied'); }catch(e){ alert(link); } });
+    }else{
+      try{ input.select(); document.execCommand('copy'); alert('Link copied'); }catch(e){ alert(link); }
+    }
+  }catch(e){
+    // final fallback to encoded build
+    const obj = getCurrentBuildObject();
+    const encoded = encodeBuild(obj);
+    if(!encoded) return alert('Could not encode build');
+    const link = location.origin + location.pathname + '?build=' + encoded;
+    if(input) input.value = link;
     try{ input.select(); document.execCommand('copy'); alert('Link copied'); }catch(e){ alert(link); }
   }
 }
@@ -432,11 +468,67 @@ function applyBuildObject(obj){
 
 function loadBuildFromURL(){
   const params = new URLSearchParams(location.search);
+  // Compact numeric scheme: ?class=1&tree=1&skills=215  OR ?class=1&trees=1:215,2:316
+  const classParam = params.get('class');
+  if(classParam){
+    const classIndex = Number(classParam);
+    if(!isNaN(classIndex) && classIndex >=1 && classIndex <= data.classes.length){
+      const cls = data.classes[classIndex-1];
+      if(cls){
+        currentClass = cls;
+        const sel = document.getElementById('classSelect'); if(sel) sel.value = currentClass.id;
+        // set character level and rebirth if present
+        const lvlParam = params.get('level');
+        const rebParam = params.get('rebirth');
+        if(lvlParam !== null){ const lv = Number(lvlParam); if(!isNaN(lv)) document.getElementById('characterLevel').value = lv; }
+        if(rebParam !== null){ const rb = Number(rebParam); if(!isNaN(rb)) document.getElementById('characterRebirth').value = rb; }
+        // zero talents then apply
+        initializeLevels();
+        const treesParam = params.get('trees');
+        if(treesParam){
+          // format: 1:215,2:316
+          const parts = treesParam.split(',');
+          parts.forEach(p=>{
+            const [tiStr, skills] = p.split(':');
+            const ti = Number(tiStr);
+            if(!isNaN(ti) && ti>=1 && ti<=currentClass.trees.length && skills){
+              applySkillsStringToTree(currentClass.trees[ti-1], skills);
+            }
+          });
+          render(); updateSummary();
+          return;
+        }
+        const treeParam = params.get('tree');
+        const skills = params.get('skills');
+        if(treeParam && skills){
+          const ti = Number(treeParam);
+          if(!isNaN(ti) && ti>=1 && ti<=currentClass.trees.length){
+            applySkillsStringToTree(currentClass.trees[ti-1], skills);
+            render(); updateSummary();
+            return;
+          }
+        }
+      }
+    }
+  }
+  // fallback to existing encoded build param
   const b = params.get('build');
   if(!b) return;
   const obj = decodeBuild(b);
   if(!obj) return;
   applyBuildObject(obj);
+}
+
+function applySkillsStringToTree(tree, skills){
+  // skills is string with repeated triples: col,row,level (single-digit each)
+  for(let i=0;i<skills.length; i+=3){
+    const col = Number(skills.charAt(i));
+    const row = Number(skills.charAt(i+1));
+    const lvl = Number(skills.charAt(i+2));
+    if(isNaN(col) || isNaN(row) || isNaN(lvl)) continue;
+    const t = tree.talents.find(tt=>Number(tt.column)===col && Number(tt.row)===row);
+    if(t){ t.level = Math.max(0, Math.min(t.maxLevel, lvl)); }
+  }
 }
 
 function updateSummary(){
