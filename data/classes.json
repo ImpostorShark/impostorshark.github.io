@@ -2434,6 +2434,1187 @@
       ]
     },
     {
+      "id": "rogue",
+      "name": "Rogue",
+      "trees": [
+        {
+          "id": "phatnomrogue",
+          "name": "Phantom Rogue",
+          "talents": [
+            {
+              "id": "shadowcloak",
+              "name": "Shadowcloak",
+              "image": "images/shadowcloak.png",
+              "column": 1,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "Sealths for 20s. Slows you by 40% for duration."
+                },
+                "2": {
+                  "description": "Sealths for 30s. Slows you by 30% for duration."
+                },
+                "3": {
+                  "description": "Sealths for 40s. Slows you by 20% for duration."
+                },
+                "4": {
+                  "description": "Sealths for 50s. Slows you by 10% for duration."
+                },
+                "5": {
+                  "description": "Sealths for 60s. Slows you by 00% for duration."
+                }
+              }
+            },
+            {
+              "id": "stealthslay",
+              "name": "Stealth Slay",
+              "image": "images/stealthslay.png",
+              "column": 1,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 135,
+                  "PATKBonus": 402,
+                  "description": "PATK Rate: 135%, PATK Bonus: +402. Triggers level 1 Stealth. Cooldown 85s"
+                },
+                "2": {
+                  "dmgPATKPercent": 139,
+                  "PATKBonus": 447  ,
+                  "description": "PATK Rate: 139%, PATK Bonus: +447 . Triggers level 2 Stealth. Cooldown 75s"
+                },
+                "3": {
+                  "dmgPATKPercent": 143,
+                  "PATKBonus": 492,
+                  "description": "PATK Rate: 143%, PATK Bonus: +492. Triggers level 3 Stealth. Cooldown 65s"
+                },
+                "4": {
+                  "dmgPATKPercent": 147,
+                  "PATKBonus": 537,
+                  "description": "PATK Rate: 147%, PATK Bonus: +537. Triggers level 4 Stealth. Cooldown 55s"
+                },
+                "5": {
+                  "dmgPATKPercent": 151,
+                  "PATKBonus": 582,
+                  "description": "PATK Rate: 151%, PATK Bonus: +582. Triggers level 5 Stealth. Cooldown 45s"
+                }
+              }
+            },
+            {
+              "id": "bladedance",
+              "name": "Blade Dance",
+              "image": "images/bladedance.png",
+              "column": 1,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 78,
+                  "PATKBonus": 221,
+                  "description": "PATK Rate: 78%, PATK Bonus: +221. Hits 5 targets. Hits twice."
+                },
+                "2": {
+                  "dmgPATKPercent": 80,
+                  "PATKBonus": 236,
+                  "description": "PATK Rate: 80%, PATK Bonus: +236. Hits 5 targets. Hits twice."
+                },
+                "3": {
+                  "dmgPATKPercent": 83,
+                  "PATKBonus": 251  ,
+                  "description": "PATK Rate: 83%, PATK Bonus: +251  . Hits 5 targets. Hits twice."
+                },
+                "4": {
+                  "dmgPATKPercent": 85,
+                  "PATKBonus": 266,
+                  "description": "PATK Rate: 85%, PATK Bonus: +266. Hits 5 targets. Hits twice."
+                },
+                "5": {
+                  "dmgPATKPercent": 87,
+                  "PATKBonus": 282,
+                  "description": "PATK Rate: 87%, PATK Bonus: +282. Hits 5 targets. Hits twice."
+                }
+              }
+            },
+            {
+              "id": "brutalslash",
+              "name": "Brutal Slash",
+              "image": "images/brutalslash.png",
+              "column": 1,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 160,
+                  "PATKBonus": 1417,
+                  "description": "PATK Rate: 160%, PATK Bonus: +1417. Hits 5 targets. Heal reduction 10%."
+                },
+                "2": {
+                  "dmgPATKPercent": 165,
+                  "PATKBonus": 1487,
+                  "description": "PATK Rate: 165%, PATK Bonus: +1487. Hits 5 targets. Heal reduction 20%."
+                },
+                "3": {
+                  "dmgPATKPercent": 170,
+                  "PATKBonus": 1557,
+                  "description": "PATK Rate: 170%, PATK Bonus: +1557. Hits 5 targets. Heal reduction 30%."
+                },
+                "4": {
+                  "dmgPATKPercent": 174,
+                  "PATKBonus": 1627,
+                  "description": "PATK Rate: 174%, PATK Bonus: +1627. Hits 5 targets. Heal reduction 40%."
+                },
+                "5": {
+                  "dmgPATKPercent": 179,
+                  "PATKBonus": 1697,
+                  "description": "PATK Rate: 179%, PATK Bonus: +1697. Hits 5 targets. Heal reduction 50%."
+                }
+              }
+            },
+            {
+              "id": "piercemastery1",
+              "name": "Pierce Mastery I",
+              "image": "images/piercemastery.png",
+              "column": 2,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 112,
+                  "PATKBonus": 12,
+                  "description": "PATK Rate: 112%, PATK Bonus: +12. Ignores 20% DEF."
+                },
+                "2": {
+                  "dmgPATKPercent": 115,
+                  "PATKBonus": 33,
+                  "description": "PATK Rate: 115%, PATK Bonus: +33. Ignores 40% DEF."
+                },
+                "3": {
+                  "dmgPATKPercent": 119,
+                  "PATKBonus": 54,
+                  "description": "PATK Rate: 119%, PATK Bonus: +54. Ignores 60% DEF."
+                },
+                "4": {
+                  "dmgPATKPercent": 122,
+                  "PATKBonus": 75,
+                  "description": "PATK Rate: 122%, PATK Bonus: +75. Ignores 80% DEF."
+                },
+                "5": {
+                  "dmgPATKPercent": 125,
+                  "PATKBonus": 96,
+                  "description": "PATK Rate: 125%, PATK Bonus: +96. Ignores 100% DEF."
+                }
+              }
+            },
+            {
+              "id": "shadowstrike",
+              "name": "Shadow Strike",
+              "image": "images/shadowstrike.png",
+              "column": 2,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 124,
+                  "PATKBonus": 85,
+                  "description": "PATK Rate: 124%, PATK Bonus: +85, Stuns 2 seconds."
+                },
+                "2": {
+                  "dmgPATKPercent": 128,
+                  "PATKBonus": 110,
+                  "description": "PATK Rate: 128%, PATK Bonus: +110, Stuns 2.5 seconds."
+                },
+                "3": {
+                  "dmgPATKPercent": 131,
+                  "PATKBonus": 134,
+                  "description": "PATK Rate: 131%, PATK Bonus: +134, Stuns 3 seconds."
+                },
+                "4": {
+                  "dmgPATKPercent": 135,
+                  "PATKBonus": 158,
+                  "description": "PATK Rate: 135%, PATK Bonus: +158, Stuns 3.5 seconds."
+                },
+                "5": {
+                  "dmgPATKPercent": 139,
+                  "PATKBonus": 182,
+                  "description": "PATK Rate: 139%, PATK Bonus: +182, Stuns 4 seconds."
+                }
+              }
+            },
+            {
+              "id": "execute1",
+              "name": "Execute I",
+              "image": "images/execute.png",
+              "column": 2,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 116,
+                  "PATKBonus": 170,
+                  "description": "PATK Rate: 116%, PATK Bonus: +170. Extra bonus stuned: 324. Slows 40% for 4s if stunned."
+                },
+                "2": {
+                  "dmgPATKPercent": 119,
+                  "PATKBonus": 197,
+                  "description": "PATK Rate: 119%, PATK Bonus: +197. Extra bonus stuned: 386. Slows 45% for 4s if stunned."
+                },
+                "3": {
+                  "dmgPATKPercent": 123,
+                  "PATKBonus": 224,
+                  "description": "PATK Rate: 123%, PATK Bonus: +224. Extra bonus stuned: 448. Slows 50% for 4s if stunned."
+                },
+                "4": {
+                  "dmgPATKPercent": 126,
+                  "PATKBonus": 251,
+                  "description": "PATK Rate: 126%, PATK Bonus: +251. Extra bonus stuned: 510. Slows 55% for 4s if stunned."
+                },
+                "5": {
+                  "dmgPATKPercent": 130,
+                  "PATKBonus": 278,
+                  "description": "PATK Rate: 130%, PATK Bonus: +278. Extra bonus stuned: 572. Slows 60% for 4s if stunned."
+                }
+              }
+            },
+            {
+              "id": "piercemastery2",
+              "name": "Pierce Mastery II",
+              "image": "images/piercemastery.png",
+              "column": 2,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 112,
+                  "PATKBonus": 413,
+                  "description": "PATK Rate: 112%, PATK Bonus: +413. Ignores 20% DEF."
+                },
+                "2": {
+                  "dmgPATKPercent": 115,
+                  "PATKBonus": 448,
+                  "description": "PATK Rate: 115%, PATK Bonus: +448. Ignores 40% DEF."
+                },
+                "3": {
+                  "dmgPATKPercent": 119,
+                  "PATKBonus": 483,
+                  "description": "PATK Rate: 119%, PATK Bonus: +483. Ignores 60% DEF."
+                },
+                "4": {
+                  "dmgPATKPercent": 122,
+                  "PATKBonus": 518,
+                  "description": "PATK Rate: 122%, PATK Bonus: +518. Ignores 80% DEF."
+                },
+                "5": {
+                  "dmgPATKPercent": 125,
+                  "PATKBonus": 553,
+                  "description": "PATK Rate: 125%, PATK Bonus: +553. Ignores 100% DEF."
+                }
+              }
+            },
+            {
+              "id": "execute2",
+              "name": "Execute II",
+              "image": "images/execute.png",
+              "column": 2,
+              "row": 5,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 116,
+                  "PATKBonus": 788,
+                  "description": "PATK Rate: 116%, PATK Bonus: +788. Extra bonus stuned: 1429. Slows 40% for 4s if stunned."
+                },
+                "2": {
+                  "dmgPATKPercent": 119,
+                  "PATKBonus": 833,
+                  "description": "PATK Rate: 119%, PATK Bonus: +833. Extra bonus stuned: 1523. Slows 45% for 4s if stunned."
+                },
+                "3": {
+                  "dmgPATKPercent": 123,
+                  "PATKBonus": 878,
+                  "description": "PATK Rate: 123%, PATK Bonus: +878. Extra bonus stuned: 1617. Slows 50% for 4s if stunned."
+                },
+                "4": {
+                  "dmgPATKPercent": 126,
+                  "PATKBonus": 923,
+                  "description": "PATK Rate: 126%, PATK Bonus: +923. Extra bonus stuned: 1711. Slows 55% for 4s if stunned."
+                },
+                "5": {
+                  "dmgPATKPercent": 130,
+                  "PATKBonus": 968,
+                  "description": "PATK Rate: 130%, PATK Bonus: +968. Extra bonus stuned: 1802. Slows 60% for 4s if stunned."
+                }
+              }
+            },
+            {
+              "id": "piercemastery3",
+              "name": "Pierce Mastery III",
+              "image": "images/piercemastery.png",
+              "column": 2,
+              "row": 6,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 112,
+                  "PATKBonus": 1192,
+                  "description": "PATK Rate: 112%, PATK Bonus: +1192. Ignores 20% DEF."
+                },
+                "2": {
+                  "dmgPATKPercent": 115,
+                  "PATKBonus": 1249,
+                  "description": "PATK Rate: 115%, PATK Bonus: +1249. Ignores 40% DEF."
+                },
+                "3": {
+                  "dmgPATKPercent": 119,
+                  "PATKBonus": 1306,
+                  "description": "PATK Rate: 119%, PATK Bonus: +1306. Ignores 60% DEF."
+                },
+                "4": {
+                  "dmgPATKPercent": 122,
+                  "PATKBonus": 1363,
+                  "description": "PATK Rate: 122%, PATK Bonus: +1363. Ignores 80% DEF."
+                },
+                "5": {
+                  "dmgPATKPercent": 125,
+                  "PATKBonus": 1420,
+                  "description": "PATK Rate: 125%, PATK Bonus: +1420. Ignores 100% DEF."
+                }
+              }
+            },
+            {
+              "id": "mysticspeed",
+              "name": "Mystic Speed",
+              "image": "images/mysticspeed.png",
+              "column": 3,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "attackSpeedPercent": 4,
+                  "description": "Attack Speed + 4%"
+                },
+                "2": {
+                  "attackSpeedPercent": 8,
+                  "description": "Attack Speed + 8%"
+                },
+                "3": {
+                  "attackSpeedPercent": 12,
+                  "description": "Attack Speed + 12%"
+                },
+                "4": {
+                  "attackSpeedPercent": 16,
+                  "description": "Attack Speed + 16%"
+                },
+                "5": {
+                  "attackSpeedPercent": 20,
+                  "description": "Attack Speed + 20%"
+                }
+              }
+            },
+            {
+              "id": "arcaneshura",
+              "name": "Arcane Shura I",
+              "image": "images/mysticshura.png",
+              "column": 3,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "crit chance": 3,
+                  "CritDamage": 3,
+                  "description": "Crit +3%. Crit DMG +3%"
+                },
+                "2": {
+                  "crit chance": 6,
+                  "CritDamage": 6,
+                  "description": "Crit +6%. Crit DMG +6%"
+                },
+                "3": {
+                  "crit chance": 9,
+                  "CritDamage": 9,
+                  "description": "Crit +9%. Crit DMG +9%"
+                },
+                "4": {
+                  "crit chance": 12,
+                  "CritDamage": 12,
+                  "description": "Crit +12%. Crit DMG +12%"
+                },
+                "5": {
+                  "crit chance": 15,
+                  "CritDamage": 15,
+                  "description": "Crit +15%. Crit DMG +15%"
+                }
+              }
+            },
+            {
+              "id": "slayersprint",
+              "name": "Slayer Sprint",
+              "image": "images/slayersprint.png",
+              "column": 3,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "description": "Speed +30%. 8s duration."
+                },
+                "2": {
+                  "description": "Speed +40%. 9s duration."
+                },
+                "3": {
+                  "description": "Speed +50%. 10s duration."
+                },
+                "4": {
+                  "description": "Speed +60%. 11s duration."
+                },
+                "5": {
+                  "description": "Speed +70%. 12s duration."
+                }
+              }
+            },
+            {
+              "id": "lethalchain",
+              "name": "Lethal Chain",
+              "image": "images/lethalchain.png",
+              "column": 3,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "Crit +30%. 4s duration."
+                },
+                "2": {
+                  "description": "Crit +35%. 5s duration."
+                },
+                "3": {
+                  "description": "Crit +40%. 6s duration."
+                },
+                "4": {
+                  "description": "Crit +45%. 7s duration."
+                },
+                "5": {
+                  "description": "Crit +50%. 8s duration."
+                }
+              }
+            },
+            {
+              "id": "mysticghost",
+              "name": "Mystic Ghost",
+              "image": "images/mysticghost.png",
+              "column": 3,
+              "row": 5,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "description": "Movement speed +5% while stealthed."
+                },
+                "2": {
+                  "description": "Movement speed +10% while stealthed."
+                },
+                "3": {
+                  "description": "Movement speed +15% while stealthed."
+                },
+                "4": {
+                  "description": "Movement speed +20% while stealthed."
+                },
+                "5": {
+                  "description": "Movement speed +25% while stealthed."
+                }
+              }
+            },
+            {
+              "id": "mysticshura2",
+              "name": "Mystic Shura II",
+              "image": "images/mysticshura.png",
+              "column": 3,
+              "row": 6,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "CritDamage": 6,
+                  "description": "Crit DMG: +6%"
+                },
+                "2": {
+                  "CritDamage": 12,
+                  "description": "Crit DMG: +12%"
+                },
+                "3": {
+                  "CritDamage": 18,
+                  "description": "Crit DMG: +18%"
+                },
+                "4": {
+                  "CritDamage": 24,
+                  "description": "Crit DMG: +24%"
+                },
+                "5": {
+                  "CritDamage": 30,
+                  "description": "Crit DMG: +30%"
+                }
+              }
+            },
+            {
+              "id": "mysticguard",
+              "name": "Mystic Guard",
+              "image": "images/mysticguard.png",
+              "column": 3,
+              "row": 7,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "description": "Clears all debuffs every 30s."
+                },
+                "2": {
+                  "description": "Clears all debuffs every 27s."
+                },
+                "3": {
+                  "description": "Clears all debuffs every 24s."
+                },
+                "4": {
+                  "description": "Clears all debuffs every 21s."
+                },
+                "5": {
+                  "description": "Clears all debuffs every 18s."
+                }
+              }
+            },
+            {
+              "id": "mysticpierce",
+              "name": "Mystic Pierce",
+              "image": "images/mysticpierce.png",
+              "column": 3,
+              "row": 8,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "exclusiveWith": [],
+              "levels": {
+                "1": {
+                  "description": "4% chance to ignore defense."
+                },
+                "2": {
+                  "description": "8% chance to ignore defense."
+                },
+                "3": {
+                  "description": "12% chance to ignore defense."
+                },
+                "4": {
+                  "description": "16% chance to ignore defense."
+                },
+                "5": {
+                  "description": "20% chance to ignore defense."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "galerogue",
+          "name": "Gale Rogue ",
+          "talents": [
+            {
+              "id": "lightstream1",
+              "name": "Lightstream I",
+              "image": "images/lightstream.png",
+              "column": 1,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 124,
+                  "PATKBonus": 209,
+                  "description": "PATK Rate: 124%, PATK Bonus: +209. Hits 5 targets.Unlocks Samsara and 15% PATK buff for 10 seconds."
+                },
+                "2": {
+                  "dmgPATKPercent": 128,
+                  "PATKBonus": 242,
+                  "description": "PATK Rate: 128%, PATK Bonus: +242. Hits 5 targets.Unlocks Samsara and 15% PATK buff for 10 seconds."
+                },
+                "3": {
+                  "dmgPATKPercent": 131,
+                  "PATKBonus": 276,
+                  "description": "PATK Rate: 131%, PATK Bonus: +276. Hits 5 targets.Unlocks Samsara and 15% PATK buff for 10 seconds."
+                },
+                "4": {
+                  "dmgPATKPercent": 135,
+                  "PATKBonus": 308,
+                  "description": "PATK Rate: 135%, PATK Bonus: +308. Hits 5 targets.Unlocks Samsara and 15% PATK buff for 10 seconds."
+                },
+                "5": {
+                  "dmgPATKPercent": 139,
+                  "PATKBonus": 341,
+                  "description": "PATK Rate: 139%, PATK Bonus: +341. Hits 5 targets.Unlocks Samsara and 15% PATK buff for 10 seconds."
+                }
+              }
+            },
+            {
+              "id": "venom1",
+              "name": "Venom I",
+              "image": "images/venom.png",
+              "column": 1,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "Proc Chance: 3%. 193 HP/s. Heal reduction 10%. Duration 12s."
+                },
+                "2": {
+                  "description": "Proc Chance: 3%. 216 HP/s. Heal reduction 20%. Duration 12s."
+                },
+                "3": {
+                  "description": "Proc Chance: 3%. 239 HP/s. Heal reduction 30%. Duration 12s."
+                },
+                "4": {
+                  "description": "Proc Chance: 3%. 262 HP/s. Heal reduction 40%. Duration 12s."
+                },
+                "5": {
+                  "description": "Proc Chance: 3%. 285 HP/s. Heal reduction 50%. Duration 12s."
+                }
+              }
+            },
+            {
+              "id": "samsara",
+              "name": "Samsara",
+              "image": "images/samsara.png",
+              "column": 1,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 124,
+                  "PATKBonus": 734,
+                  "description": "PATK Rate: 124%, PATK Bonus: +734. Hits 5 targets.Unlocks Light Break and 30% PATK buff for 10 seconds."
+                },
+                "2": {
+                  "dmgPATKPercent": 128,
+                  "PATKBonus": 783,
+                  "description": "PATK Rate: 128%, PATK Bonus: +783. Hits 5 targets.Unlocks Light Break and 30% PATK buff for 10 seconds."
+                },
+                "3": {
+                  "dmgPATKPercent": 131,
+                  "PATKBonus": 834,
+                  "description": "PATK Rate: 131%, PATK Bonus: +834. Hits 5 targets.Unlocks Light Break and 30% PATK buff for 10 seconds."
+                },
+                "4": {
+                  "dmgPATKPercent": 135,
+                  "PATKBonus": 885,
+                  "description": "PATK Rate: 135%, PATK Bonus: +885. Hits 5 targets.Unlocks Light Break and 30% PATK buff for 10 seconds."
+                },
+                "5": {
+                  "dmgPATKPercent": 139,
+                  "PATKBonus": 936,
+                  "description": "PATK Rate: 139%, PATK Bonus: +936. Hits 5 targets.Unlocks Light Break and 30% PATK buff for 10 seconds."
+                }
+              }
+            },
+            {
+              "id": "lightstream2",
+              "name": "Lightstream II",
+              "image": "images/lightstream.png",
+              "column": 1,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 124,
+                  "PATKBonus": 968,
+                  "description": "PATK Rate: 124%, PATK Bonus: +968. Hits 5 targets.Unlocks Samsara and 15% PATK buff for 10 seconds."
+                },
+                "2": {
+                  "dmgPATKPercent": 128,
+                  "PATKBonus": 1023,
+                  "description": "PATK Rate: 128%, PATK Bonus: +1023. Hits 5 targets.Unlocks Samsara and 15% PATK buff for 10 seconds."
+                },
+                "3": {
+                  "dmgPATKPercent": 131,
+                  "PATKBonus": 1078,
+                  "description": "PATK Rate: 131%, PATK Bonus: +1078. Hits 5 targets.Unlocks Samsara and 15% PATK buff for 10 seconds."
+                },
+                "4": {
+                  "dmgPATKPercent": 135,
+                  "PATKBonus": 1133,
+                  "description": "PATK Rate: 135%, PATK Bonus: +1133. Hits 5 targets.Unlocks Samsara and 15% PATK buff for 10 seconds."
+                },
+                "5": {
+                  "dmgPATKPercent": 139,
+                  "PATKBonus": 1188,
+                  "description": "PATK Rate: 139%, PATK Bonus: +1188. Hits 5 targets.Unlocks Samsara and 15% PATK buff for 10 seconds."
+                }
+              }
+            },
+            {
+              "id": "venom2",
+              "name": "Venom II",
+              "image": "images/venom.png",
+              "column": 1,
+              "row": 5,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "Proc Chance: 3%. 722 HP/s. Heal reduction 10%. Duration 12s."
+                },
+                "2": {
+                  "description": "Proc Chance: 3%. 761 HP/s. Heal reduction 20%. Duration 12s."
+                },
+                "3": {
+                  "description": "Proc Chance: 3%. 800 HP/s. Heal reduction 30%. Duration 12s."
+                },
+                "4": {
+                  "description": "Proc Chance: 3%. 839 HP/s. Heal reduction 40%. Duration 12s."
+                },
+                "5": {
+                  "description": "Proc Chance: 3%. 878 HP/s. Heal reduction 50%. Duration 12s."
+                }
+              }
+            },
+            {
+              "id": "lightbreak",
+              "name": "Light Break",
+              "image": "images/lightbreak.png",
+              "column": 1,
+              "row": 6,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 152,
+                  "PATKBonus": 2005 ,
+                  "description": "PATK Rate: 152%, PATK Bonus: +2005  . Hits 7 targets.Stuns for 1.5s"
+                },
+                "2": {
+                  "dmgPATKPercent": 154,
+                  "PATKBonus": 2102,
+                  "description": "PATK Rate: 154%, PATK Bonus: +2102. Hits 9 targets.Stuns for 2s"
+                },
+                "3": {
+                  "dmgPATKPercent": 155,
+                  "PATKBonus": 2199,
+                  "description": "PATK Rate: 155%, PATK Bonus: +2199. Hits 11 targets.Stuns for 2.5s"
+                },
+                "4": {
+                  "dmgPATKPercent": 157,
+                  "PATKBonus": 2296,
+                  "description": "PATK Rate: 157%, PATK Bonus: +2296. Hits 13 targets.Stuns for 3s"
+                },
+                "5": {
+                  "dmgPATKPercent": 158,
+                  "PATKBonus": 2393,
+                  "description": "PATK Rate: 158%, PATK Bonus: +2393. Hits 15 targets.Stuns for 3.5s"
+                }
+              }
+            },
+            {
+              "id": "bloodblade1",
+              "name": "Blood Blade I",
+              "image": "images/bloodblade.png",
+              "column": 2,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 65,
+                  "PATKBonus": 26,
+                  "description": "Attack Rate: 165%, PATK Bonus: +26. DoT Chance: 15%. 5 HP/s for 5s. Hits twice."
+                },
+                "2": {
+                  "dmgPATKPercent": 67,
+                  "PATKBonus": 48,
+                  "description": "Attack Rate: 167%, PATK Bonus: +48. DoT Chance: 18%. 14 HP/s for 5s. Hits twice."
+                },
+                "3": {
+                  "dmgPATKPercent": 69,
+                  "PATKBonus": 70,
+                  "description": "Attack Rate: 69%, PATK Bonus: +70. DoT Chance: 21%. 23 HP/s for 5s. Hits twice."
+                },
+                "4": {
+                  "dmgPATKPercent": 71,
+                  "PATKBonus": 92,
+                  "description": "Attack Rate: 71%, PATK Bonus: +92. DoT Chance: 24%. 32 HP/s for 5s. Hits twice."
+                },
+                "5": {
+                  "dmgPATKPercent": 73,
+                  "PATKBonus": 114,
+                  "description": "Attack Rate: 73%, PATK Bonus: +114. DoT Chance: 27%. 41 HP/s for 5s. Hits twice."
+                }
+              }
+            },
+            {
+              "id": "bloodcorrode",
+              "name": "Blood Corrode",
+              "image": "images/bloodcorrode.png",
+              "column": 2,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 120,
+                  "PATKBonus": 95,
+                  "description": "Attack Rate: 120%, PATK Bonus: +95. -5% PDEF for 12s"
+                },
+                "2": {
+                  "dmgPATKPercent": 124,
+                  "PATKBonus": 121,
+                  "description": "Attack Rate: 124%, PATK Bonus: +121. -11% PDEF for 12s"
+                },
+                "3": {
+                  "dmgPATKPercent": 127,
+                  "PATKBonus": 147,
+                  "description": "Attack Rate: 127%, PATK Bonus: +147. -18% PDEF for 12s"
+                },
+                "4": {
+                  "dmgPATKPercent": 131,
+                  "PATKBonus": 173,
+                  "description": "Attack Rate: 131%, PATK Bonus: +173. -24% PDEF for 12s"
+                },
+                "5": {
+                  "dmgPATKPercent": 134,
+                  "PATKBonus": 199,
+                  "description": "Attack Rate: 134%, PATK Bonus: +199. -30% PDEF for 12s"
+                }
+              }
+            },
+            {
+              "id": "triplestrike1",
+              "name": "Triple Strike I",
+              "image": "images/triplestrike.png",
+              "column": 2,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 52,
+                  "PATKBonus": 109,
+                  "description": "Attack Rate: 52%, PATK Bonus: +109. Hits 3 times."
+                },
+                "2": {
+                  "dmgPATKPercent": 54,
+                  "PATKBonus": 121,
+                  "description": "Attack Rate: 54%, PATK Bonus: +121. Hits 3 times."
+                },
+                "3": {
+                  "dmgPATKPercent": 55,
+                  "PATKBonus": 133,
+                  "description": "Attack Rate: 55%, PATK Bonus: +133. Hits 3 times."
+                },
+                "4": {
+                  "dmgPATKPercent": 57,
+                  "PATKBonus": 145,
+                  "description": "Attack Rate: 57%, PATK Bonus: +145. Hits 3 times."
+                },
+                "5": {
+                  "dmgPATKPercent": 58,
+                  "PATKBonus": 157,
+                  "description": "Attack Rate: 58%, PATK Bonus: +157. Hits 3 times."
+                }
+              }
+            },
+            {
+              "id": "bloodblade2",
+              "name": "Blood Blade II",
+              "image": "images/bloodblade.png",
+              "column": 2,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 65,
+                  "PATKBonus": 227,
+                  "description": "Attack Rate: 165%, PATK Bonus: +227. DoT Chance: 15%. 197 HP/s for 5s. Hits twice."
+                },
+                "2": {
+                  "dmgPATKPercent": 67,
+                  "PATKBonus": 247,
+                  "description": "Attack Rate: 167%, PATK Bonus: +247. DoT Chance: 18%. 214 HP/s for 5s. Hits twice."
+                },
+                "3": {
+                  "dmgPATKPercent": 69,
+                  "PATKBonus": 266,
+                  "description": "Attack Rate: 69%, PATK Bonus: +266. DoT Chance: 21%. 231 HP/s for 5s. Hits twice."
+                },
+                "4": {
+                  "dmgPATKPercent": 71,
+                  "PATKBonus": 286,
+                  "description": "Attack Rate: 71%, PATK Bonus: +286. DoT Chance: 24%. 248 HP/s for 5s. Hits twice."
+                },
+                "5": {
+                  "dmgPATKPercent": 73,
+                  "PATKBonus": 286,
+                  "description": "Attack Rate: 73%, PATK Bonus: +286. DoT Chance: 27%. 248 HP/s for 5s. Hits twice. ( I know the bonus is the same. It's what the game says )"
+                }
+              }
+            },
+            {
+              "id": "triplestrike2",
+              "name": "Triple Strike II",
+              "image": "images/triplestrike.png",
+              "column": 2,
+              "row": 5,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 52,
+                  "PATKBonus": 382,
+                  "description": "Attack Rate: 52%, PATK Bonus: +382. Hits 3 times."
+                },
+                "2": {
+                  "dmgPATKPercent": 54,
+                  "PATKBonus": 400,
+                  "description": "Attack Rate: 54%, PATK Bonus: +400. Hits 3 times."
+                },
+                "3": {
+                  "dmgPATKPercent": 55,
+                  "PATKBonus": 419,
+                  "description": "Attack Rate: 55%, PATK Bonus: +419. Hits 3 times."
+                },
+                "4": {
+                  "dmgPATKPercent": 57,
+                  "PATKBonus": 438,
+                  "description": "Attack Rate: 57%, PATK Bonus: +438. Hits 3 times."
+                },
+                "5": {
+                  "dmgPATKPercent": 58,
+                  "PATKBonus": 456,
+                  "description": "Attack Rate: 58%, PATK Bonus: +456. Hits 3 times."
+                }
+              }
+            },
+            {
+              "id": "bloodblade3",
+              "name": "Blood Blade III",
+              "image": "images/bloodblade.png",
+              "column": 2,
+              "row": 6,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dmgPATKPercent": 65,
+                  "PATKBonus": 654,
+                  "description": "Attack Rate: 165%, PATK Bonus: +654. DoT Chance: 15%. 604 HP/s for 5s. Hits twice."
+                },
+                "2": {
+                  "dmgPATKPercent": 67,
+                  "PATKBonus": 686,
+                  "description": "Attack Rate: 167%, PATK Bonus: +686. DoT Chance: 18%. 636 HP/s for 5s. Hits twice."
+                },
+                "3": {
+                  "dmgPATKPercent": 69,
+                  "PATKBonus": 718,
+                  "description": "Attack Rate: 69%, PATK Bonus: +718. DoT Chance: 21%. 668 HP/s for 5s. Hits twice."
+                },
+                "4": {
+                  "dmgPATKPercent": 71,
+                  "PATKBonus": 750,
+                  "description": "Attack Rate: 71%, PATK Bonus: +750. DoT Chance: 24%. 700 HP/s for 5s. Hits twice."
+                },
+                "5": {
+                  "dmgPATKPercent": 73,
+                  "PATKBonus": 782,
+                  "description": "Attack Rate: 73%, PATK Bonus: +782. DoT Chance: 27%. 732 HP/s for 5s. Hits twice."
+                }
+              }
+            },
+            {
+              "id": "dazzle",
+              "name": "Dazzle",
+              "image": "images/dazzle.png",
+              "column": 3,
+              "row": 1,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "Proc Rate: 3%. Hit reduction: 2%"
+                },
+                "2": {
+                  "description": "Proc Rate: 4%. Hit reduction: 4%"
+                },
+                "3": {
+                  "description": "Proc Rate: 5%. Hit reduction: 6%"
+                },
+                "4": {
+                  "description": "Proc Rate: 6%. Hit reduction: 8%"
+                },
+                "5": {
+                  "description": "Proc Rate: 7%. Hit reduction: 10%"
+                }
+              }
+            },
+            {
+              "id": "harvest",
+              "name": "Harvest",
+              "image": "images/harvest.png",
+              "column": 3,
+              "row": 2,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "Deals damage, no info on percentages. Increases target DMG taken by 15%. Slows target by 50%. Lasts 3 seconds. WORKS ON BOSSES."
+                },
+                "2": {
+                  "description": "Deals damage, no info on percentages. Increases target DMG taken by 20%. Slows target by 55%. Lasts 4 seconds. WORKS ON BOSSES."
+                },
+                "3": {
+                  "description": "Deals damage, no info on percentages. Increases target DMG taken by 25%. Slows target by 60%. Lasts 5 seconds. WORKS ON BOSSES."
+                },
+                "4": {
+                  "description": "Deals damage, no info on percentages. Increases target DMG taken by 30%. Slows target by 65%. Lasts 6 seconds. WORKS ON BOSSES."
+                },
+                "5": {
+                  "description": "Deals damage, no info on percentages. Increases target DMG taken by 35%. Slows target by 70%. Lasts 7 seconds. WORKS ON BOSSES."
+                }
+              }
+            },
+            {
+              "id": "mysticflash1",
+              "name": "Mystic Flash I",
+              "image": "images/mysticflash.png",
+              "column": 3,
+              "row": 3,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dodgePercent": 2,
+                  "description": "Dodge + 2%"
+                },
+                "2": {
+                  "dodgePercent": 4,
+                  "description": "Dodge + 4%"
+                },
+                "3": {
+                  "dodgePercent": 6,
+                  "description": "Dodge + 6%"
+                },
+                "4": {
+                  "dodgePercent": 8,
+                  "description": "Dodge + 8%"
+                },
+                "5": {
+                  "dodgePercent": 10,
+                  "description": "Dodge + 10%"
+                }
+              }
+            },
+            {
+              "id": "mystichaste",
+              "name": "Mystic Haste",
+              "image": "images/mystichaste.png",
+              "column": 3,
+              "row": 4,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "+5 Movespeed."
+                },
+                "2": {
+                  "description": "+10 Movespeed."
+                },
+                "3": {
+                  "description": "+15 Movespeed."
+                },
+                "4": {
+                  "description": "+20 Movespeed."
+                },
+                "5": {
+                  "description": "+25 Movespeed."
+                }
+              }
+            },
+            {
+              "id": "limitdodge",
+              "name": "Limit Dodge",
+              "image": "images/limitdodge.png",
+              "column": 3,
+              "row": 5,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "description": "+30% Dodge for 4s."
+                },
+                "2": {
+                  "description": "+35% Dodge for 5s."
+                },
+                "3": {
+                  "description": "+40% Dodge for 6s."
+                },
+                "4": {
+                  "description": "+45% Dodge for 7s."
+                },
+                "5": {
+                  "description": "+50% Dodge for 8  s."
+                }
+              }
+            },
+            {
+              "id": "mysticflash",
+              "name": "Mystic Flash II",
+              "image": "images/mysticflash.png",
+              "column": 3,
+              "row": 6,
+              "minLevel": 1,
+              "maxLevel": 5,
+              "levels": {
+                "1": {
+                  "dodge": 40,
+                  "description": "+40 Dodge."
+                },
+                "2": {
+                  "dodge": 75,
+                  "description": "+75 Dodge."
+                },
+                "3": {
+                  "dodge": 110,
+                  "description": "+110 Dodge."
+                },
+                "4": {
+                  "dodge": 145,
+                  "description": "+145 Dodge."
+                },
+                "5": {
+                  "dodge": 180,
+                  "description": "+180 Dodge."
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "knight",
       "name": "Knight",
       "trees": [
@@ -2487,29 +3668,29 @@
               "maxLevel": 5,
               "levels": {
                 "1": {
-                  "dmgMATKPercent": 120,
-                  "MATKBonus": 224,
-                  "description": "MATK Rate: 120%, MATK Bonus: +224"
+                  "dmgPATKPercent": 120,
+                  "PATKBonus": 224,
+                  "description": "PATK Rate: 120%, PATK Bonus: +224. Deals magic damage."
                 },
                 "2": {
-                  "dmgMATKPercent": 124,
-                  "MATKBonus": 259,
-                  "description": "MATK Rate: 124%, MATK Bonus: +259"
+                  "dmgPATKPercent": 124,
+                  "PATKBonus": 259,
+                  "description": "PATK Rate: 124%, PATK Bonus: +259. Deals magic damage."
                 },
                 "3": {
-                  "dmgMATKPercent": 127,
-                  "MATKBonus": 294,
-                  "description": "MATK Rate: 127%, MATK Bonus: +294"
+                  "dmgPATKPercent": 127,
+                  "PATKBonus": 294,
+                  "description": "PATK Rate: 127%, PATK Bonus: +294. Deals magic damage."
                 },
                 "4": {
-                  "dmgMATKPercent": 131,
-                  "MATKBonus": 329,
-                  "description": "MATK Rate: 131%, MATK Bonus: +329"
+                  "dmgPATKPercent": 131,
+                  "PATKBonus": 329,
+                  "description": "PATK Rate: 131%, PATK Bonus: +329. Deals magic damage."
                 },
                 "5": {
-                  "dmgMATKPercent": 134,
-                  "MATKBonus": 364,
-                  "description": "MATK Rate: 134%, MATK Bonus: +364"
+                  "dmgPATKPercent": 134,
+                  "PATKBonus": 364,
+                  "description": "PATK Rate: 134%, PATK Bonus: +364. Deals magic damage."
                 }
               }
             },
@@ -2559,29 +3740,29 @@
               "maxLevel": 5,
               "levels": {
                 "1": {
-                  "dmgMATKPercent": 120,
-                  "MATKBonus": 1034,
-                  "description": "MATK Rate: 120%, MATK Bonus: +1034"
+                  "dmgPATKPercent": 120,
+                  "PATKBonus": 1034,
+                  "description": "PATK Rate: 120%, PATK Bonus: +1034. Deals magic damage."
                 },
                 "2": {
-                  "dmgMATKPercent": 124,
-                  "MATKBonus": 1093,
-                  "description": "MATK Rate: 124%, MATK Bonus: +1093"
+                  "dmgPATKPercent": 124,
+                  "PATKBonus": 1093,
+                  "description": "PATK Rate: 124%, PATK Bonus: +1093. Deals magic damage."
                 },
                 "3": {
-                  "dmgMATKPercent": 127,
-                  "MATKBonus": 1152,
-                  "description": "MATK Rate: 127%, MATK Bonus: +1152"
+                  "dmgPATKPercent": 127,
+                  "PATKBonus": 1152,
+                  "description": "PATK Rate: 127%, PATK Bonus: +1152. Deals magic damage."
                 },
                 "4": {
-                  "dmgMATKPercent": 131,
-                  "MATKBonus": 1210,
-                  "description": "MATK Rate: 131%, MATK Bonus: +1210"
+                  "dmgPATKPercent": 131,
+                  "PATKBonus": 1210,
+                  "description": "PATK Rate: 131%, PATK Bonus: +1210. Deals magic damage."
                 },
                 "5": {
-                  "dmgMATKPercent": 134,
-                  "MATKBonus": 1268,
-                  "description": "MATK Rate: 134%, MATK Bonus: +1268"
+                  "dmgPATKPercent": 134,
+                  "PATKBonus": 1268,
+                  "description": "PATK Rate: 134%, PATK Bonus: +1268. Deals magic damage."
                 }
               }
             },

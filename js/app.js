@@ -47,7 +47,8 @@ function computeStats(){
     HEAL: document.getElementById('heal') ? +document.getElementById('heal').value : 0,
     ATTACKSPEED: document.getElementById('attackSpeed') ? +document.getElementById('attackSpeed').value : 100,
     CASTSPEED: document.getElementById('castSpeed') ? +document.getElementById('castSpeed').value : 100,
-    HITPERCENT: document.getElementById('hitPercent') ? +document.getElementById('hitPercent').value : 100
+    HITPERCENT: document.getElementById('hitPercent') ? +document.getElementById('hitPercent').value : 100,
+    DODGE: document.getElementById('dodge') ? +document.getElementById('dodge').value : 0
   };
 
   currentClass.trees.forEach(tree=>{
@@ -120,6 +121,10 @@ function computeStats(){
   const rawCastSpeedPercent = (stats.castSpeedPercent || 0) + (stats.CastSpeedPercent || 0);
   if(rawCastSpeedPercent) castSpeed = Math.round(castSpeed * (1 + rawCastSpeedPercent / 100));
   stats.CASTSPEED = castSpeed;
+
+  // DODGE is kept as plain value (no percent multiplier); dodgePercent is separate
+  let dodgePercent = (stats.dodgePercent || 0) + (stats.DodgePercent || 0);
+  stats.DODGEPERCENT = dodgePercent;
 
   return stats;
 }
@@ -318,7 +323,7 @@ function render(){
 // Build serialization: collect currentClass id, inputs, and talent levels (only non-zero)
 function getCurrentBuildObject(){
   const obj = { classId: currentClass.id, characterLevel: Number(document.getElementById('characterLevel').value),characterRebirth: Number(document.getElementById('characterRebirth').value), inputs: {}, talents: {} };
-  ['patk','matk','pdef','mdef','hp','heal','attackSpeed','castSpeed','hitPercent'].forEach(k=>{
+  ['patk','matk','pdef','mdef','hp','heal','attackSpeed','castSpeed','hitPercent','dodge'].forEach(k=>{
     const el = document.getElementById(k);
     if(el) obj.inputs[k] = Number(el.value) || 0;
   });
@@ -439,8 +444,8 @@ function updateSummary(){
  const s=document.getElementById('summary');
  s.innerHTML='';
   Object.entries(stats).forEach(([k,v])=>{
-   // hide bonus and dmg-specific entries; show MDMGPercent and PDMGPercent as calculated
-   if(k.includes('Bonus') || k.includes('bonus') || k.startsWith('dmg') || (k.endsWith('Percent') && k !== 'MDMGPercent' && k !== 'PDMGPercent') || k === 'healPercent') return;
+   // hide bonus and dmg-specific entries; show MDMGPercent, PDMGPercent, and DODGEPERCENT as calculated
+   if(k.includes('Bonus') || k.includes('bonus') || k.startsWith('dmg') || (k.endsWith('Percent') && k !== 'MDMGPercent' && k !== 'PDMGPercent' && k !== 'DODGEPERCENT') || k === 'healPercent') return;
    const d=document.createElement('div');
    d.innerHTML=`<b>${k}</b>: ${v}`;
    s.appendChild(d);
