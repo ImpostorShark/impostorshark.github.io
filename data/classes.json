@@ -623,17 +623,17 @@
                   "description": "MATK Rate: 119% MATK Bonus: 184"
                 },
                 "3": {
-                  "dmgMATKPercent": 23,
+                  "dmgMATKPercent": 123,
                   "MATKBonus": 223,
                   "description": "MATK Rate: 123% MATK Bonus: 223"
                 },
                 "4": {
-                  "dmgMATKPercent": 26,
+                  "dmgMATKPercent": 126,
                   "MATKBonus": 262,
                   "description": "MATK Rate: 126% MATK Bonus: 262"
                 },
                 "5": {
-                  "dmgMATKPercent": 30,
+                  "dmgMATKPercent": 130,
                   "MATKBonus": 301,
                   "description": "MATK Rate: 130% MATK Bonus: 301"
                 }
