@@ -5479,25 +5479,25 @@
                 "2": {
                   "dmgMATKPercent": 80,
                   "dmgHPPercent": 4,
-                  "MATKBonus": 18,
+                  "MATKBonus": 47,
                   "description": "MATK Rate: 80%, Current HP Rate: 4.1%, MATK Bonus: +47"
                 },
                 "3": {
                   "dmgMATKPercent": 80,
                   "dmgHPPercent": 4,
-                  "MATKBonus": 18,
+                  "MATKBonus": 76,
                   "description": "MATK Rate: 80%, Current HP Rate: 4.2%, MATK Bonus: +76"
                 },
                 "4": {
                   "dmgMATKPercent": 80,
                   "dmgHPPercent": 4,
-                  "MATKBonus": 18,
+                  "MATKBonus": 105,
                   "description": "MATK Rate: 80%, Current HP Rate: 4.4%, MATK Bonus: +105"
                 },
                 "5": {
                   "dmgMATKPercent": 80,
                   "dmgHPPercent": 4,
-                  "MATKBonus": 18,
+                  "MATKBonus": 134,
                   "description": "MATK Rate: 80%, Current HP Rate: 4.5%, MATK Bonus: +134"
                 }
               }
